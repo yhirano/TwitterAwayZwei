@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TwitterAwayZwei.Twitter.StatusInfomation">
+    <Position X="6.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAIAAAACAAAAAAAAAAAAAIAAAICAAAAwA=</HashCode>
+      <FileName>Twitter\StatusInfomation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TwitterAwayZwei.Twitter.UserInfomation">
+    <Position X="11" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAIgABAAoAIAAAQCAAAMAABACAAAAAAAEgA=</HashCode>
+      <FileName>Twitter\UserInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TwitterAwayZwei.Twitter.Twitter">
+    <Position X="1.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQgQABQBBEAAAgACAAAAAgAAABAAAACAQAAAgECiAA=</HashCode>
+      <FileName>Twitter\Twitter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FriendTimeline" />
+      <Property Name="PublicTimeline" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="メイリオ" Size="9" />
+</ClassDiagram>
