@@ -31,6 +31,11 @@ namespace TwitterAwayZwei
         /// </summary>
         private DirectMessage[] twitterDirectMessages;
 
+        /// <summary>
+        /// ステータスバーに表示するエラー
+        /// </summary>
+        private string errorTextStatusBar;
+
         public MainForm()
         {
             InitializeComponent();
@@ -101,8 +106,6 @@ namespace TwitterAwayZwei
             }
 
             CheckTimelineUpdate();
-
-            timilineTwitterListView.Items.Clear();
             UpdateTimelineListView(twitterStatuses);
         }
 
@@ -226,8 +229,6 @@ namespace TwitterAwayZwei
             }
 
             CheckDirectMessageUpdate();
-
-            timilineTwitterListView.Items.Clear();
             UpdateDirectMessageListView(twitterDirectMessages);
         }
 
@@ -304,12 +305,11 @@ namespace TwitterAwayZwei
             timilineTwitterListView.Items.Add(item);
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        /// <summary>
+        /// フォームに関する設定を呼び出す
+        /// </summary>
+        private void LoadFormSetting()
         {
-            // フォームのテキストバーを設定
-            this.Text = AssemblyUtility.Title;
-
-            // 設定の復元
             topPanel.Height = UserSettingAdapter.Setting.TopPanelHeight;
             timilineTwitterListView.Columns[0].Width = UserSettingAdapter.Setting.TimelineTwitterListViewNameColumnWidth;
             timilineTwitterListView.Columns[1].Width = UserSettingAdapter.Setting.TimelineTwitterListViewDoingColumnWidth;
@@ -317,6 +317,29 @@ namespace TwitterAwayZwei
             messageTwitterListView.Columns[0].Width = UserSettingAdapter.Setting.MessageTwitterListViewNameColumnWidth;
             messageTwitterListView.Columns[1].Width = UserSettingAdapter.Setting.MessageTwitterListViewMessageColumnWidth;
             messageTwitterListView.Columns[2].Width = UserSettingAdapter.Setting.MessageTwitterListViewDateColumnWidth;
+        }
+
+        /// <summary>
+        /// フォームに関する設定を保存する
+        /// </summary>
+        private void SaveFormSetting()
+        {
+            UserSettingAdapter.Setting.TopPanelHeight = topPanel.Height;
+            UserSettingAdapter.Setting.TimelineTwitterListViewNameColumnWidth = timilineTwitterListView.Columns[0].Width;
+            UserSettingAdapter.Setting.TimelineTwitterListViewDoingColumnWidth = timilineTwitterListView.Columns[1].Width;
+            UserSettingAdapter.Setting.TimelineTwitterListViewDateColumnWidth = timilineTwitterListView.Columns[2].Width;
+            UserSettingAdapter.Setting.MessageTwitterListViewNameColumnWidth = messageTwitterListView.Columns[0].Width;
+            UserSettingAdapter.Setting.MessageTwitterListViewMessageColumnWidth = messageTwitterListView.Columns[1].Width;
+            UserSettingAdapter.Setting.MessageTwitterListViewDateColumnWidth = messageTwitterListView.Columns[2].Width;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // フォームのテキストバーを設定
+            this.Text = AssemblyUtility.Title;
+
+            // 設定の復元
+            LoadFormSetting();
 
             timilineTwitterListView.SmallImageList = twitterAccount.ProfileSmallImageList;
             timilineTwitterListView.LargeImageList = twitterAccount.ProfileLargeImageList;
@@ -333,27 +356,7 @@ namespace TwitterAwayZwei
 
         private void MainForm_Closing(object sender, CancelEventArgs e)
         {
-            UserSettingAdapter.Setting.TopPanelHeight = topPanel.Height;
-            UserSettingAdapter.Setting.TimelineTwitterListViewNameColumnWidth = timilineTwitterListView.Columns[0].Width;
-            UserSettingAdapter.Setting.TimelineTwitterListViewDoingColumnWidth = timilineTwitterListView.Columns[1].Width;
-            UserSettingAdapter.Setting.TimelineTwitterListViewDateColumnWidth = timilineTwitterListView.Columns[2].Width;
-            UserSettingAdapter.Setting.MessageTwitterListViewNameColumnWidth = messageTwitterListView.Columns[0].Width;
-            UserSettingAdapter.Setting.MessageTwitterListViewMessageColumnWidth = messageTwitterListView.Columns[1].Width;
-            UserSettingAdapter.Setting.MessageTwitterListViewDateColumnWidth = messageTwitterListView.Columns[2].Width;
-
-            // タイマーを留める
-            fetchTimelineTimer.Enabled = false;
-
-            // スレッドを中止
-            fetchTimelineBackgroundWorker.CancelAsync();
-            fetchDirectMessageBackgroundWorker.CancelAsync();
-            updateTwitterBackgroundWorker.CancelAsync();
-
-            // スレッドが中止されるまで待つ
-            while (fetchTimelineBackgroundWorker.IsBusy == true || fetchDirectMessageBackgroundWorker.IsBusy == true || updateTwitterBackgroundWorker.IsBusy == true)
-            {
-                System.Threading.Thread.Sleep(100);
-            }
+            SaveFormSetting();
         }
 
         /// <summary>
@@ -365,6 +368,16 @@ namespace TwitterAwayZwei
         /// 前回のタイムラインの取得から過ぎた時間
         /// </summary>
         private int passesSecendsPreviousFetchDirectMessage = 0;
+
+        /// <summary>
+        /// エラーを表示してから経過した時間
+        /// </summary>
+        private int passesSecendsShowError = 0;
+
+        /// <summary>
+        /// エラーを表示する時間
+        /// </summary>
+        private const int ERROR_SHOW_SEC = 10;
 
         private void fetchTimelineTimer_Tick(object sender, EventArgs e)
         {
@@ -396,10 +409,32 @@ namespace TwitterAwayZwei
 
             #endregion // ダイレクトメッセージ取得
 
+            #region エラー表示
+
+            if (passesSecendsShowError >= ERROR_SHOW_SEC)
+            {
+                errorTextStatusBar = string.Empty;
+                passesSecendsShowError = 0;
+            }
+            else if (errorTextStatusBar == string.Empty)
+            {
+                passesSecendsShowError = 0;
+            }
+            else
+            {
+                ++passesSecendsShowError;
+            }
+
+            #endregion // エラー表示
+
             StringBuilder statusBarString = new StringBuilder(UserSettingAdapter.Setting.UpdateTimulineInterval - passesSecendsPreviousFetchTimeline + " sec.");
             if (checkTimelineUpdateNowFlag == true)
             {
-                statusBarString.Append(" " + "タイムライン取得中");
+                statusBarString.Append(" タイムライン取得中");
+            }
+            if (passesSecendsShowError > 0 && errorTextStatusBar != string.Empty)
+            {
+                statusBarString.Append(" " + errorTextStatusBar);
             }
             mainStatusBar.Text = statusBarString.ToString();
         }
@@ -423,6 +458,8 @@ namespace TwitterAwayZwei
             ;
         }
 
+        private delegate void UpdateTimelineListViewViewDelegate(StatusInfomation[] statuses);
+
         private void fetchTimelineTwitterBackgroundWorker_RunWorkerCompleted(object sender, OpenNETCF.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             if (e.Cancelled == true)
@@ -431,7 +468,14 @@ namespace TwitterAwayZwei
             }
             else if (e.Error == null)
             {
-                UpdateTimelineListView(twitterStatuses);
+                if (this.InvokeRequired == true)
+                {
+                    Invoke(new UpdateTimelineListViewViewDelegate(UpdateTimelineListView), new object[] { twitterStatuses });
+                }
+                else
+                {
+                    UpdateTimelineListView(twitterStatuses);
+                }
             }
             else
             {
@@ -440,13 +484,13 @@ namespace TwitterAwayZwei
                     switch (((WebException)e.Error).Status)
                     {
                         case WebExceptionStatus.ProtocolError:
-                            MessageBox.Show("ステータスをアップデートできませんでした。Twitterのユーザー名とパスワードが間違っている可能性があります。");
+                            errorTextStatusBar = "[Timeline]ユーザー名とパスワードが間違っている可能性があります。";
                             break;
                         case WebExceptionStatus.Timeout:
-                            MessageBox.Show("ステータスをアップデートできませんでした。接続がタイムアウトしました。", "警告");
+                            errorTextStatusBar = "[Timeline]接続がタイムアウトしました。";
                             break;
                         default:
-                            MessageBox.Show("ステータスをアップデートできませんでした。", "警告");
+                            errorTextStatusBar = "[Timeline]取得できませんでした。";
                             break;
                     }
                 }
@@ -463,6 +507,8 @@ namespace TwitterAwayZwei
             ;
         }
 
+        private delegate void UpdateDirectMessageListViewDelegate(DirectMessage[] messages);
+
         private void fetchDirectMessageBackgroundWorker_RunWorkerCompleted(object sender, OpenNETCF.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             if (e.Cancelled == true)
@@ -471,7 +517,14 @@ namespace TwitterAwayZwei
             }
             else if (e.Error == null)
             {
-                UpdateDirectMessageListView(twitterDirectMessages);
+                if (this.InvokeRequired == true)
+                {
+                    Invoke(new UpdateDirectMessageListViewDelegate(UpdateDirectMessageListView), new object[] { twitterDirectMessages });
+                }
+                else
+                {
+                    UpdateDirectMessageListView(twitterDirectMessages);
+                }
             }
             else
             {
@@ -480,13 +533,13 @@ namespace TwitterAwayZwei
                     switch (((WebException)e.Error).Status)
                     {
                         case WebExceptionStatus.ProtocolError:
-                            MessageBox.Show("ステータスをアップデートできませんでした。Twitterのユーザー名とパスワードが間違っている可能性があります。");
+                            errorTextStatusBar = "[DMsg]ユーザー名とパスワードが間違っている可能性があります。";
                             break;
                         case WebExceptionStatus.Timeout:
-                            MessageBox.Show("ステータスをアップデートできませんでした。接続がタイムアウトしました。", "警告");
+                            errorTextStatusBar = "[DMsg]接続がタイムアウトしました。";
                             break;
                         default:
-                            MessageBox.Show("ステータスをアップデートできませんでした。", "警告");
+                            errorTextStatusBar = "[DMsg]取得できませんでした。";
                             break;
                     }
                 }
@@ -516,19 +569,19 @@ namespace TwitterAwayZwei
                     switch (((WebException)e.Error).Status)
                     {
                         case WebExceptionStatus.ProtocolError:
-                            MessageBox.Show("ステータスをアップデートできませんでした。Twitterのユーザー名とパスワードが間違っている可能性があります。");
+                            errorTextStatusBar = "[Twit]ユーザー名とパスワードが間違っている可能性があります。";
                             break;
                         case WebExceptionStatus.Timeout:
-                            MessageBox.Show("ステータスをアップデートできませんでした。接続がタイムアウトしました。", "警告");
+                            errorTextStatusBar = "[Twit]接続がタイムアウトしました。";
                             break;
                         default:
-                            MessageBox.Show("ステータスをアップデートできませんでした。", "警告");
+                            errorTextStatusBar = "[Twit]更新できませんでした。";
                             break;
                     }
                 }
                 else if (e.Error is UriFormatException)
                 {
-                    MessageBox.Show("ステータスをアップデートできませんでした。ステータスが長すぎる可能性があります。", "警告");
+                    errorTextStatusBar = "[Twit]更新できませんでした。";
                 }
             }
 
@@ -579,7 +632,22 @@ namespace TwitterAwayZwei
 
         private void exitMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            SaveFormSetting();
+
+            // タイマーを留める
+            fetchTimelineTimer.Enabled = false;
+
+            // スレッドを中止
+            fetchTimelineBackgroundWorker.CancelAsync();
+            fetchDirectMessageBackgroundWorker.CancelAsync();
+            updateTwitterBackgroundWorker.CancelAsync();
+
+            // スレッドが中止されるまで待つ
+            while (fetchTimelineBackgroundWorker.IsBusy == true || fetchDirectMessageBackgroundWorker.IsBusy == true || updateTwitterBackgroundWorker.IsBusy == true)
+            {
+                System.Threading.Thread.Sleep(100);
+            }
+
             Application.Exit();
         }
 
@@ -644,6 +712,5 @@ namespace TwitterAwayZwei
                 dowingTextBox.Text = "D " + status.User.ScreenName + " " + dowingTextBox.Text;
             }
         }
-
     }
 }

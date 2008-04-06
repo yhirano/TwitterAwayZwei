@@ -308,8 +308,8 @@
             // 
             // fetchTimelineBackgroundWorker
             // 
-            this.fetchTimelineBackgroundWorker.WorkerReportsProgress = false;
-            this.fetchTimelineBackgroundWorker.WorkerSupportsCancellation = false;
+            this.fetchTimelineBackgroundWorker.WorkerReportsProgress = true;
+            this.fetchTimelineBackgroundWorker.WorkerSupportsCancellation = true;
             this.fetchTimelineBackgroundWorker.DoWork += new OpenNETCF.ComponentModel.DoWorkEventHandler(this.fetchTimelineTwitterBackgroundWorker_DoWork);
             this.fetchTimelineBackgroundWorker.RunWorkerCompleted += new OpenNETCF.ComponentModel.RunWorkerCompletedEventHandler(this.fetchTimelineTwitterBackgroundWorker_RunWorkerCompleted);
             this.fetchTimelineBackgroundWorker.ProgressChanged += new OpenNETCF.ComponentModel.ProgressChangedEventHandler(this.fetchTimelineBackgroundWorker_ProgressChanged);
@@ -321,16 +321,16 @@
             // 
             // updateTwitterBackgroundWorker
             // 
-            this.updateTwitterBackgroundWorker.WorkerReportsProgress = false;
-            this.updateTwitterBackgroundWorker.WorkerSupportsCancellation = false;
+            this.updateTwitterBackgroundWorker.WorkerReportsProgress = true;
+            this.updateTwitterBackgroundWorker.WorkerSupportsCancellation = true;
             this.updateTwitterBackgroundWorker.DoWork += new OpenNETCF.ComponentModel.DoWorkEventHandler(this.updateTwitterBackgroundWorker_DoWork);
             this.updateTwitterBackgroundWorker.RunWorkerCompleted += new OpenNETCF.ComponentModel.RunWorkerCompletedEventHandler(this.updateTwitterBackgroundWorker_RunWorkerCompleted);
             this.updateTwitterBackgroundWorker.ProgressChanged += new OpenNETCF.ComponentModel.ProgressChangedEventHandler(this.updateTwitterBackgroundWorker_ProgressChanged);
             // 
             // fetchDirectMessageBackgroundWorker
             // 
-            this.fetchDirectMessageBackgroundWorker.WorkerReportsProgress = false;
-            this.fetchDirectMessageBackgroundWorker.WorkerSupportsCancellation = false;
+            this.fetchDirectMessageBackgroundWorker.WorkerReportsProgress = true;
+            this.fetchDirectMessageBackgroundWorker.WorkerSupportsCancellation = true;
             this.fetchDirectMessageBackgroundWorker.DoWork += new OpenNETCF.ComponentModel.DoWorkEventHandler(this.fetchDirectMessageBackgroundWorker_DoWork);
             this.fetchDirectMessageBackgroundWorker.RunWorkerCompleted += new OpenNETCF.ComponentModel.RunWorkerCompletedEventHandler(this.fetchDirectMessageBackgroundWorker_RunWorkerCompleted);
             this.fetchDirectMessageBackgroundWorker.ProgressChanged += new OpenNETCF.ComponentModel.ProgressChangedEventHandler(this.fetchDirectMessageBackgroundWorker_ProgressChanged);
