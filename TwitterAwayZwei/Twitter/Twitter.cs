@@ -172,7 +172,7 @@ namespace TwitterAwayZwei.Twitter
 
                     try
                     {
-                        st = GetWebStream(new Uri(TwitterAwayZweiInfo.TwitterDirectMessageTimelineXml));
+                        st = GetWebStream(new Uri(TwitterAwayZweiInfo.TwitterDirectMessageTimelineXml), userName, password);
                         message = PaeseDirectMessage(st);
                     }
                     finally
