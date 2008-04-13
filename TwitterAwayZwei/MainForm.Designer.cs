@@ -29,8 +29,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenu = new System.Windows.Forms.MainMenu();
             this.menuMenuItem = new System.Windows.Forms.MenuItem();
+            this.automaticaryUpdateMenuItem = new System.Windows.Forms.MenuItem();
+            this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.settingMenuItem = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.aboutMenuItem = new System.Windows.Forms.MenuItem();
@@ -79,138 +82,119 @@
             // 
             // menuMenuItem
             // 
+            resources.ApplyResources(this.menuMenuItem, "menuMenuItem");
+            this.menuMenuItem.MenuItems.Add(this.automaticaryUpdateMenuItem);
+            this.menuMenuItem.MenuItems.Add(this.menuItem3);
             this.menuMenuItem.MenuItems.Add(this.settingMenuItem);
             this.menuMenuItem.MenuItems.Add(this.menuItem2);
             this.menuMenuItem.MenuItems.Add(this.aboutMenuItem);
             this.menuMenuItem.MenuItems.Add(this.menuItem1);
             this.menuMenuItem.MenuItems.Add(this.exitMenuItem);
-            this.menuMenuItem.Text = "&Menu";
+            // 
+            // automaticaryUpdateMenuItem
+            // 
+            resources.ApplyResources(this.automaticaryUpdateMenuItem, "automaticaryUpdateMenuItem");
+            this.automaticaryUpdateMenuItem.Click += new System.EventHandler(this.automaticaryUpdateMenuItem_Click);
+            // 
+            // menuItem3
+            // 
+            resources.ApplyResources(this.menuItem3, "menuItem3");
             // 
             // settingMenuItem
             // 
-            this.settingMenuItem.Text = "&Setting";
+            resources.ApplyResources(this.settingMenuItem, "settingMenuItem");
             this.settingMenuItem.Click += new System.EventHandler(this.settingMenuItem_Click);
             // 
             // menuItem2
             // 
-            this.menuItem2.Text = "-";
+            resources.ApplyResources(this.menuItem2, "menuItem2");
             // 
             // aboutMenuItem
             // 
-            this.aboutMenuItem.Text = "&About";
+            resources.ApplyResources(this.aboutMenuItem, "aboutMenuItem");
             this.aboutMenuItem.Click += new System.EventHandler(this.aboutMenuItem_Click);
             // 
             // menuItem1
             // 
-            this.menuItem1.Text = "-";
+            resources.ApplyResources(this.menuItem1, "menuItem1");
             // 
             // exitMenuItem
             // 
-            this.exitMenuItem.Text = "E&xit";
+            resources.ApplyResources(this.exitMenuItem, "exitMenuItem");
             this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
             // topPanel
             // 
+            resources.ApplyResources(this.topPanel, "topPanel");
             this.topPanel.Controls.Add(this.doingInfomationTextLabel);
             this.topPanel.Controls.Add(this.twitterIconPictureBox);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(240, 60);
             // 
             // doingInfomationTextLabel
             // 
-            this.doingInfomationTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.doingInfomationTextLabel.Location = new System.Drawing.Point(53, 3);
+            resources.ApplyResources(this.doingInfomationTextLabel, "doingInfomationTextLabel");
             this.doingInfomationTextLabel.Name = "doingInfomationTextLabel";
-            this.doingInfomationTextLabel.Size = new System.Drawing.Size(184, 54);
             // 
             // twitterIconPictureBox
             // 
-            this.twitterIconPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.twitterIconPictureBox.Location = new System.Drawing.Point(3, 8);
+            resources.ApplyResources(this.twitterIconPictureBox, "twitterIconPictureBox");
             this.twitterIconPictureBox.Name = "twitterIconPictureBox";
-            this.twitterIconPictureBox.Size = new System.Drawing.Size(44, 44);
-            this.twitterIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
             // mainSplitter
             // 
-            this.mainSplitter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainSplitter.Location = new System.Drawing.Point(0, 60);
+            resources.ApplyResources(this.mainSplitter, "mainSplitter");
             this.mainSplitter.Name = "mainSplitter";
-            this.mainSplitter.Size = new System.Drawing.Size(240, 3);
             // 
             // bottomPanel
             // 
+            resources.ApplyResources(this.bottomPanel, "bottomPanel");
             this.bottomPanel.Controls.Add(this.mainStatusBar);
             this.bottomPanel.Controls.Add(this.twitterInfomationTabControl);
             this.bottomPanel.Controls.Add(this.updateButton);
             this.bottomPanel.Controls.Add(this.dowingTextBox);
-            this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bottomPanel.Location = new System.Drawing.Point(0, 63);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(240, 205);
             // 
             // mainStatusBar
             // 
-            this.mainStatusBar.Location = new System.Drawing.Point(0, 183);
+            resources.ApplyResources(this.mainStatusBar, "mainStatusBar");
             this.mainStatusBar.Name = "mainStatusBar";
-            this.mainStatusBar.Size = new System.Drawing.Size(240, 22);
             // 
             // twitterInfomationTabControl
             // 
-            this.twitterInfomationTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.twitterInfomationTabControl, "twitterInfomationTabControl");
             this.twitterInfomationTabControl.Controls.Add(this.timelineTabPage);
             this.twitterInfomationTabControl.Controls.Add(this.directMessageTabPage);
-            this.twitterInfomationTabControl.Dock = System.Windows.Forms.DockStyle.None;
-            this.twitterInfomationTabControl.Location = new System.Drawing.Point(0, 0);
             this.twitterInfomationTabControl.Name = "twitterInfomationTabControl";
             this.twitterInfomationTabControl.SelectedIndex = 0;
-            this.twitterInfomationTabControl.Size = new System.Drawing.Size(240, 151);
-            this.twitterInfomationTabControl.TabIndex = 3;
             // 
             // timelineTabPage
             // 
+            resources.ApplyResources(this.timelineTabPage, "timelineTabPage");
             this.timelineTabPage.Controls.Add(this.timilineTwitterListView);
-            this.timelineTabPage.Location = new System.Drawing.Point(0, 0);
             this.timelineTabPage.Name = "timelineTabPage";
-            this.timelineTabPage.Size = new System.Drawing.Size(240, 128);
-            this.timelineTabPage.Text = "Timeline";
             // 
             // timilineTwitterListView
             // 
-            this.timilineTwitterListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.timilineTwitterListView, "timilineTwitterListView");
             this.timilineTwitterListView.Columns.Add(this.timelineScreenNameColumnHeader);
             this.timilineTwitterListView.Columns.Add(this.doingColumnHeader);
             this.timilineTwitterListView.Columns.Add(this.timelineDateColumnHeader);
             this.timilineTwitterListView.ContextMenu = this.timelineContextMenu;
-            this.timilineTwitterListView.Location = new System.Drawing.Point(3, 3);
             this.timilineTwitterListView.Name = "timilineTwitterListView";
-            this.timilineTwitterListView.Size = new System.Drawing.Size(234, 122);
-            this.timilineTwitterListView.TabIndex = 0;
             this.timilineTwitterListView.View = System.Windows.Forms.View.Details;
             this.timilineTwitterListView.SelectedIndexChanged += new System.EventHandler(this.twitterListView_SelectedIndexChanged);
             // 
             // timelineScreenNameColumnHeader
             // 
-            this.timelineScreenNameColumnHeader.Text = "Name";
-            this.timelineScreenNameColumnHeader.Width = 60;
+            resources.ApplyResources(this.timelineScreenNameColumnHeader, "timelineScreenNameColumnHeader");
             // 
             // doingColumnHeader
             // 
-            this.doingColumnHeader.Text = "What are you doing?";
-            this.doingColumnHeader.Width = 120;
+            resources.ApplyResources(this.doingColumnHeader, "doingColumnHeader");
             // 
             // timelineDateColumnHeader
             // 
-            this.timelineDateColumnHeader.Text = "Date";
-            this.timelineDateColumnHeader.Width = 50;
+            resources.ApplyResources(this.timelineDateColumnHeader, "timelineDateColumnHeader");
             // 
             // timelineContextMenu
             // 
@@ -219,71 +203,53 @@
             // 
             // replyMenuItem
             // 
-            this.replyMenuItem.Text = "&Reply";
+            resources.ApplyResources(this.replyMenuItem, "replyMenuItem");
             this.replyMenuItem.Click += new System.EventHandler(this.replyMenuItem_Click);
             // 
             // directMessageMenuItem
             // 
-            this.directMessageMenuItem.Text = "&Direct message";
+            resources.ApplyResources(this.directMessageMenuItem, "directMessageMenuItem");
             this.directMessageMenuItem.Click += new System.EventHandler(this.directMessageMenuItem_Click);
             // 
             // directMessageTabPage
             // 
+            resources.ApplyResources(this.directMessageTabPage, "directMessageTabPage");
             this.directMessageTabPage.Controls.Add(this.messageTwitterListView);
-            this.directMessageTabPage.Location = new System.Drawing.Point(0, 0);
             this.directMessageTabPage.Name = "directMessageTabPage";
-            this.directMessageTabPage.Size = new System.Drawing.Size(232, 125);
-            this.directMessageTabPage.Text = "Messages";
             // 
             // messageTwitterListView
             // 
-            this.messageTwitterListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.messageTwitterListView, "messageTwitterListView");
             this.messageTwitterListView.Columns.Add(this.messageScreenNameColumnHeader);
             this.messageTwitterListView.Columns.Add(this.messageColumnHeader);
             this.messageTwitterListView.Columns.Add(this.messageDateColumnHeader);
-            this.messageTwitterListView.Location = new System.Drawing.Point(3, 3);
             this.messageTwitterListView.Name = "messageTwitterListView";
-            this.messageTwitterListView.Size = new System.Drawing.Size(226, 119);
-            this.messageTwitterListView.TabIndex = 1;
             this.messageTwitterListView.View = System.Windows.Forms.View.Details;
             this.messageTwitterListView.SelectedIndexChanged += new System.EventHandler(this.messageTwitterListView_SelectedIndexChanged);
             // 
             // messageScreenNameColumnHeader
             // 
-            this.messageScreenNameColumnHeader.Text = "Name";
-            this.messageScreenNameColumnHeader.Width = 60;
+            resources.ApplyResources(this.messageScreenNameColumnHeader, "messageScreenNameColumnHeader");
             // 
             // messageColumnHeader
             // 
-            this.messageColumnHeader.Text = "Message";
-            this.messageColumnHeader.Width = 120;
+            resources.ApplyResources(this.messageColumnHeader, "messageColumnHeader");
             // 
             // messageDateColumnHeader
             // 
-            this.messageDateColumnHeader.Text = "Date";
-            this.messageDateColumnHeader.Width = 50;
+            resources.ApplyResources(this.messageDateColumnHeader, "messageDateColumnHeader");
             // 
             // updateButton
             // 
-            this.updateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateButton.Location = new System.Drawing.Point(173, 157);
+            resources.ApplyResources(this.updateButton, "updateButton");
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(64, 20);
-            this.updateButton.TabIndex = 1;
-            this.updateButton.Text = "&Update";
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // dowingTextBox
             // 
-            this.dowingTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.dowingTextBox, "dowingTextBox");
             this.dowingTextBox.ContextMenu = this.doingContextMenu;
-            this.dowingTextBox.Location = new System.Drawing.Point(3, 157);
             this.dowingTextBox.Name = "dowingTextBox";
-            this.dowingTextBox.Size = new System.Drawing.Size(164, 21);
-            this.dowingTextBox.TabIndex = 0;
             // 
             // doingContextMenu
             // 
@@ -293,17 +259,17 @@
             // 
             // cutMenuItem
             // 
-            this.cutMenuItem.Text = "Cu&t";
+            resources.ApplyResources(this.cutMenuItem, "cutMenuItem");
             this.cutMenuItem.Click += new System.EventHandler(this.cutMenuItem_Click);
             // 
             // copyMenuItem
             // 
-            this.copyMenuItem.Text = "&Copy";
+            resources.ApplyResources(this.copyMenuItem, "copyMenuItem");
             this.copyMenuItem.Click += new System.EventHandler(this.copyMenuItem_Click);
             // 
             // pasteMenuItem
             // 
-            this.pasteMenuItem.Text = "&Paste";
+            resources.ApplyResources(this.pasteMenuItem, "pasteMenuItem");
             this.pasteMenuItem.Click += new System.EventHandler(this.pasteMenuItem_Click);
             // 
             // fetchTimelineBackgroundWorker
@@ -339,8 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(240, 268);
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.bottomPanel);
             this.Controls.Add(this.mainSplitter);
             this.Controls.Add(this.topPanel);
@@ -395,6 +360,8 @@
         private System.Windows.Forms.ColumnHeader messageColumnHeader;
         private System.Windows.Forms.ColumnHeader messageDateColumnHeader;
         private OpenNETCF.ComponentModel.BackgroundWorker fetchDirectMessageBackgroundWorker;
+        private System.Windows.Forms.MenuItem automaticaryUpdateMenuItem;
+        private System.Windows.Forms.MenuItem menuItem3;
 
 
     }

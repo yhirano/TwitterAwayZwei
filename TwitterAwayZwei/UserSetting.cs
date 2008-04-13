@@ -68,15 +68,15 @@ namespace TwitterAwayZwei
         /// <summary>
         /// タイマーでチェックするか
         /// </summary>
-        private bool updateTimerCheck;
+        private bool automaticaryCheck = true;
 
         /// <summary>
         /// タイマーでチェックするかを取得・設定する
         /// </summary>
-        public bool UpdateTimerCheck
+        public bool AutomaticaryCheck
         {
-            get { return updateTimerCheck; }
-            set { updateTimerCheck = value; }
+            get { return automaticaryCheck; }
+            set { automaticaryCheck = value; }
         }
 
         /// <summary>

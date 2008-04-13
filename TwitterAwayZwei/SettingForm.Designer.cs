@@ -6,7 +6,6 @@
         /// 必要なデザイナ変数です。
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.MainMenu mainMenu1;
 
         /// <summary>
         /// 使用中のリソースをすべてクリーンアップします。
@@ -29,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainMenu1 = new System.Windows.Forms.MainMenu();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingForm));
             this.settingTabControl = new System.Windows.Forms.TabControl();
             this.generalTabPage = new System.Windows.Forms.TabPage();
+            this.checkDirectMessageIntervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.checkDirectMessageLabel = new System.Windows.Forms.Label();
             this.getListPanel = new System.Windows.Forms.Panel();
             this.checkPublicRadioButton = new System.Windows.Forms.RadioButton();
             this.checkFriendsRadioButton = new System.Windows.Forms.RadioButton();
@@ -67,8 +68,6 @@
             this.proxyUnuseRadioButton = new System.Windows.Forms.RadioButton();
             this.proxyPortLabel = new System.Windows.Forms.Label();
             this.proxyServerLabel = new System.Windows.Forms.Label();
-            this.checkDirectMessageIntervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.checkDirectMessageLabel = new System.Windows.Forms.Label();
             this.settingTabControl.SuspendLayout();
             this.generalTabPage.SuspendLayout();
             this.getListPanel.SuspendLayout();
@@ -80,12 +79,9 @@
             // 
             this.settingTabControl.Controls.Add(this.generalTabPage);
             this.settingTabControl.Controls.Add(this.networkTabPage);
-            this.settingTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.settingTabControl.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.settingTabControl, "settingTabControl");
             this.settingTabControl.Name = "settingTabControl";
             this.settingTabControl.SelectedIndex = 0;
-            this.settingTabControl.Size = new System.Drawing.Size(240, 268);
-            this.settingTabControl.TabIndex = 0;
             // 
             // generalTabPage
             // 
@@ -98,276 +94,12 @@
             this.generalTabPage.Controls.Add(this.passwordLabel);
             this.generalTabPage.Controls.Add(this.userNameTextBox);
             this.generalTabPage.Controls.Add(this.userNameLabel);
-            this.generalTabPage.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Name = "generalTabPage";
-            this.generalTabPage.Size = new System.Drawing.Size(240, 245);
-            this.generalTabPage.Text = "General";
-            // 
-            // getListPanel
-            // 
-            this.getListPanel.Controls.Add(this.checkPublicRadioButton);
-            this.getListPanel.Controls.Add(this.checkFriendsRadioButton);
-            this.getListPanel.Controls.Add(this.checkListLabel);
-            this.getListPanel.Location = new System.Drawing.Point(0, 57);
-            this.getListPanel.Name = "getListPanel";
-            this.getListPanel.Size = new System.Drawing.Size(240, 77);
-            // 
-            // checkPublicRadioButton
-            // 
-            this.checkPublicRadioButton.Location = new System.Drawing.Point(13, 49);
-            this.checkPublicRadioButton.Name = "checkPublicRadioButton";
-            this.checkPublicRadioButton.Size = new System.Drawing.Size(220, 20);
-            this.checkPublicRadioButton.TabIndex = 1;
-            this.checkPublicRadioButton.Text = "The Public List";
-            // 
-            // checkFriendsRadioButton
-            // 
-            this.checkFriendsRadioButton.Checked = true;
-            this.checkFriendsRadioButton.Location = new System.Drawing.Point(13, 23);
-            this.checkFriendsRadioButton.Name = "checkFriendsRadioButton";
-            this.checkFriendsRadioButton.Size = new System.Drawing.Size(220, 20);
-            this.checkFriendsRadioButton.TabIndex = 0;
-            this.checkFriendsRadioButton.Text = "The Friends List";
-            // 
-            // checkListLabel
-            // 
-            this.checkListLabel.Location = new System.Drawing.Point(3, 0);
-            this.checkListLabel.Name = "checkListLabel";
-            this.checkListLabel.Size = new System.Drawing.Size(234, 20);
-            this.checkListLabel.Text = "Check for new twitter from";
-            // 
-            // checkTimelineIntervalNumericUpDown
-            // 
-            this.checkTimelineIntervalNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkTimelineIntervalNumericUpDown.Location = new System.Drawing.Point(172, 140);
-            this.checkTimelineIntervalNumericUpDown.Maximum = new decimal(new int[] {
-            3600,
-            0,
-            0,
-            0});
-            this.checkTimelineIntervalNumericUpDown.Minimum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.checkTimelineIntervalNumericUpDown.Name = "checkTimelineIntervalNumericUpDown";
-            this.checkTimelineIntervalNumericUpDown.ReadOnly = true;
-            this.checkTimelineIntervalNumericUpDown.Size = new System.Drawing.Size(65, 22);
-            this.checkTimelineIntervalNumericUpDown.TabIndex = 2;
-            this.checkTimelineIntervalNumericUpDown.Value = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            // 
-            // checkTimelineIntervalLabel
-            // 
-            this.checkTimelineIntervalLabel.Location = new System.Drawing.Point(3, 142);
-            this.checkTimelineIntervalLabel.Name = "checkTimelineIntervalLabel";
-            this.checkTimelineIntervalLabel.Size = new System.Drawing.Size(163, 36);
-            this.checkTimelineIntervalLabel.Text = "Automatically refresh twitter (sec)";
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordTextBox.ContextMenu = this.passwordContextMenu;
-            this.passwordTextBox.Location = new System.Drawing.Point(81, 30);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(156, 21);
-            this.passwordTextBox.TabIndex = 1;
-            // 
-            // passwordContextMenu
-            // 
-            this.passwordContextMenu.MenuItems.Add(this.passwordCutMenuItem);
-            this.passwordContextMenu.MenuItems.Add(this.passwordCopyMenuItem);
-            this.passwordContextMenu.MenuItems.Add(this.passwordPasteMenuItem);
-            // 
-            // passwordCutMenuItem
-            // 
-            this.passwordCutMenuItem.Text = "Cu&t";
-            this.passwordCutMenuItem.Click += new System.EventHandler(this.passwordCutMenuItem_Click);
-            // 
-            // passwordCopyMenuItem
-            // 
-            this.passwordCopyMenuItem.Text = "&Copy";
-            this.passwordCopyMenuItem.Click += new System.EventHandler(this.passwordCopyMenuItem_Click);
-            // 
-            // passwordPasteMenuItem
-            // 
-            this.passwordPasteMenuItem.Text = "&Paste";
-            this.passwordPasteMenuItem.Click += new System.EventHandler(this.passwordPasteMenuItem_Click);
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.Location = new System.Drawing.Point(3, 31);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(72, 20);
-            this.passwordLabel.Text = "Password";
-            // 
-            // userNameTextBox
-            // 
-            this.userNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.userNameTextBox.ContextMenu = this.userNameContextMenu;
-            this.userNameTextBox.Location = new System.Drawing.Point(81, 3);
-            this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(156, 21);
-            this.userNameTextBox.TabIndex = 0;
-            // 
-            // userNameContextMenu
-            // 
-            this.userNameContextMenu.MenuItems.Add(this.userNameCutMenuItem);
-            this.userNameContextMenu.MenuItems.Add(this.userNameCopyMenuItem);
-            this.userNameContextMenu.MenuItems.Add(this.userNamePasteMenuItem);
-            // 
-            // userNameCutMenuItem
-            // 
-            this.userNameCutMenuItem.Text = "Cu&t";
-            this.userNameCutMenuItem.Click += new System.EventHandler(this.userNameCutMenuItem_Click);
-            // 
-            // userNameCopyMenuItem
-            // 
-            this.userNameCopyMenuItem.Text = "&Copy";
-            this.userNameCopyMenuItem.Click += new System.EventHandler(this.userNameCopyMenuItem_Click);
-            // 
-            // userNamePasteMenuItem
-            // 
-            this.userNamePasteMenuItem.Text = "&Paste";
-            this.userNamePasteMenuItem.Click += new System.EventHandler(this.userNamePasteMenuItem_Click);
-            // 
-            // userNameLabel
-            // 
-            this.userNameLabel.Location = new System.Drawing.Point(3, 4);
-            this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(72, 20);
-            this.userNameLabel.Text = "User name";
-            // 
-            // networkTabPage
-            // 
-            this.networkTabPage.Controls.Add(this.proxySettingPanel);
-            this.networkTabPage.Location = new System.Drawing.Point(0, 0);
-            this.networkTabPage.Name = "networkTabPage";
-            this.networkTabPage.Size = new System.Drawing.Size(240, 245);
-            this.networkTabPage.Text = "NetWork";
-            // 
-            // proxySettingPanel
-            // 
-            this.proxySettingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.proxySettingPanel.Controls.Add(this.proxyUseOriginalSettingRadioButton);
-            this.proxySettingPanel.Controls.Add(this.proxyPortTextBox);
-            this.proxySettingPanel.Controls.Add(this.proxyUseOsSettingRadioButton);
-            this.proxySettingPanel.Controls.Add(this.proxyServerTextBox);
-            this.proxySettingPanel.Controls.Add(this.proxyUnuseRadioButton);
-            this.proxySettingPanel.Controls.Add(this.proxyPortLabel);
-            this.proxySettingPanel.Controls.Add(this.proxyServerLabel);
-            this.proxySettingPanel.Location = new System.Drawing.Point(0, 0);
-            this.proxySettingPanel.Name = "proxySettingPanel";
-            this.proxySettingPanel.Size = new System.Drawing.Size(240, 169);
-            // 
-            // proxyUseOriginalSettingRadioButton
-            // 
-            this.proxyUseOriginalSettingRadioButton.Location = new System.Drawing.Point(3, 55);
-            this.proxyUseOriginalSettingRadioButton.Name = "proxyUseOriginalSettingRadioButton";
-            this.proxyUseOriginalSettingRadioButton.Size = new System.Drawing.Size(234, 20);
-            this.proxyUseOriginalSettingRadioButton.TabIndex = 2;
-            this.proxyUseOriginalSettingRadioButton.Text = "Use the following proxy";
-            // 
-            // proxyPortTextBox
-            // 
-            this.proxyPortTextBox.ContextMenu = this.proxyPortContextMenu;
-            this.proxyPortTextBox.Location = new System.Drawing.Point(3, 140);
-            this.proxyPortTextBox.Name = "proxyPortTextBox";
-            this.proxyPortTextBox.Size = new System.Drawing.Size(74, 21);
-            this.proxyPortTextBox.TabIndex = 4;
-            // 
-            // proxyPortContextMenu
-            // 
-            this.proxyPortContextMenu.MenuItems.Add(this.proxyPortCutMenuItem);
-            this.proxyPortContextMenu.MenuItems.Add(this.proxyPortCopyMenuItem);
-            this.proxyPortContextMenu.MenuItems.Add(this.proxyPortPasteMenuItem);
-            // 
-            // proxyPortCutMenuItem
-            // 
-            this.proxyPortCutMenuItem.Text = "Cu&t";
-            this.proxyPortCutMenuItem.Click += new System.EventHandler(this.proxyPortCutMenuItem_Click);
-            // 
-            // proxyPortCopyMenuItem
-            // 
-            this.proxyPortCopyMenuItem.Text = "&Copy";
-            this.proxyPortCopyMenuItem.Click += new System.EventHandler(this.proxyPortCopyMenuItem_Click);
-            // 
-            // proxyPortPasteMenuItem
-            // 
-            this.proxyPortPasteMenuItem.Text = "&Paste";
-            this.proxyPortPasteMenuItem.Click += new System.EventHandler(this.proxyPortPasteMenuItem_Click);
-            // 
-            // proxyUseOsSettingRadioButton
-            // 
-            this.proxyUseOsSettingRadioButton.Checked = true;
-            this.proxyUseOsSettingRadioButton.Location = new System.Drawing.Point(3, 29);
-            this.proxyUseOsSettingRadioButton.Name = "proxyUseOsSettingRadioButton";
-            this.proxyUseOsSettingRadioButton.Size = new System.Drawing.Size(234, 20);
-            this.proxyUseOsSettingRadioButton.TabIndex = 1;
-            this.proxyUseOsSettingRadioButton.Text = "Use the proxy set depending on OS";
-            // 
-            // proxyServerTextBox
-            // 
-            this.proxyServerTextBox.ContextMenu = this.proxyServerContextMenu;
-            this.proxyServerTextBox.Location = new System.Drawing.Point(3, 97);
-            this.proxyServerTextBox.Name = "proxyServerTextBox";
-            this.proxyServerTextBox.Size = new System.Drawing.Size(234, 21);
-            this.proxyServerTextBox.TabIndex = 3;
-            // 
-            // proxyServerContextMenu
-            // 
-            this.proxyServerContextMenu.MenuItems.Add(this.proxyServerCutMenuItem);
-            this.proxyServerContextMenu.MenuItems.Add(this.proxyServerCopyMenuItem);
-            this.proxyServerContextMenu.MenuItems.Add(this.proxyServerPasteMenuItem);
-            // 
-            // proxyServerCutMenuItem
-            // 
-            this.proxyServerCutMenuItem.Text = "Cu&t";
-            this.proxyServerCutMenuItem.Click += new System.EventHandler(this.proxyServerCutMenuItem_Click);
-            // 
-            // proxyServerCopyMenuItem
-            // 
-            this.proxyServerCopyMenuItem.Text = "&Copy";
-            this.proxyServerCopyMenuItem.Click += new System.EventHandler(this.proxyServerCopyMenuItem_Click);
-            // 
-            // proxyServerPasteMenuItem
-            // 
-            this.proxyServerPasteMenuItem.Text = "&Paste";
-            this.proxyServerPasteMenuItem.Click += new System.EventHandler(this.proxyServerPasteMenuItem_Click);
-            // 
-            // proxyUnuseRadioButton
-            // 
-            this.proxyUnuseRadioButton.Location = new System.Drawing.Point(3, 3);
-            this.proxyUnuseRadioButton.Name = "proxyUnuseRadioButton";
-            this.proxyUnuseRadioButton.Size = new System.Drawing.Size(234, 20);
-            this.proxyUnuseRadioButton.TabIndex = 0;
-            this.proxyUnuseRadioButton.Text = "Use no proxy";
-            // 
-            // proxyPortLabel
-            // 
-            this.proxyPortLabel.Location = new System.Drawing.Point(3, 121);
-            this.proxyPortLabel.Name = "proxyPortLabel";
-            this.proxyPortLabel.Size = new System.Drawing.Size(234, 16);
-            this.proxyPortLabel.Text = "Port number (ex: 8080)";
-            // 
-            // proxyServerLabel
-            // 
-            this.proxyServerLabel.Location = new System.Drawing.Point(3, 78);
-            this.proxyServerLabel.Name = "proxyServerLabel";
-            this.proxyServerLabel.Size = new System.Drawing.Size(234, 16);
-            this.proxyServerLabel.Text = "Proxy server (ex: proxy.example.com)";
             // 
             // checkDirectMessageIntervalNumericUpDown
             // 
-            this.checkDirectMessageIntervalNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkDirectMessageIntervalNumericUpDown.Location = new System.Drawing.Point(168, 185);
+            resources.ApplyResources(this.checkDirectMessageIntervalNumericUpDown, "checkDirectMessageIntervalNumericUpDown");
             this.checkDirectMessageIntervalNumericUpDown.Maximum = new decimal(new int[] {
             3600,
             0,
@@ -380,8 +112,6 @@
             0});
             this.checkDirectMessageIntervalNumericUpDown.Name = "checkDirectMessageIntervalNumericUpDown";
             this.checkDirectMessageIntervalNumericUpDown.ReadOnly = true;
-            this.checkDirectMessageIntervalNumericUpDown.Size = new System.Drawing.Size(65, 22);
-            this.checkDirectMessageIntervalNumericUpDown.TabIndex = 3;
             this.checkDirectMessageIntervalNumericUpDown.Value = new decimal(new int[] {
             600,
             0,
@@ -390,21 +120,228 @@
             // 
             // checkDirectMessageLabel
             // 
-            this.checkDirectMessageLabel.Location = new System.Drawing.Point(3, 185);
+            resources.ApplyResources(this.checkDirectMessageLabel, "checkDirectMessageLabel");
             this.checkDirectMessageLabel.Name = "checkDirectMessageLabel";
-            this.checkDirectMessageLabel.Size = new System.Drawing.Size(163, 36);
-            this.checkDirectMessageLabel.Text = "Automatically refresh direct message (sec)";
+            // 
+            // getListPanel
+            // 
+            this.getListPanel.Controls.Add(this.checkPublicRadioButton);
+            this.getListPanel.Controls.Add(this.checkFriendsRadioButton);
+            this.getListPanel.Controls.Add(this.checkListLabel);
+            resources.ApplyResources(this.getListPanel, "getListPanel");
+            this.getListPanel.Name = "getListPanel";
+            // 
+            // checkPublicRadioButton
+            // 
+            resources.ApplyResources(this.checkPublicRadioButton, "checkPublicRadioButton");
+            this.checkPublicRadioButton.Name = "checkPublicRadioButton";
+            // 
+            // checkFriendsRadioButton
+            // 
+            this.checkFriendsRadioButton.Checked = true;
+            resources.ApplyResources(this.checkFriendsRadioButton, "checkFriendsRadioButton");
+            this.checkFriendsRadioButton.Name = "checkFriendsRadioButton";
+            // 
+            // checkListLabel
+            // 
+            resources.ApplyResources(this.checkListLabel, "checkListLabel");
+            this.checkListLabel.Name = "checkListLabel";
+            // 
+            // checkTimelineIntervalNumericUpDown
+            // 
+            resources.ApplyResources(this.checkTimelineIntervalNumericUpDown, "checkTimelineIntervalNumericUpDown");
+            this.checkTimelineIntervalNumericUpDown.Maximum = new decimal(new int[] {
+            3600,
+            0,
+            0,
+            0});
+            this.checkTimelineIntervalNumericUpDown.Minimum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.checkTimelineIntervalNumericUpDown.Name = "checkTimelineIntervalNumericUpDown";
+            this.checkTimelineIntervalNumericUpDown.ReadOnly = true;
+            this.checkTimelineIntervalNumericUpDown.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            // 
+            // checkTimelineIntervalLabel
+            // 
+            resources.ApplyResources(this.checkTimelineIntervalLabel, "checkTimelineIntervalLabel");
+            this.checkTimelineIntervalLabel.Name = "checkTimelineIntervalLabel";
+            // 
+            // passwordTextBox
+            // 
+            resources.ApplyResources(this.passwordTextBox, "passwordTextBox");
+            this.passwordTextBox.ContextMenu = this.passwordContextMenu;
+            this.passwordTextBox.Name = "passwordTextBox";
+            // 
+            // passwordContextMenu
+            // 
+            this.passwordContextMenu.MenuItems.Add(this.passwordCutMenuItem);
+            this.passwordContextMenu.MenuItems.Add(this.passwordCopyMenuItem);
+            this.passwordContextMenu.MenuItems.Add(this.passwordPasteMenuItem);
+            // 
+            // passwordCutMenuItem
+            // 
+            resources.ApplyResources(this.passwordCutMenuItem, "passwordCutMenuItem");
+            this.passwordCutMenuItem.Click += new System.EventHandler(this.passwordCutMenuItem_Click);
+            // 
+            // passwordCopyMenuItem
+            // 
+            resources.ApplyResources(this.passwordCopyMenuItem, "passwordCopyMenuItem");
+            this.passwordCopyMenuItem.Click += new System.EventHandler(this.passwordCopyMenuItem_Click);
+            // 
+            // passwordPasteMenuItem
+            // 
+            resources.ApplyResources(this.passwordPasteMenuItem, "passwordPasteMenuItem");
+            this.passwordPasteMenuItem.Click += new System.EventHandler(this.passwordPasteMenuItem_Click);
+            // 
+            // passwordLabel
+            // 
+            resources.ApplyResources(this.passwordLabel, "passwordLabel");
+            this.passwordLabel.Name = "passwordLabel";
+            // 
+            // userNameTextBox
+            // 
+            resources.ApplyResources(this.userNameTextBox, "userNameTextBox");
+            this.userNameTextBox.ContextMenu = this.userNameContextMenu;
+            this.userNameTextBox.Name = "userNameTextBox";
+            // 
+            // userNameContextMenu
+            // 
+            this.userNameContextMenu.MenuItems.Add(this.userNameCutMenuItem);
+            this.userNameContextMenu.MenuItems.Add(this.userNameCopyMenuItem);
+            this.userNameContextMenu.MenuItems.Add(this.userNamePasteMenuItem);
+            // 
+            // userNameCutMenuItem
+            // 
+            resources.ApplyResources(this.userNameCutMenuItem, "userNameCutMenuItem");
+            this.userNameCutMenuItem.Click += new System.EventHandler(this.userNameCutMenuItem_Click);
+            // 
+            // userNameCopyMenuItem
+            // 
+            resources.ApplyResources(this.userNameCopyMenuItem, "userNameCopyMenuItem");
+            this.userNameCopyMenuItem.Click += new System.EventHandler(this.userNameCopyMenuItem_Click);
+            // 
+            // userNamePasteMenuItem
+            // 
+            resources.ApplyResources(this.userNamePasteMenuItem, "userNamePasteMenuItem");
+            this.userNamePasteMenuItem.Click += new System.EventHandler(this.userNamePasteMenuItem_Click);
+            // 
+            // userNameLabel
+            // 
+            resources.ApplyResources(this.userNameLabel, "userNameLabel");
+            this.userNameLabel.Name = "userNameLabel";
+            // 
+            // networkTabPage
+            // 
+            this.networkTabPage.Controls.Add(this.proxySettingPanel);
+            resources.ApplyResources(this.networkTabPage, "networkTabPage");
+            this.networkTabPage.Name = "networkTabPage";
+            // 
+            // proxySettingPanel
+            // 
+            resources.ApplyResources(this.proxySettingPanel, "proxySettingPanel");
+            this.proxySettingPanel.Controls.Add(this.proxyUseOriginalSettingRadioButton);
+            this.proxySettingPanel.Controls.Add(this.proxyPortTextBox);
+            this.proxySettingPanel.Controls.Add(this.proxyUseOsSettingRadioButton);
+            this.proxySettingPanel.Controls.Add(this.proxyServerTextBox);
+            this.proxySettingPanel.Controls.Add(this.proxyUnuseRadioButton);
+            this.proxySettingPanel.Controls.Add(this.proxyPortLabel);
+            this.proxySettingPanel.Controls.Add(this.proxyServerLabel);
+            this.proxySettingPanel.Name = "proxySettingPanel";
+            // 
+            // proxyUseOriginalSettingRadioButton
+            // 
+            resources.ApplyResources(this.proxyUseOriginalSettingRadioButton, "proxyUseOriginalSettingRadioButton");
+            this.proxyUseOriginalSettingRadioButton.Name = "proxyUseOriginalSettingRadioButton";
+            // 
+            // proxyPortTextBox
+            // 
+            this.proxyPortTextBox.ContextMenu = this.proxyPortContextMenu;
+            resources.ApplyResources(this.proxyPortTextBox, "proxyPortTextBox");
+            this.proxyPortTextBox.Name = "proxyPortTextBox";
+            // 
+            // proxyPortContextMenu
+            // 
+            this.proxyPortContextMenu.MenuItems.Add(this.proxyPortCutMenuItem);
+            this.proxyPortContextMenu.MenuItems.Add(this.proxyPortCopyMenuItem);
+            this.proxyPortContextMenu.MenuItems.Add(this.proxyPortPasteMenuItem);
+            // 
+            // proxyPortCutMenuItem
+            // 
+            resources.ApplyResources(this.proxyPortCutMenuItem, "proxyPortCutMenuItem");
+            this.proxyPortCutMenuItem.Click += new System.EventHandler(this.proxyPortCutMenuItem_Click);
+            // 
+            // proxyPortCopyMenuItem
+            // 
+            resources.ApplyResources(this.proxyPortCopyMenuItem, "proxyPortCopyMenuItem");
+            this.proxyPortCopyMenuItem.Click += new System.EventHandler(this.proxyPortCopyMenuItem_Click);
+            // 
+            // proxyPortPasteMenuItem
+            // 
+            resources.ApplyResources(this.proxyPortPasteMenuItem, "proxyPortPasteMenuItem");
+            this.proxyPortPasteMenuItem.Click += new System.EventHandler(this.proxyPortPasteMenuItem_Click);
+            // 
+            // proxyUseOsSettingRadioButton
+            // 
+            this.proxyUseOsSettingRadioButton.Checked = true;
+            resources.ApplyResources(this.proxyUseOsSettingRadioButton, "proxyUseOsSettingRadioButton");
+            this.proxyUseOsSettingRadioButton.Name = "proxyUseOsSettingRadioButton";
+            // 
+            // proxyServerTextBox
+            // 
+            this.proxyServerTextBox.ContextMenu = this.proxyServerContextMenu;
+            resources.ApplyResources(this.proxyServerTextBox, "proxyServerTextBox");
+            this.proxyServerTextBox.Name = "proxyServerTextBox";
+            // 
+            // proxyServerContextMenu
+            // 
+            this.proxyServerContextMenu.MenuItems.Add(this.proxyServerCutMenuItem);
+            this.proxyServerContextMenu.MenuItems.Add(this.proxyServerCopyMenuItem);
+            this.proxyServerContextMenu.MenuItems.Add(this.proxyServerPasteMenuItem);
+            // 
+            // proxyServerCutMenuItem
+            // 
+            resources.ApplyResources(this.proxyServerCutMenuItem, "proxyServerCutMenuItem");
+            this.proxyServerCutMenuItem.Click += new System.EventHandler(this.proxyServerCutMenuItem_Click);
+            // 
+            // proxyServerCopyMenuItem
+            // 
+            resources.ApplyResources(this.proxyServerCopyMenuItem, "proxyServerCopyMenuItem");
+            this.proxyServerCopyMenuItem.Click += new System.EventHandler(this.proxyServerCopyMenuItem_Click);
+            // 
+            // proxyServerPasteMenuItem
+            // 
+            resources.ApplyResources(this.proxyServerPasteMenuItem, "proxyServerPasteMenuItem");
+            this.proxyServerPasteMenuItem.Click += new System.EventHandler(this.proxyServerPasteMenuItem_Click);
+            // 
+            // proxyUnuseRadioButton
+            // 
+            resources.ApplyResources(this.proxyUnuseRadioButton, "proxyUnuseRadioButton");
+            this.proxyUnuseRadioButton.Name = "proxyUnuseRadioButton";
+            // 
+            // proxyPortLabel
+            // 
+            resources.ApplyResources(this.proxyPortLabel, "proxyPortLabel");
+            this.proxyPortLabel.Name = "proxyPortLabel";
+            // 
+            // proxyServerLabel
+            // 
+            resources.ApplyResources(this.proxyServerLabel, "proxyServerLabel");
+            this.proxyServerLabel.Name = "proxyServerLabel";
             // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(240, 268);
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.settingTabControl);
-            this.Menu = this.mainMenu1;
             this.Name = "SettingForm";
-            this.Text = "Setting";
             this.Load += new System.EventHandler(this.SettingForm_Load);
             this.Closing += new System.ComponentModel.CancelEventHandler(this.SettingForm_Closing);
             this.settingTabControl.ResumeLayout(false);

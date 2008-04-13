@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Net;
 using System.IO;
+using System.Resources;
 using System.Windows.Forms;
 using OpenNETCF.ComponentModel;
 using MiscPocketCompactLibrary2.Reflection;
@@ -22,6 +23,11 @@ namespace TwitterAwayZwei
         TwitterAwayZwei.Twitter.Twitter twitterAccount;
 
         /// <summary>
+        /// 自動チェックするか
+        /// </summary>
+        private bool automaticaryCheck = false;
+
+        /// <summary>
         /// 取得している TwitterStatusInfomation
         /// </summary>
         private StatusInfomation[] twitterStatuses;
@@ -35,6 +41,11 @@ namespace TwitterAwayZwei
         /// ステータスバーに表示するエラー
         /// </summary>
         private string errorTextStatusBar;
+
+        /// <summary>
+        /// 多言語リソース
+        /// </summary>
+        private ResourceManager stringResource = new ResourceManager("TwitterAwayZwei.TwitterAwayZweiStrings", AssemblyUtility.Assembly);
 
         public MainForm()
         {
@@ -159,20 +170,20 @@ namespace TwitterAwayZwei
                 TimeSpan span = DateTime.Now.Subtract(addStatus.CreatedAt);
                 if (span.Minutes < 1)
                 {
-                    date = span.Seconds.ToString() + "秒前";
+                    date = string.Format(stringResource.GetString("SecAgo"), span.Seconds.ToString());
                 }
                 else if (span.Hours < 1)
                 {
-                    date = span.Minutes.ToString() + "分前";
+                    date = string.Format(stringResource.GetString("MinAgo"), span.Minutes.ToString());
                 }
                 else
                 {
-                    date = span.Hours.ToString() + "時間前";
+                    date = string.Format(stringResource.GetString("HourAgo"), span.Hours.ToString());
                 }
             }
             else
             {
-                date = addStatus.CreatedAt.ToString("M'/'d");
+                date = addStatus.CreatedAt.ToString("d", null);
             }
 
             string[] str = { addStatus.User.Name, addStatus.Text, date };
@@ -282,20 +293,20 @@ namespace TwitterAwayZwei
                 TimeSpan span = DateTime.Now.Subtract(message.CreatedAt);
                 if (span.Minutes < 1)
                 {
-                    date = span.Seconds.ToString() + "秒前";
+                    date = string.Format(stringResource.GetString("SecAgo"), span.Seconds.ToString());
                 }
                 else if (span.Hours < 1)
                 {
-                    date = span.Minutes.ToString() + "分前";
+                    date = string.Format(stringResource.GetString("MinAgo"), span.Minutes.ToString());
                 }
                 else
                 {
-                    date = span.Hours.ToString() + "時間前";
+                    date = string.Format(stringResource.GetString("HourAgo"), span.Hours.ToString());
                 }
             }
             else
             {
-                date = message.CreatedAt.ToString("M'/'d");
+                date = message.CreatedAt.ToString("d", null);
             }
 
             string[] str = { message.SenderScreenName, message.Text, date };
@@ -305,11 +316,44 @@ namespace TwitterAwayZwei
             timilineTwitterListView.Items.Add(item);
         }
 
+
+        /// <summary>
+        /// 自動チェックを有効にする
+        /// </summary>
+        private void EnableAutomaticaryCheck()
+        {
+            // 起動時にタイムラインをチェック
+            CheckTwitterUpdateAsync();
+
+            // 起動時にダイレクトメッセージをチェック
+            CheckDirectMessageUpdateAsync();
+
+            // 自動チェックのフラグを立てる
+            automaticaryCheck = true;
+        }
+
+        /// <summary>
+        /// 自動チェックを無効にする
+        /// </summary>
+        private void DisableAutomaticaryCheck()
+        {
+            // スレッドを中止
+            fetchTimelineBackgroundWorker.CancelAsync();
+            fetchDirectMessageBackgroundWorker.CancelAsync();
+            updateTwitterBackgroundWorker.CancelAsync();
+
+            ResetPassesSecendsPriviousFetch();
+
+            // 自動チェックのフラグを下げる
+            automaticaryCheck = false;
+        }
+
         /// <summary>
         /// フォームに関する設定を呼び出す
         /// </summary>
         private void LoadFormSetting()
         {
+            automaticaryCheck = UserSettingAdapter.Setting.AutomaticaryCheck;
             topPanel.Height = UserSettingAdapter.Setting.TopPanelHeight;
             timilineTwitterListView.Columns[0].Width = UserSettingAdapter.Setting.TimelineTwitterListViewNameColumnWidth;
             timilineTwitterListView.Columns[1].Width = UserSettingAdapter.Setting.TimelineTwitterListViewDoingColumnWidth;
@@ -324,6 +368,7 @@ namespace TwitterAwayZwei
         /// </summary>
         private void SaveFormSetting()
         {
+            UserSettingAdapter.Setting.AutomaticaryCheck = automaticaryCheck;
             UserSettingAdapter.Setting.TopPanelHeight = topPanel.Height;
             UserSettingAdapter.Setting.TimelineTwitterListViewNameColumnWidth = timilineTwitterListView.Columns[0].Width;
             UserSettingAdapter.Setting.TimelineTwitterListViewDoingColumnWidth = timilineTwitterListView.Columns[1].Width;
@@ -344,14 +389,18 @@ namespace TwitterAwayZwei
             timilineTwitterListView.SmallImageList = twitterAccount.ProfileSmallImageList;
             timilineTwitterListView.LargeImageList = twitterAccount.ProfileLargeImageList;
 
-            // 起動時にタイムラインをチェック
-            CheckTwitterUpdateAsync();
-
-            // 起動時にダイレクトメッセージをチェック
-            CheckDirectMessageUpdateAsync();
-
             // タイマーを有効にする
             fetchTimelineTimer.Enabled = true;
+            
+            if (automaticaryCheck == true)
+            {
+                automaticaryUpdateMenuItem.Checked = true;
+                EnableAutomaticaryCheck();
+            }
+            else
+            {
+                automaticaryUpdateMenuItem.Checked = false;
+            }
         }
 
         private void MainForm_Closing(object sender, CancelEventArgs e)
@@ -381,33 +430,36 @@ namespace TwitterAwayZwei
 
         private void fetchTimelineTimer_Tick(object sender, EventArgs e)
         {
-            #region タイムライン取得
-
-            if (passesSecendsPreviousFetchTimeline >= (UserSettingAdapter.Setting.UpdateTimulineInterval))
+            if (automaticaryCheck == true)
             {
-                passesSecendsPreviousFetchTimeline = 0;
-                CheckTwitterUpdateAsync();
-            }
-            else
-            {
-                ++passesSecendsPreviousFetchTimeline;
-            }
+                #region タイムライン取得
 
-            #endregion // タイムライン取得
+                if (passesSecendsPreviousFetchTimeline >= (UserSettingAdapter.Setting.UpdateTimulineInterval))
+                {
+                    passesSecendsPreviousFetchTimeline = 0;
+                    CheckTwitterUpdateAsync();
+                }
+                else
+                {
+                    ++passesSecendsPreviousFetchTimeline;
+                }
 
-            #region ダイレクトメッセージ取得
+                #endregion // タイムライン取得
 
-            if (passesSecendsPreviousFetchTimeline >= (UserSettingAdapter.Setting.UpdateDirectMessageInterval))
-            {
-                passesSecendsPreviousFetchTimeline = 0;
-                CheckDirectMessageUpdateAsync();
+                #region ダイレクトメッセージ取得
+
+                if (passesSecendsPreviousFetchTimeline >= (UserSettingAdapter.Setting.UpdateDirectMessageInterval))
+                {
+                    passesSecendsPreviousFetchTimeline = 0;
+                    CheckDirectMessageUpdateAsync();
+                }
+                else
+                {
+                    ++passesSecendsPreviousFetchDirectMessage;
+                }
+
+                #endregion // ダイレクトメッセージ取得
             }
-            else
-            {
-                ++passesSecendsPreviousFetchDirectMessage;
-            }
-
-            #endregion // ダイレクトメッセージ取得
 
             #region エラー表示
 
@@ -427,7 +479,11 @@ namespace TwitterAwayZwei
 
             #endregion // エラー表示
 
-            StringBuilder statusBarString = new StringBuilder(UserSettingAdapter.Setting.UpdateTimulineInterval - passesSecendsPreviousFetchTimeline + " sec.");
+            StringBuilder statusBarString = new StringBuilder();
+            if (automaticaryCheck == true)
+            {
+                statusBarString = statusBarString.Append(UserSettingAdapter.Setting.UpdateTimulineInterval - passesSecendsPreviousFetchTimeline + " sec.");
+            }
             if (checkTimelineUpdateNowFlag == true)
             {
                 statusBarString.Append(" タイムライン取得中");
@@ -484,13 +540,13 @@ namespace TwitterAwayZwei
                     switch (((WebException)e.Error).Status)
                     {
                         case WebExceptionStatus.ProtocolError:
-                            errorTextStatusBar = "[Timeline]ユーザー名とパスワードが間違っている可能性があります。";
+                            errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixTimeline"), stringResource.GetString("UserNameORPasswordWrong"));
                             break;
                         case WebExceptionStatus.Timeout:
-                            errorTextStatusBar = "[Timeline]接続がタイムアウトしました。";
+                            errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixTimeline"), stringResource.GetString("ConnectionTimuout"));
                             break;
                         default:
-                            errorTextStatusBar = "[Timeline]取得できませんでした。";
+                            errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixTimeline"), stringResource.GetString("NotAbleToBeFetch"));
                             break;
                     }
                 }
@@ -533,13 +589,13 @@ namespace TwitterAwayZwei
                     switch (((WebException)e.Error).Status)
                     {
                         case WebExceptionStatus.ProtocolError:
-                            errorTextStatusBar = "[DMsg]ユーザー名とパスワードが間違っている可能性があります。";
+                            errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixDirectMessage"), stringResource.GetString("UserNameORPasswordWrong"));
                             break;
                         case WebExceptionStatus.Timeout:
-                            errorTextStatusBar = "[DMsg]接続がタイムアウトしました。";
+                            errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixDirectMessage"), stringResource.GetString("ConnectionTimuout"));
                             break;
                         default:
-                            errorTextStatusBar = "[DMsg]取得できませんでした。";
+                            errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixDirectMessage"), stringResource.GetString("NotAbleToBeFetch"));
                             break;
                     }
                 }
@@ -569,19 +625,20 @@ namespace TwitterAwayZwei
                     switch (((WebException)e.Error).Status)
                     {
                         case WebExceptionStatus.ProtocolError:
-                            errorTextStatusBar = "[Twit]ユーザー名とパスワードが間違っている可能性があります。";
+                            errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixTwitter"), stringResource.GetString("UserNameORPasswordWrong"));
                             break;
                         case WebExceptionStatus.Timeout:
-                            errorTextStatusBar = "[Twit]接続がタイムアウトしました。";
+                            errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixTwitter"), stringResource.GetString("ConnectionTimuout"));
                             break;
                         default:
-                            errorTextStatusBar = "[Twit]更新できませんでした。";
+                            errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixTwitter"), stringResource.GetString("NotAbleToBeFetch"));
                             break;
                     }
                 }
                 else if (e.Error is UriFormatException)
                 {
-                    errorTextStatusBar = "[Twit]更新できませんでした。";
+
+                    errorTextStatusBar = string.Format("{0}{1}", stringResource.GetString("PrefixTwitter"), stringResource.GetString("NotAbleToBeUpdate"));
                 }
             }
 
@@ -634,7 +691,7 @@ namespace TwitterAwayZwei
         {
             SaveFormSetting();
 
-            // タイマーを留める
+            // タイマーを止める
             fetchTimelineTimer.Enabled = false;
 
             // スレッドを中止
@@ -699,7 +756,7 @@ namespace TwitterAwayZwei
                 timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
             {
                 StatusInfomation status = (StatusInfomation)timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag;
-                dowingTextBox.Text = "@" + status.User.ScreenName + " " + dowingTextBox.Text;
+                dowingTextBox.Text = string.Format("@{0} {1}", status.User.ScreenName, dowingTextBox.Text);
             }
         }
 
@@ -709,7 +766,21 @@ namespace TwitterAwayZwei
                 timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
             {
                 StatusInfomation status = (StatusInfomation)timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag;
-                dowingTextBox.Text = "D " + status.User.ScreenName + " " + dowingTextBox.Text;
+                dowingTextBox.Text = string.Format("D {0} {1}", status.User.ScreenName, dowingTextBox.Text);
+            }
+        }
+
+        private void automaticaryUpdateMenuItem_Click(object sender, EventArgs e)
+        {
+            if (automaticaryCheck == true)
+            {
+                DisableAutomaticaryCheck();
+                automaticaryUpdateMenuItem.Checked = false;
+            }
+            else
+            {
+                EnableAutomaticaryCheck();
+                automaticaryUpdateMenuItem.Checked = true;
             }
         }
     }
