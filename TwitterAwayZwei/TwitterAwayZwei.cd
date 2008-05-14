@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TwitterAwayZwei.UserSetting">
+    <Position X="3.5" Y="0.5" Width="3.5" />
+    <NestedTypes>
+      <Enum Name="TwitterAwayZwei.UserSetting.CheckLists" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UserSetting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="TwitterAwayZwei.UserSetting.ProxyConnects" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UserSetting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACEAAASAAAAoACAhAAKoAACAKAggACQKASAEAgEgIEA=</HashCode>
+      <FileName>UserSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TwitterAwayZwei.UserSettingAdapter">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>UserSettingAdapter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Setting" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TwitterAwayZwei.Twitter.DirectMessage">
+    <Position X="12.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAACAIAQAAAAMAAAACAAAAEAAACBAAAKAAAICAAAAgA=</HashCode>
+      <FileName>Twitter\DirectMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TwitterAwayZwei.Twitter.StatusInfomation">
+    <Position X="12.5" Y="5.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAIAAAACAAAAAAAAAAAAAIAAAICAAAAwA=</HashCode>
+      <FileName>Twitter\StatusInfomation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TwitterAwayZwei.Twitter.Twitter">
+    <Position X="7.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQgQABQBBEABAgACAAAAAgAAABAAAICQQAADoECiAA=</HashCode>
+      <FileName>Twitter\Twitter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DirectMessage" />
+      <Property Name="FriendTimeline" />
+      <Property Name="PublicTimeline" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TwitterAwayZwei.Twitter.UserInfomation">
+    <Position X="16.75" Y="5.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAIgABAAoAIAAAQCAAAMAABACAAAAAAAEgA=</HashCode>
+      <FileName>Twitter\UserInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="メイリオ" Size="9" />
+</ClassDiagram>

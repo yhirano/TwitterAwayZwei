@@ -140,6 +140,7 @@
     <Compile Include="UserSetting.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="TwitterAwayZwei.cd" />
     <None Include="ModelDiagram.cd" />
   </ItemGroup>
   <ItemGroup>

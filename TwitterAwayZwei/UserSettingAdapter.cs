@@ -8,7 +8,8 @@ using MiscPocketCompactLibrary2.Reflection;
 namespace TwitterAwayZwei
 {
     /// <summary>
-    /// TwitterAwayの設定にアクセスするクラス
+    /// TwitterAwayの設定にアクセスするクラス。
+    /// UserSettingクラスへのアクセスと、シリアライズ・デシリアライズを担当している。
     /// </summary>
     public static class UserSettingAdapter
     {
@@ -33,7 +34,7 @@ namespace TwitterAwayZwei
             FileStream fs = null;
             try
             {
-                if(Directory.Exists(Path.GetDirectoryName(TwitterAwayZweiInfo.SettingPath)) == false)
+                if (Directory.Exists(Path.GetDirectoryName(TwitterAwayZweiInfo.SettingPath)) == false)
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(TwitterAwayZweiInfo.SettingPath));
                 }
