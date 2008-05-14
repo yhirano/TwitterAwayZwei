@@ -54,17 +54,17 @@ namespace TwitterAwayZwei
 
             switch (UserSettingAdapter.Setting.ProxyUse)
             {
-                case UserSetting.ProxyConnects.Unuse:
+                case Twitter.Twitter.ProxyConnects.Unuse:
                     proxyUnuseRadioButton.Checked = true;
                     proxyUseOsSettingRadioButton.Checked = false;
                     proxyUseOriginalSettingRadioButton.Checked = false;
                     break;
-                case UserSetting.ProxyConnects.OsSetting:
+                case Twitter.Twitter.ProxyConnects.OsSetting:
                     proxyUnuseRadioButton.Checked = false;
                     proxyUseOsSettingRadioButton.Checked = true;
                     proxyUseOriginalSettingRadioButton.Checked = false;
                     break;
-                case UserSetting.ProxyConnects.OriginalSetting:
+                case Twitter.Twitter.ProxyConnects.OriginalSetting:
                     proxyUnuseRadioButton.Checked = false;
                     proxyUseOsSettingRadioButton.Checked = false;
                     proxyUseOriginalSettingRadioButton.Checked = true;
@@ -120,15 +120,15 @@ namespace TwitterAwayZwei
 
             if (proxyUnuseRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.ProxyUse = UserSetting.ProxyConnects.Unuse;
+                UserSettingAdapter.Setting.ProxyUse = Twitter.Twitter.ProxyConnects.Unuse;
             }
             else if (proxyUseOsSettingRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.ProxyUse = UserSetting.ProxyConnects.OsSetting;
+                UserSettingAdapter.Setting.ProxyUse = Twitter.Twitter.ProxyConnects.OsSetting;
             }
             else if (proxyUseOriginalSettingRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.ProxyUse = UserSetting.ProxyConnects.OriginalSetting;
+                UserSettingAdapter.Setting.ProxyUse = Twitter.Twitter.ProxyConnects.OriginalSetting;
             }
             else
             {

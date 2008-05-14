@@ -56,58 +56,6 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
-        /// ネットアクセス時のUserAgent設定
-        /// </summary>
-        private static string userAgent = null;
-
-        /// <summary>
-        /// ネットアクセス時のUserAgent設定を取得する
-        /// </summary>
-        public static string UserAgent
-        {
-            get
-            {
-                if (userAgent == null)
-                {
-                    userAgent = AssemblyUtility.Title + "/" + AssemblyUtility.Version.ToString();
-                }
-                return userAgent;
-            }
-        }
-
-        /// <summary>
-        /// Public TimelineのTwitter API URLを取得する
-        /// </summary>
-        public static string TwitterPublicTimelineXml
-        {
-            get { return "http://twitter.com/statuses/public_timeline.xml"; }
-        }
-
-        /// <summary>
-        /// Friends TimelineのTwitter API URLを取得する
-        /// </summary>
-        public static string TwitterFriendsTimelineXml
-        {
-            get { return "http://twitter.com/statuses/friends_timeline.xml"; }
-        }
-
-        /// <summary>
-        /// Direct MessageのTwitter API URLを取得する
-        /// </summary>
-        public static string TwitterDirectMessageTimelineXml
-        {
-            get { return "http://twitter.com/direct_messages.xml"; }
-        }
-
-        /// <summary>
-        /// UpdateのTwitter API URLを取得する
-        /// </summary>
-        public static string TwitterUpdateXml
-        {
-            get { return "http://twitter.com/statuses/update.xml"; }
-        }
-
-        /// <summary>
         /// アプリケーションの設定ファイルパスを取得する
         /// </summary>
         public static string SettingPath

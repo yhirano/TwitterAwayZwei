@@ -53,6 +53,10 @@ namespace TwitterAwayZwei
 
             // Twitterの初期化
             twitterAccount = new TwitterAwayZwei.Twitter.Twitter(UserSettingAdapter.Setting.UserName, UserSettingAdapter.Setting.Password);
+            twitterAccount.ProxyUse = UserSettingAdapter.Setting.ProxyUse;
+            twitterAccount.ProxyServer = UserSettingAdapter.Setting.ProxyServer;
+            twitterAccount.ProxyPort = UserSettingAdapter.Setting.ProxyPort;
+            twitterAccount.WebRequestTimeoutMillSec = TwitterAwayZweiInfo.WebRequestTimeoutMillSec;
             twitterAccount.StatusAdded += delegate(object sender, StatusAddedEventArgs e)
             {
                 fetchTimelineBackgroundWorker.ReportProgress((int)(((float)e.StatusNo / (float)e.AllStatusCount) * 100), e.Status);

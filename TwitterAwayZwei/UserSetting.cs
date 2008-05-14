@@ -6,7 +6,6 @@ using System.IO;
 using System.Xml.Serialization;
 using MiscPocketCompactLibrary2.Reflection;
 
-
 namespace TwitterAwayZwei
 {
     /// <summary>
@@ -142,22 +141,14 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
-        /// プロキシの接続方法列挙
-        /// </summary>
-        public enum ProxyConnects
-        {
-            Unuse, OsSetting, OriginalSetting
-        }
-
-        /// <summary>
         /// プロキシの接続方法
         /// </summary>
-        private ProxyConnects proxyUse = ProxyConnects.OsSetting;
+        private Twitter.Twitter.ProxyConnects proxyUse = Twitter.Twitter.ProxyConnects.OsSetting;
 
         /// <summary>
         /// プロキシの接続方法を取得・設定する
         /// </summary>
-        public ProxyConnects ProxyUse
+        public Twitter.Twitter.ProxyConnects ProxyUse
         {
             get { return proxyUse; }
             set { proxyUse = value; }

@@ -22,6 +22,26 @@ namespace TwitterAwayZwei.Twitter
     public class Twitter
     {
         /// <summary>
+        /// Public TimelineのTwitter API URL
+        /// </summary>
+        private const string PUBLIC_TIMELINE_XML = "http://twitter.com/statuses/public_timeline.xml";
+
+        /// <summary>
+        /// Friends TimelineのTwitter API URL
+        /// </summary>
+        private const string FRIENDS_TIMELINE_XML = "http://twitter.com/statuses/friends_timeline.xml";
+
+        /// <summary>
+        /// Direct MessageのTwitter API URL
+        /// </summary>
+        private const string DIRECT_MESSAGE_TIMELINE_XML = "http://twitter.com/direct_messages.xml";
+
+        /// <summary>
+        /// UpdateのTwitter API URL
+        /// </summary>
+        private static string UPDATE_XML = "http://twitter.com/statuses/update.xml";
+
+        /// <summary>
         /// ユーザー名
         /// </summary>
         private string userName;
@@ -105,7 +125,7 @@ namespace TwitterAwayZwei.Twitter
 
                     try
                     {
-                        st = GetWebStream(new Uri(TwitterAwayZweiInfo.TwitterPublicTimelineXml));
+                        st = GetWebStream(new Uri(PUBLIC_TIMELINE_XML));
                         statuses = PaeseStatuses(st);
                         FetchPofileImages(statuses);
                     }
@@ -136,7 +156,7 @@ namespace TwitterAwayZwei.Twitter
 
                     try
                     {
-                        st = GetWebStream(new Uri(TwitterAwayZweiInfo.TwitterFriendsTimelineXml), userName, password);
+                        st = GetWebStream(new Uri(FRIENDS_TIMELINE_XML), userName, password);
                         statuses = PaeseStatuses(st);
                         FetchPofileImages(statuses);
                     }
@@ -172,7 +192,7 @@ namespace TwitterAwayZwei.Twitter
 
                     try
                     {
-                        st = GetWebStream(new Uri(TwitterAwayZweiInfo.TwitterDirectMessageTimelineXml), userName, password);
+                        st = GetWebStream(new Uri(DIRECT_MESSAGE_TIMELINE_XML), userName, password);
                         message = PaeseDirectMessage(st);
                     }
                     finally
@@ -636,7 +656,7 @@ namespace TwitterAwayZwei.Twitter
 
                 try
                 {
-                    string send = TwitterAwayZweiInfo.TwitterUpdateXml + "?status=" + sendMessage;
+                    string send = UPDATE_XML + "?status=" + sendMessage;
                     st = GetWebStream(new Uri(send), "POST", userName, password);
                 }
                 catch (WebException)
@@ -662,7 +682,7 @@ namespace TwitterAwayZwei.Twitter
         /// </summary>
         /// <param name="url">URL</param>
         /// <returns>Webサイトの情報のStream</returns>
-        private static Stream GetWebStream(Uri url)
+        private Stream GetWebStream(Uri url)
         {
             return GetWebStream(url, string.Empty, string.Empty, string.Empty);
         }
@@ -673,7 +693,7 @@ namespace TwitterAwayZwei.Twitter
         /// <param name="url">URL</param>
         /// <param name="requestMethod">HTTPリクエストメソッド</param>
         /// <returns>Webサイトの情報のStream</returns>
-        private static Stream GetWebStream(Uri url, string requestMethod)
+        private Stream GetWebStream(Uri url, string requestMethod)
         {
             return GetWebStream(url, requestMethod, string.Empty, string.Empty);
         }
@@ -685,9 +705,89 @@ namespace TwitterAwayZwei.Twitter
         /// <param name="userName">Web認証のユーザー名</param>
         /// <param name="password">Web認証のパスワード</param>
         /// <returns>Webサイトの情報のStream</returns>
-        private static Stream GetWebStream(Uri url, string userName, string password)
+        private Stream GetWebStream(Uri url, string userName, string password)
         {
             return GetWebStream(url, string.Empty, userName, password);
+        }
+
+        /// <summary>
+        /// プロキシの接続方法列挙
+        /// </summary>
+        public enum ProxyConnects
+        {
+            Unuse, OsSetting, OriginalSetting
+        }
+
+        /// <summary>
+        /// プロキシの接続方法
+        /// </summary>
+        private ProxyConnects proxyUse = ProxyConnects.OsSetting;
+
+        /// <summary>
+        /// プロキシの接続方法を設定する
+        /// </summary>
+        public ProxyConnects ProxyUse
+        {
+            set { proxyUse = value; }
+        }
+
+        /// <summary>
+        /// プロキシのサーバ名
+        /// </summary>
+        private string proxyServer = string.Empty;
+
+        /// <summary>
+        /// プロキシのサーバ名を設定する
+        /// </summary>
+        public string ProxyServer
+        {
+            set { proxyServer = value; }
+        }
+
+        /// <summary>
+        /// プロキシのポート番号
+        /// </summary>
+        private int proxyPort = 0;
+
+        /// <summary>
+        /// プロキシのポート番号を設定する
+        /// </summary>
+        public int ProxyPort
+        {
+            set
+            {
+                if (0x00 <= value && value <= 0xFFFF)
+                {
+                    proxyPort = value;
+                }
+                else { ; }
+            }
+        }
+
+        /// <summary>
+        /// Web接続時のタイムアウト時間
+        /// </summary>
+        private int webRequestTimeoutMillSec = 20000;
+
+        /// <summary>
+        /// Web接続時のタイムアウト時間を設定する
+        /// </summary>
+        public int WebRequestTimeoutMillSec
+        {
+            set { webRequestTimeoutMillSec = value; }
+        }
+
+        /// <summary>
+        /// UserAgent
+        /// </summary>
+        private string userAgent = AssemblyUtility.Title + "/" + AssemblyUtility.Version.ToString();
+
+        /// <summary>
+        /// UserAgentを設定する
+        /// </summary>
+        public string UserAgent
+        {
+            set { userAgent = value; }
         }
 
         /// <summary>
@@ -698,7 +798,7 @@ namespace TwitterAwayZwei.Twitter
         /// <param name="userName">Web認証のユーザー名</param>
         /// <param name="password">Web認証のパスワード</param>
         /// <returns>Webサイトの情報のStream</returns>
-        private static Stream GetWebStream(Uri url, string requestMethod, string userName, string password)
+        private Stream GetWebStream(Uri url, string requestMethod, string userName, string password)
         {
             HttpWebRequest webReq = (HttpWebRequest)WebRequest.Create(url);
             webReq.AllowWriteStreamBuffering = true;
@@ -712,23 +812,23 @@ namespace TwitterAwayZwei.Twitter
                 webReq.Method = requestMethod;
             }
 
-            switch (UserSettingAdapter.Setting.ProxyUse)
+            switch (proxyUse)
             {
-                case UserSetting.ProxyConnects.Unuse:
+                case ProxyConnects.Unuse:
                     WebProxy proxy = new WebProxy();
                     proxy.Address = null;
                     webReq.Proxy = proxy;
                     break;
-                case UserSetting.ProxyConnects.OriginalSetting:
-                    webReq.Proxy = new WebProxy(UserSettingAdapter.Setting.ProxyServer, UserSettingAdapter.Setting.ProxyPort);
+                case ProxyConnects.OriginalSetting:
+                    webReq.Proxy = new WebProxy(proxyServer, proxyPort);
                     break;
-                case UserSetting.ProxyConnects.OsSetting:
+                case ProxyConnects.OsSetting:
                 default:
                     break;
 
             }
-            webReq.Timeout = TwitterAwayZweiInfo.WebRequestTimeoutMillSec;
-            webReq.UserAgent = TwitterAwayZweiInfo.UserAgent;
+            webReq.Timeout = webRequestTimeoutMillSec;
+            webReq.UserAgent = userAgent;
             webReq.Headers.Add("X-Twitter-Client", AssemblyUtility.Title);
             webReq.Headers.Add("X-Twitter-Client-Version", AssemblyUtility.Version.ToString());
 
