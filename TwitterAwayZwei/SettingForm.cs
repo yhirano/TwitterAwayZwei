@@ -49,6 +49,8 @@ namespace TwitterAwayZwei
                     break;
             }
 
+            fetchProfileIconsCheckBox.Checked = UserSettingAdapter.Setting.IsFetchProfileImages;
+
             checkTimelineIntervalNumericUpDown.Text = (UserSettingAdapter.Setting.UpdateTimulineInterval).ToString();
             checkDirectMessageIntervalNumericUpDown.Text = (UserSettingAdapter.Setting.UpdateDirectMessageInterval).ToString();
 
@@ -101,6 +103,8 @@ namespace TwitterAwayZwei
                 // ここに到達することはあり得ない
                 Trace.Assert(false, "想定外の動作のため、終了します");
             }
+
+            UserSettingAdapter.Setting.IsFetchProfileImages = fetchProfileIconsCheckBox.Checked;
 
             try
             {

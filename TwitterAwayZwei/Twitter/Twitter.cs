@@ -68,6 +68,19 @@ namespace TwitterAwayZwei.Twitter
         }
 
         /// <summary>
+        /// プロフィールイメージを取得するか
+        /// </summary>
+        private bool isFetchProfileImages = true;
+
+        /// <summary>
+        /// プロフィールイメージを取得するかを設定する
+        /// </summary>
+        public bool IsFetchProfileImages
+        {
+            set { isFetchProfileImages = value; }
+        }
+
+        /// <summary>
         /// プロフィールイメージのイメージリスト（小）
         /// </summary>
         private ImageList profileSmallImageList = new ImageList();
@@ -127,7 +140,10 @@ namespace TwitterAwayZwei.Twitter
                     {
                         st = GetWebStream(new Uri(PUBLIC_TIMELINE_XML));
                         statuses = PaeseStatuses(st);
-                        FetchPofileImages(statuses);
+                        if (isFetchProfileImages == true)
+                        {
+                            FetchPofileImages(statuses);
+                        }
                     }
                     finally
                     {
@@ -158,7 +174,10 @@ namespace TwitterAwayZwei.Twitter
                     {
                         st = GetWebStream(new Uri(FRIENDS_TIMELINE_XML), userName, password);
                         statuses = PaeseStatuses(st);
-                        FetchPofileImages(statuses);
+                        if (isFetchProfileImages == true)
+                        {
+                            FetchPofileImages(statuses);
+                        }
                     }
                     finally
                     {

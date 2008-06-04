@@ -117,152 +117,536 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="mainSplitter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 3</value>
+  <metadata name="mainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuMenuItem.Text" xml:space="preserve">
+    <value>&amp;Menu</value>
   </data>
-  <data name="&gt;&gt;twitterInfomationTabControl.Name" xml:space="preserve">
-    <value>twitterInfomationTabControl</value>
+  <data name="automaticaryUpdateMenuItem.Text" xml:space="preserve">
+    <value>&amp;Automaticary check</value>
   </data>
-  <data name="&gt;&gt;mainMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="updateButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 157</value>
-  </data>
-  <data name="menuItem2.Text" xml:space="preserve">
+  <data name="menuItem3.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="twitterInfomationTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="settingMenuItem.Text" xml:space="preserve">
+    <value>&amp;Setting</value>
   </data>
-  <data name="&gt;&gt;exitMenuItem.Name" xml:space="preserve">
-    <value>exitMenuItem</value>
-  </data>
-  <data name="timelineDateColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;timelineTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mainMenu.Name" xml:space="preserve">
-    <value>mainMenu</value>
-  </data>
-  <data name="menuItem1.Text" xml:space="preserve">
+  <data name="menuItem2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="aboutMenuItem.Text" xml:space="preserve">
     <value>&amp;About</value>
   </data>
-  <data name="&gt;&gt;doingContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="menuItem1.Text" xml:space="preserve">
+    <value>-</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="twitterIconPictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+  <data name="exitMenuItem.Text" xml:space="preserve">
+    <value>E&amp;xit</value>
   </data>
-  <data name="updateButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="&gt;&gt;doingInfomationTextLabel.Name" xml:space="preserve">
+    <value>doingInfomationTextLabel</value>
   </data>
   <data name="&gt;&gt;doingInfomationTextLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="timilineTwitterListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 122</value>
+  <data name="&gt;&gt;doingInfomationTextLabel.Parent" xml:space="preserve">
+    <value>topPanel</value>
   </data>
-  <data name="&gt;&gt;messageTwitterListView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;doingInfomationTextLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="copyMenuItem.Text" xml:space="preserve">
-    <value>&amp;Copy</value>
-  </data>
-  <data name="&gt;&gt;updateTwitterBackgroundWorker.Name" xml:space="preserve">
-    <value>updateTwitterBackgroundWorker</value>
-  </data>
-  <data name="twitterIconPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="twitterInfomationTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="&gt;&gt;twitterIconPictureBox.Name" xml:space="preserve">
+    <value>twitterIconPictureBox</value>
   </data>
   <data name="&gt;&gt;twitterIconPictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="messageTwitterListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="&gt;&gt;twitterIconPictureBox.Parent" xml:space="preserve">
+    <value>topPanel</value>
+  </data>
+  <data name="&gt;&gt;twitterIconPictureBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="topPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="topPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="topPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 60</value>
+  </data>
+  <data name="&gt;&gt;topPanel.Name" xml:space="preserve">
+    <value>topPanel</value>
+  </data>
+  <data name="&gt;&gt;topPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;topPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;topPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="doingInfomationTextLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;messageTwitterListView.ZOrder" xml:space="preserve">
+  <data name="doingInfomationTextLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 3</value>
+  </data>
+  <data name="doingInfomationTextLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 54</value>
+  </data>
+  <data name="&gt;&gt;doingInfomationTextLabel.Name" xml:space="preserve">
+    <value>doingInfomationTextLabel</value>
+  </data>
+  <data name="&gt;&gt;doingInfomationTextLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;doingInfomationTextLabel.Parent" xml:space="preserve">
+    <value>topPanel</value>
+  </data>
+  <data name="&gt;&gt;doingInfomationTextLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;pasteMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="twitterIconPictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="twitterIconPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="twitterIconPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 44</value>
+  </data>
+  <data name="twitterIconPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;twitterIconPictureBox.Name" xml:space="preserve">
+    <value>twitterIconPictureBox</value>
+  </data>
+  <data name="&gt;&gt;twitterIconPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;twitterIconPictureBox.Parent" xml:space="preserve">
+    <value>topPanel</value>
+  </data>
+  <data name="&gt;&gt;twitterIconPictureBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mainSplitter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="mainSplitter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 60</value>
+  </data>
+  <data name="mainSplitter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 3</value>
+  </data>
+  <data name="&gt;&gt;mainSplitter.Name" xml:space="preserve">
+    <value>mainSplitter</value>
+  </data>
+  <data name="&gt;&gt;mainSplitter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainSplitter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainSplitter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mainStatusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 183</value>
+  </data>
+  <data name="mainStatusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 22</value>
+  </data>
+  <data name="&gt;&gt;mainStatusBar.Name" xml:space="preserve">
+    <value>mainStatusBar</value>
+  </data>
+  <data name="&gt;&gt;mainStatusBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mainStatusBar.Parent" xml:space="preserve">
     <value>bottomPanel</value>
   </data>
-  <data name="topPanel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;mainStatusBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="twitterInfomationTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.Name" xml:space="preserve">
+    <value>timelineTabPage</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.Parent" xml:space="preserve">
+    <value>twitterInfomationTabControl</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;directMessageTabPage.Name" xml:space="preserve">
+    <value>directMessageTabPage</value>
+  </data>
+  <data name="&gt;&gt;directMessageTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;directMessageTabPage.Parent" xml:space="preserve">
+    <value>twitterInfomationTabControl</value>
+  </data>
+  <data name="&gt;&gt;directMessageTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="twitterInfomationTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="twitterInfomationTabControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;cutMenuItem.Type" xml:space="preserve">
+  <data name="twitterInfomationTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 151</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="twitterInfomationTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;twitterInfomationTabControl.Name" xml:space="preserve">
+    <value>twitterInfomationTabControl</value>
+  </data>
+  <data name="&gt;&gt;twitterInfomationTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;twitterInfomationTabControl.Parent" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;twitterInfomationTabControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="updateButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="updateButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 157</value>
+  </data>
+  <data name="updateButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="updateButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="updateButton.Text" xml:space="preserve">
+    <value>&amp;Update</value>
+  </data>
+  <data name="&gt;&gt;updateButton.Name" xml:space="preserve">
+    <value>updateButton</value>
+  </data>
+  <data name="&gt;&gt;updateButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateButton.Parent" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;updateButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dowingTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <metadata name="doingContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>797, 17</value>
+  </metadata>
+  <data name="dowingTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 157</value>
+  </data>
+  <data name="dowingTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 21</value>
+  </data>
+  <data name="dowingTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dowingTextBox.Name" xml:space="preserve">
+    <value>dowingTextBox</value>
+  </data>
+  <data name="&gt;&gt;dowingTextBox.Type" xml:space="preserve">
+    <value>Microsoft.CompactFramework.Design.UnsafeControl, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;dowingTextBox.Parent" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;dowingTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="bottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="bottomPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 63</value>
+  </data>
+  <data name="bottomPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 205</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.Name" xml:space="preserve">
+    <value>bottomPanel</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;timilineTwitterListView.Name" xml:space="preserve">
+    <value>timilineTwitterListView</value>
+  </data>
+  <data name="&gt;&gt;timilineTwitterListView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timilineTwitterListView.Parent" xml:space="preserve">
+    <value>timelineTabPage</value>
+  </data>
+  <data name="&gt;&gt;timilineTwitterListView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="timelineTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="timelineTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 128</value>
+  </data>
+  <data name="timelineTabPage.Text" xml:space="preserve">
+    <value>Timeline</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.Name" xml:space="preserve">
+    <value>timelineTabPage</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.Parent" xml:space="preserve">
+    <value>twitterInfomationTabControl</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="timilineTwitterListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="timelineScreenNameColumnHeader.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="timelineScreenNameColumnHeader.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="doingColumnHeader.Text" xml:space="preserve">
+    <value>What are you doing?</value>
+  </data>
+  <data name="doingColumnHeader.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="timelineDateColumnHeader.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="timelineDateColumnHeader.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="timelineContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>961, 17</value>
+  </metadata>
+  <data name="timilineTwitterListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="timilineTwitterListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 122</value>
+  </data>
+  <data name="timilineTwitterListView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;timilineTwitterListView.Name" xml:space="preserve">
+    <value>timilineTwitterListView</value>
+  </data>
+  <data name="&gt;&gt;timilineTwitterListView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timilineTwitterListView.Parent" xml:space="preserve">
+    <value>timelineTabPage</value>
+  </data>
+  <data name="&gt;&gt;timilineTwitterListView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="timelineReplyMenuItem.Text" xml:space="preserve">
+    <value>&amp;Reply</value>
+  </data>
+  <data name="timelineDirectMessageMenuItem.Text" xml:space="preserve">
+    <value>&amp;Direct message</value>
+  </data>
+  <data name="&gt;&gt;messageTwitterListView.Name" xml:space="preserve">
+    <value>messageTwitterListView</value>
+  </data>
+  <data name="&gt;&gt;messageTwitterListView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;messageTwitterListView.Parent" xml:space="preserve">
+    <value>directMessageTabPage</value>
+  </data>
+  <data name="&gt;&gt;messageTwitterListView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="directMessageTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="directMessageTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 128</value>
+  </data>
+  <data name="directMessageTabPage.Text" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="&gt;&gt;directMessageTabPage.Name" xml:space="preserve">
+    <value>directMessageTabPage</value>
+  </data>
+  <data name="&gt;&gt;directMessageTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;directMessageTabPage.Parent" xml:space="preserve">
+    <value>twitterInfomationTabControl</value>
+  </data>
+  <data name="&gt;&gt;directMessageTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="messageTwitterListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="messageScreenNameColumnHeader.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="messageScreenNameColumnHeader.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="messageColumnHeader.Text" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="messageColumnHeader.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="messageDateColumnHeader.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="messageDateColumnHeader.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="messagesContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 58</value>
+  </metadata>
+  <data name="messageTwitterListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="messageTwitterListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 122</value>
+  </data>
+  <data name="messageTwitterListView.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;messageTwitterListView.Name" xml:space="preserve">
+    <value>messageTwitterListView</value>
+  </data>
+  <data name="&gt;&gt;messageTwitterListView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;messageTwitterListView.Parent" xml:space="preserve">
+    <value>directMessageTabPage</value>
+  </data>
+  <data name="&gt;&gt;messageTwitterListView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cutMenuItem.Text" xml:space="preserve">
+    <value>Cu&amp;t</value>
+  </data>
+  <data name="copyMenuItem.Text" xml:space="preserve">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="pasteMenuItem.Text" xml:space="preserve">
+    <value>&amp;Paste</value>
+  </data>
+  <metadata name="fetchTimelineBackgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>131, 17</value>
+  </metadata>
+  <metadata name="fetchTimelineTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>379, 17</value>
+  </metadata>
+  <metadata name="updateTwitterBackgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>546, 17</value>
+  </metadata>
+  <metadata name="fetchDirectMessageBackgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1140, 17</value>
+  </metadata>
+  <data name="messagesReplayMenuItem.Text" xml:space="preserve">
+    <value>&amp;Reply</value>
+  </data>
+  <data name="messagesDirectMessageMenuItem.Text" xml:space="preserve">
+    <value>&amp;Direct message</value>
+  </data>
+  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
+    <value>Pocket_PC</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>84</value>
+  </metadata>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>240, 268</value>
+  </data>
+  <data name="&gt;&gt;mainMenu.Name" xml:space="preserve">
+    <value>mainMenu</value>
+  </data>
+  <data name="&gt;&gt;mainMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuMenuItem.Name" xml:space="preserve">
+    <value>menuMenuItem</value>
+  </data>
+  <data name="&gt;&gt;menuMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;automaticaryUpdateMenuItem.Name" xml:space="preserve">
     <value>automaticaryUpdateMenuItem</value>
   </data>
-  <data name="replyMenuItem.Text" xml:space="preserve">
-    <value>&amp;Reply</value>
-  </data>
   <data name="&gt;&gt;automaticaryUpdateMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;timelineDateColumnHeader.Name" xml:space="preserve">
-    <value>timelineDateColumnHeader</value>
+  <data name="&gt;&gt;menuItem3.Name" xml:space="preserve">
+    <value>menuItem3</value>
   </data>
-  <data name="&gt;&gt;timilineTwitterListView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mainSplitter.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;fetchTimelineTimer.Name" xml:space="preserve">
-    <value>fetchTimelineTimer</value>
-  </data>
-  <data name="dowingTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 157</value>
-  </data>
-  <data name="&gt;&gt;fetchTimelineTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;messageDateColumnHeader.Name" xml:space="preserve">
-    <value>messageDateColumnHeader</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainForm</value>
-  </data>
-  <data name="&gt;&gt;messageScreenNameColumnHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="messageColumnHeader.Text" xml:space="preserve">
-    <value>Message</value>
-  </data>
-  <data name="doingColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="&gt;&gt;mainStatusBar.Name" xml:space="preserve">
-    <value>mainStatusBar</value>
-  </data>
-  <data name="&gt;&gt;menuItem1.Type" xml:space="preserve">
+  <data name="&gt;&gt;menuItem3.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;twitterIconPictureBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;settingMenuItem.Name" xml:space="preserve">
+    <value>settingMenuItem</value>
   </data>
-  <data name="&gt;&gt;fetchDirectMessageBackgroundWorker.Name" xml:space="preserve">
-    <value>fetchDirectMessageBackgroundWorker</value>
+  <data name="&gt;&gt;settingMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;twitterIconPictureBox.Name" xml:space="preserve">
-    <value>twitterIconPictureBox</value>
+  <data name="&gt;&gt;menuItem2.Name" xml:space="preserve">
+    <value>menuItem2</value>
+  </data>
+  <data name="&gt;&gt;menuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutMenuItem.Name" xml:space="preserve">
+    <value>aboutMenuItem</value>
   </data>
   <data name="&gt;&gt;aboutMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -270,424 +654,139 @@
   <data name="&gt;&gt;menuItem1.Name" xml:space="preserve">
     <value>menuItem1</value>
   </data>
-  <data name="mainStatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 22</value>
-  </data>
-  <data name="messageDateColumnHeader.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="messageScreenNameColumnHeader.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="bottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="exitMenuItem.Text" xml:space="preserve">
-    <value>E&amp;xit</value>
-  </data>
-  <data name="&gt;&gt;mainStatusBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pasteMenuItem.Name" xml:space="preserve">
-    <value>pasteMenuItem</value>
-  </data>
-  <data name="&gt;&gt;updateButton.Name" xml:space="preserve">
-    <value>updateButton</value>
-  </data>
-  <data name="&gt;&gt;timilineTwitterListView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;topPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuItem3.Name" xml:space="preserve">
-    <value>menuItem3</value>
-  </data>
-  <data name="&gt;&gt;doingColumnHeader.Name" xml:space="preserve">
-    <value>doingColumnHeader</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateButton.Parent" xml:space="preserve">
-    <value>bottomPanel</value>
-  </data>
-  <data name="&gt;&gt;menuMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;menuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exitMenuItem.Name" xml:space="preserve">
+    <value>exitMenuItem</value>
   </data>
   <data name="&gt;&gt;exitMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;bottomPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="doingInfomationTextLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 54</value>
-  </data>
-  <data name="&gt;&gt;twitterIconPictureBox.Parent" xml:space="preserve">
-    <value>topPanel</value>
-  </data>
-  <data name="automaticaryUpdateMenuItem.Text" xml:space="preserve">
-    <value>&amp;Automaticary check</value>
-  </data>
-  <data name="&gt;&gt;twitterInfomationTabControl.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;timelineTabPage.Parent" xml:space="preserve">
-    <value>twitterInfomationTabControl</value>
-  </data>
-  <data name="bottomPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 205</value>
-  </data>
-  <data name="&gt;&gt;messageTwitterListView.Parent" xml:space="preserve">
-    <value>directMessageTabPage</value>
-  </data>
-  <data name="&gt;&gt;timilineTwitterListView.Name" xml:space="preserve">
-    <value>timilineTwitterListView</value>
-  </data>
-  <data name="&gt;&gt;mainSplitter.Name" xml:space="preserve">
-    <value>mainSplitter</value>
-  </data>
-  <data name="cutMenuItem.Text" xml:space="preserve">
-    <value>Cu&amp;t</value>
-  </data>
-  <data name="&gt;&gt;timelineTabPage.Name" xml:space="preserve">
-    <value>timelineTabPage</value>
-  </data>
-  <data name="menuItem3.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="&gt;&gt;timelineTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="mainSplitter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;settingMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="topPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="bottomPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 63</value>
-  </data>
-  <data name="timelineTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 128</value>
-  </data>
-  <data name="&gt;&gt;timelineDateColumnHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dowingTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="messageColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="doingInfomationTextLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 3</value>
-  </data>
-  <data name="messageTwitterListView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;messageColumnHeader.Name" xml:space="preserve">
-    <value>messageColumnHeader</value>
-  </data>
-  <data name="twitterInfomationTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;replyMenuItem.Name" xml:space="preserve">
-    <value>replyMenuItem</value>
-  </data>
-  <data name="mainStatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 183</value>
-  </data>
-  <data name="&gt;&gt;directMessageTabPage.Name" xml:space="preserve">
-    <value>directMessageTabPage</value>
-  </data>
-  <data name="&gt;&gt;twitterInfomationTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;doingInfomationTextLabel.Parent" xml:space="preserve">
-    <value>topPanel</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="messageTwitterListView.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;mainStatusBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;doingInfomationTextLabel.Name" xml:space="preserve">
-    <value>doingInfomationTextLabel</value>
-  </data>
-  <data name="doingColumnHeader.Text" xml:space="preserve">
-    <value>What are you doing?</value>
-  </data>
-  <data name="updateButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 20</value>
-  </data>
-  <data name="&gt;&gt;replyMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="directMessageTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;topPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dowingTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;topPanel.Name" xml:space="preserve">
-    <value>topPanel</value>
-  </data>
-  <data name="updateButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;mainSplitter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyMenuItem.Name" xml:space="preserve">
-    <value>copyMenuItem</value>
+  <data name="&gt;&gt;timelineScreenNameColumnHeader.Name" xml:space="preserve">
+    <value>timelineScreenNameColumnHeader</value>
   </data>
   <data name="&gt;&gt;timelineScreenNameColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="timelineScreenNameColumnHeader.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="&gt;&gt;menuItem2.Name" xml:space="preserve">
-    <value>menuItem2</value>
-  </data>
-  <data name="dowingTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="messageDateColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="doingInfomationTextLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;timilineTwitterListView.Parent" xml:space="preserve">
-    <value>timelineTabPage</value>
-  </data>
-  <data name="&gt;&gt;settingMenuItem.Name" xml:space="preserve">
-    <value>settingMenuItem</value>
-  </data>
-  <data name="timilineTwitterListView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;updateButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fetchDirectMessageBackgroundWorker.Type" xml:space="preserve">
-    <value>Microsoft.CompactFramework.Design.UnsafeComponent, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="updateButton.Text" xml:space="preserve">
-    <value>&amp;Update</value>
-  </data>
-  <data name="&gt;&gt;directMessageTabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;fetchTimelineBackgroundWorker.Type" xml:space="preserve">
-    <value>Microsoft.CompactFramework.Design.UnsafeComponent, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;doingInfomationTextLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;aboutMenuItem.Name" xml:space="preserve">
-    <value>aboutMenuItem</value>
-  </data>
-  <data name="&gt;&gt;updateButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="messageTwitterListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 119</value>
-  </data>
-  <data name="timilineTwitterListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="twitterInfomationTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 151</value>
-  </data>
-  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;updateTwitterBackgroundWorker.Type" xml:space="preserve">
-    <value>Microsoft.CompactFramework.Design.UnsafeComponent, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;fetchTimelineBackgroundWorker.Name" xml:space="preserve">
-    <value>fetchTimelineBackgroundWorker</value>
-  </data>
-  <data name="&gt;&gt;directMessageMenuItem.Name" xml:space="preserve">
-    <value>directMessageMenuItem</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.Name" xml:space="preserve">
-    <value>bottomPanel</value>
-  </data>
-  <data name="directMessageTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 125</value>
-  </data>
-  <data name="messageScreenNameColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="&gt;&gt;topPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="dowingTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 21</value>
-  </data>
-  <data name="&gt;&gt;directMessageMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dowingTextBox.Parent" xml:space="preserve">
-    <value>bottomPanel</value>
-  </data>
-  <data name="twitterIconPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 8</value>
-  </data>
-  <data name="timelineTabPage.Text" xml:space="preserve">
-    <value>Timeline</value>
-  </data>
-  <data name="&gt;&gt;menuItem3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="settingMenuItem.Text" xml:space="preserve">
-    <value>&amp;Setting</value>
-  </data>
-  <data name="&gt;&gt;timelineContextMenu.Name" xml:space="preserve">
-    <value>timelineContextMenu</value>
-  </data>
-  <data name="&gt;&gt;menuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mainSplitter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 60</value>
-  </data>
-  <data name="&gt;&gt;directMessageTabPage.Parent" xml:space="preserve">
-    <value>twitterInfomationTabControl</value>
-  </data>
-  <data name="&gt;&gt;messageTwitterListView.Name" xml:space="preserve">
-    <value>messageTwitterListView</value>
-  </data>
-  <data name="timelineTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mainSplitter.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;messageScreenNameColumnHeader.Name" xml:space="preserve">
-    <value>messageScreenNameColumnHeader</value>
-  </data>
-  <data name="&gt;&gt;timelineScreenNameColumnHeader.Name" xml:space="preserve">
-    <value>timelineScreenNameColumnHeader</value>
-  </data>
-  <data name="&gt;&gt;timelineContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuMenuItem.Name" xml:space="preserve">
-    <value>menuMenuItem</value>
-  </data>
-  <data name="&gt;&gt;messageColumnHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="timilineTwitterListView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;directMessageTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;doingContextMenu.Name" xml:space="preserve">
-    <value>doingContextMenu</value>
-  </data>
-  <data name="directMessageTabPage.Text" xml:space="preserve">
-    <value>Messages</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>240, 268</value>
-  </data>
-  <data name="twitterIconPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 44</value>
-  </data>
-  <data name="timelineDateColumnHeader.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="topPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 60</value>
-  </data>
-  <data name="&gt;&gt;messageDateColumnHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pasteMenuItem.Text" xml:space="preserve">
-    <value>&amp;Paste</value>
-  </data>
-  <data name="&gt;&gt;twitterInfomationTabControl.Parent" xml:space="preserve">
-    <value>bottomPanel</value>
-  </data>
-  <data name="&gt;&gt;dowingTextBox.Type" xml:space="preserve">
-    <value>Microsoft.CompactFramework.Design.UnsafeControl, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;cutMenuItem.Name" xml:space="preserve">
-    <value>cutMenuItem</value>
-  </data>
-  <data name="&gt;&gt;dowingTextBox.Name" xml:space="preserve">
-    <value>dowingTextBox</value>
-  </data>
-  <data name="menuMenuItem.Text" xml:space="preserve">
-    <value>&amp;Menu</value>
-  </data>
-  <data name="directMessageMenuItem.Text" xml:space="preserve">
-    <value>&amp;Direct message</value>
-  </data>
-  <data name="twitterInfomationTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;doingColumnHeader.Name" xml:space="preserve">
+    <value>doingColumnHeader</value>
   </data>
   <data name="&gt;&gt;doingColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="timelineScreenNameColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>60</value>
+  <data name="&gt;&gt;timelineDateColumnHeader.Name" xml:space="preserve">
+    <value>timelineDateColumnHeader</value>
+  </data>
+  <data name="&gt;&gt;timelineDateColumnHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timelineContextMenu.Name" xml:space="preserve">
+    <value>timelineContextMenu</value>
+  </data>
+  <data name="&gt;&gt;timelineContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timelineReplyMenuItem.Name" xml:space="preserve">
+    <value>timelineReplyMenuItem</value>
+  </data>
+  <data name="&gt;&gt;timelineReplyMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timelineDirectMessageMenuItem.Name" xml:space="preserve">
+    <value>timelineDirectMessageMenuItem</value>
+  </data>
+  <data name="&gt;&gt;timelineDirectMessageMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;messageScreenNameColumnHeader.Name" xml:space="preserve">
+    <value>messageScreenNameColumnHeader</value>
+  </data>
+  <data name="&gt;&gt;messageScreenNameColumnHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;messageColumnHeader.Name" xml:space="preserve">
+    <value>messageColumnHeader</value>
+  </data>
+  <data name="&gt;&gt;messageColumnHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;messageDateColumnHeader.Name" xml:space="preserve">
+    <value>messageDateColumnHeader</value>
+  </data>
+  <data name="&gt;&gt;messageDateColumnHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;doingContextMenu.Name" xml:space="preserve">
+    <value>doingContextMenu</value>
+  </data>
+  <data name="&gt;&gt;doingContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cutMenuItem.Name" xml:space="preserve">
+    <value>cutMenuItem</value>
+  </data>
+  <data name="&gt;&gt;cutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyMenuItem.Name" xml:space="preserve">
+    <value>copyMenuItem</value>
   </data>
   <data name="&gt;&gt;copyMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="doingContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>797, 17</value>
-  </metadata>
-  <metadata name="timelineContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>961, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>84</value>
-  </metadata>
-  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="fetchTimelineBackgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>131, 17</value>
-  </metadata>
-  <metadata name="mainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="updateTwitterBackgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>546, 17</value>
-  </metadata>
-  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
-    <value>Pocket_PC</value>
-  </metadata>
-  <metadata name="fetchTimelineTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>379, 17</value>
-  </metadata>
-  <metadata name="fetchDirectMessageBackgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1140, 17</value>
-  </metadata>
+  <data name="&gt;&gt;pasteMenuItem.Name" xml:space="preserve">
+    <value>pasteMenuItem</value>
+  </data>
+  <data name="&gt;&gt;pasteMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fetchTimelineBackgroundWorker.Name" xml:space="preserve">
+    <value>fetchTimelineBackgroundWorker</value>
+  </data>
+  <data name="&gt;&gt;fetchTimelineBackgroundWorker.Type" xml:space="preserve">
+    <value>Microsoft.CompactFramework.Design.UnsafeComponent, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;fetchTimelineTimer.Name" xml:space="preserve">
+    <value>fetchTimelineTimer</value>
+  </data>
+  <data name="&gt;&gt;fetchTimelineTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateTwitterBackgroundWorker.Name" xml:space="preserve">
+    <value>updateTwitterBackgroundWorker</value>
+  </data>
+  <data name="&gt;&gt;updateTwitterBackgroundWorker.Type" xml:space="preserve">
+    <value>Microsoft.CompactFramework.Design.UnsafeComponent, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;fetchDirectMessageBackgroundWorker.Name" xml:space="preserve">
+    <value>fetchDirectMessageBackgroundWorker</value>
+  </data>
+  <data name="&gt;&gt;fetchDirectMessageBackgroundWorker.Type" xml:space="preserve">
+    <value>Microsoft.CompactFramework.Design.UnsafeComponent, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;messagesContextMenu.Name" xml:space="preserve">
+    <value>messagesContextMenu</value>
+  </data>
+  <data name="&gt;&gt;messagesContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;messagesReplayMenuItem.Name" xml:space="preserve">
+    <value>messagesReplayMenuItem</value>
+  </data>
+  <data name="&gt;&gt;messagesReplayMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;messagesDirectMessageMenuItem.Name" xml:space="preserve">
+    <value>messagesDirectMessageMenuItem</value>
+  </data>
+  <data name="&gt;&gt;messagesDirectMessageMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

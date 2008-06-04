@@ -141,6 +141,20 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
+        /// プロフィールイメージを取得するか
+        /// </summary>
+        private bool isFetchProfileImages = true;
+
+        /// <summary>
+        /// プロフィールイメージを取得するかを取得・設定する
+        /// </summary>
+        public bool IsFetchProfileImages
+        {
+            get { return isFetchProfileImages; }
+            set { isFetchProfileImages = value; }
+        }
+
+        /// <summary>
         /// プロキシの接続方法
         /// </summary>
         private Twitter.Twitter.ProxyConnects proxyUse = Twitter.Twitter.ProxyConnects.OsSetting;

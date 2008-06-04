@@ -53,6 +53,7 @@ namespace TwitterAwayZwei
 
             // Twitterの初期化
             twitterAccount = new TwitterAwayZwei.Twitter.Twitter(UserSettingAdapter.Setting.UserName, UserSettingAdapter.Setting.Password);
+            twitterAccount.IsFetchProfileImages = UserSettingAdapter.Setting.IsFetchProfileImages;
             twitterAccount.ProxyUse = UserSettingAdapter.Setting.ProxyUse;
             twitterAccount.ProxyServer = UserSettingAdapter.Setting.ProxyServer;
             twitterAccount.ProxyPort = UserSettingAdapter.Setting.ProxyPort;
@@ -90,6 +91,11 @@ namespace TwitterAwayZwei
             {
                 twitterAccount.UserName = UserSettingAdapter.Setting.UserName;
                 twitterAccount.Password = UserSettingAdapter.Setting.Password;
+                twitterAccount.IsFetchProfileImages = UserSettingAdapter.Setting.IsFetchProfileImages;
+                twitterAccount.ProxyUse = UserSettingAdapter.Setting.ProxyUse;
+                twitterAccount.ProxyServer = UserSettingAdapter.Setting.ProxyServer;
+                twitterAccount.ProxyPort = UserSettingAdapter.Setting.ProxyPort;
+                twitterAccount.WebRequestTimeoutMillSec = TwitterAwayZweiInfo.WebRequestTimeoutMillSec;
 
                 switch (UserSettingAdapter.Setting.CheckList)
                 {
@@ -172,11 +178,11 @@ namespace TwitterAwayZwei
             if (DateTime.Today <= addStatus.CreatedAt)
             {
                 TimeSpan span = DateTime.Now.Subtract(addStatus.CreatedAt);
-                if (span.Minutes < 1)
+                if (0 <= span.Minutes && span.Minutes < 1 && span.Hours == 0)
                 {
                     date = string.Format(stringResource.GetString("SecAgo"), span.Seconds.ToString());
                 }
-                else if (span.Hours < 1)
+                else if (0 <= span.Hours && span.Hours < 1 && span.Days == 0)
                 {
                     date = string.Format(stringResource.GetString("MinAgo"), span.Minutes.ToString());
                 }
@@ -295,11 +301,11 @@ namespace TwitterAwayZwei
             if (DateTime.Today <= message.CreatedAt)
             {
                 TimeSpan span = DateTime.Now.Subtract(message.CreatedAt);
-                if (span.Minutes < 1)
+                if (0 <= span.Minutes && span.Minutes < 1 && span.Hours == 0)
                 {
                     date = string.Format(stringResource.GetString("SecAgo"), span.Seconds.ToString());
                 }
-                else if (span.Hours < 1)
+                else if (0 <= span.Hours && span.Hours < 1 && span.Days == 0)
                 {
                     date = string.Format(stringResource.GetString("MinAgo"), span.Minutes.ToString());
                 }
@@ -317,7 +323,7 @@ namespace TwitterAwayZwei
 
             ListViewItem item = new ListViewItem(str);
             item.Tag = message;
-            timilineTwitterListView.Items.Add(item);
+            messageTwitterListView.Items.Add(item);
         }
 
 
@@ -350,6 +356,21 @@ namespace TwitterAwayZwei
 
             // 自動チェックのフラグを下げる
             automaticaryCheck = false;
+        }
+
+        /// <summary>
+        /// 入力されたテキストの状態を見て、UpdateButtonの有効無効を切り替える
+        /// </summary>
+        private void SwitchEnableUpdateButton()
+        {
+            if (doingTextBox.Text.Length > 0)
+            {
+                updateButton.Enabled = true;
+            }
+            else
+            {
+                updateButton.Enabled = false;
+            }
         }
 
         /// <summary>
@@ -386,6 +407,8 @@ namespace TwitterAwayZwei
         {
             // フォームのテキストバーを設定
             this.Text = AssemblyUtility.Title;
+
+            SwitchEnableUpdateButton();
 
             // 設定の復元
             LoadFormSetting();
@@ -733,44 +756,95 @@ namespace TwitterAwayZwei
             if (updateTwitterBackgroundWorker.IsBusy == false)
             {
                 updateButton.Enabled = false;
-                string message = dowingTextBox.Text;
-                dowingTextBox.Text = string.Empty;
+                string message = doingTextBox.Text;
+                doingTextBox.Text = string.Empty;
                 updateTwitterBackgroundWorker.RunWorkerAsync(message);
             }
         }
 
         private void cutMenuItem_Click(object sender, EventArgs e)
         {
-            dowingTextBox.Cut();
+            doingTextBox.Cut();
         }
 
         private void copyMenuItem_Click(object sender, EventArgs e)
         {
-            dowingTextBox.Copy();
+            doingTextBox.Copy();
         }
 
         private void pasteMenuItem_Click(object sender, EventArgs e)
         {
-            dowingTextBox.Paste();
+            doingTextBox.Paste();
         }
 
-        private void replyMenuItem_Click(object sender, EventArgs e)
+        private void timelineContextMenu_Popup(object sender, EventArgs e)
         {
             if (timilineTwitterListView.SelectedIndices.Count > 0 &&
                 timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
             {
-                StatusInfomation status = (StatusInfomation)timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag;
-                dowingTextBox.Text = string.Format("@{0} {1}", status.User.ScreenName, dowingTextBox.Text);
+                timelineReplyMenuItem.Enabled = true;
+                timelineDirectMessageMenuItem.Enabled = true;
+            }
+            else
+            {
+                timelineReplyMenuItem.Enabled = false;
+                timelineDirectMessageMenuItem.Enabled = false;
             }
         }
 
-        private void directMessageMenuItem_Click(object sender, EventArgs e)
+        private void timelineReplyMenuItem_Click(object sender, EventArgs e)
         {
             if (timilineTwitterListView.SelectedIndices.Count > 0 &&
                 timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
             {
                 StatusInfomation status = (StatusInfomation)timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag;
-                dowingTextBox.Text = string.Format("D {0} {1}", status.User.ScreenName, dowingTextBox.Text);
+                doingTextBox.Text = string.Format("@{0} {1}", status.User.ScreenName, doingTextBox.Text);
+            }
+        }
+
+        private void timelineDirectMessageMenuItem_Click(object sender, EventArgs e)
+        {
+            if (timilineTwitterListView.SelectedIndices.Count > 0 &&
+                timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
+            {
+                StatusInfomation status = (StatusInfomation)timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag;
+                doingTextBox.Text = string.Format("D {0} {1}", status.User.ScreenName, doingTextBox.Text);
+            }
+        }
+
+
+        private void messagesContextMenu_Popup(object sender, EventArgs e)
+        {
+            if (messageTwitterListView.SelectedIndices.Count > 0 &&
+                messageTwitterListView.Items[messageTwitterListView.SelectedIndices[0]].Tag is DirectMessage)
+            {
+                messagesReplayMenuItem.Enabled = true;
+                messagesDirectMessageMenuItem.Enabled = true;
+            }
+            else
+            {
+                messagesReplayMenuItem.Enabled = false;
+                messagesDirectMessageMenuItem.Enabled = false;
+            }
+        }
+
+        private void messagesReplayMenuItem_Click(object sender, EventArgs e)
+        {
+            if (messageTwitterListView.SelectedIndices.Count > 0 &&
+                messageTwitterListView.Items[messageTwitterListView.SelectedIndices[0]].Tag is DirectMessage)
+            {
+                DirectMessage message = (DirectMessage)messageTwitterListView.Items[messageTwitterListView.SelectedIndices[0]].Tag;
+                doingTextBox.Text = string.Format("@{0} {1}", message.SenderScreenName, doingTextBox.Text);
+            }
+        }
+
+        private void messagesDirectMessageMenuItem_Click(object sender, EventArgs e)
+        {
+            if (messageTwitterListView.SelectedIndices.Count > 0 &&
+                messageTwitterListView.Items[messageTwitterListView.SelectedIndices[0]].Tag is DirectMessage)
+            {
+                DirectMessage message = (DirectMessage)messageTwitterListView.Items[messageTwitterListView.SelectedIndices[0]].Tag;
+                doingTextBox.Text = string.Format("D {0} {1}", message.SenderScreenName, doingTextBox.Text);
             }
         }
 
@@ -786,6 +860,11 @@ namespace TwitterAwayZwei
                 EnableAutomaticaryCheck();
                 automaticaryUpdateMenuItem.Checked = true;
             }
+        }
+
+        private void doingTextBox_TextChanged(object sender, EventArgs e)
+        {
+            SwitchEnableUpdateButton();
         }
     }
 }

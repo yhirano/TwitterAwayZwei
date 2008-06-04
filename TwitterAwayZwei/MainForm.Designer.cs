@@ -52,15 +52,15 @@
             this.doingColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.timelineDateColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.timelineContextMenu = new System.Windows.Forms.ContextMenu();
-            this.replyMenuItem = new System.Windows.Forms.MenuItem();
-            this.directMessageMenuItem = new System.Windows.Forms.MenuItem();
+            this.timelineReplyMenuItem = new System.Windows.Forms.MenuItem();
+            this.timelineDirectMessageMenuItem = new System.Windows.Forms.MenuItem();
             this.directMessageTabPage = new System.Windows.Forms.TabPage();
             this.messageTwitterListView = new System.Windows.Forms.ListView();
             this.messageScreenNameColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.messageColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.messageDateColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.updateButton = new System.Windows.Forms.Button();
-            this.dowingTextBox = new OpenNETCF.Windows.Forms.TextBox2();
+            this.doingTextBox = new OpenNETCF.Windows.Forms.TextBox2();
             this.doingContextMenu = new System.Windows.Forms.ContextMenu();
             this.cutMenuItem = new System.Windows.Forms.MenuItem();
             this.copyMenuItem = new System.Windows.Forms.MenuItem();
@@ -69,6 +69,9 @@
             this.fetchTimelineTimer = new System.Windows.Forms.Timer();
             this.updateTwitterBackgroundWorker = new OpenNETCF.ComponentModel.BackgroundWorker();
             this.fetchDirectMessageBackgroundWorker = new OpenNETCF.ComponentModel.BackgroundWorker();
+            this.messagesContextMenu = new System.Windows.Forms.ContextMenu();
+            this.messagesReplayMenuItem = new System.Windows.Forms.MenuItem();
+            this.messagesDirectMessageMenuItem = new System.Windows.Forms.MenuItem();
             this.topPanel.SuspendLayout();
             this.bottomPanel.SuspendLayout();
             this.twitterInfomationTabControl.SuspendLayout();
@@ -82,7 +85,6 @@
             // 
             // menuMenuItem
             // 
-            resources.ApplyResources(this.menuMenuItem, "menuMenuItem");
             this.menuMenuItem.MenuItems.Add(this.automaticaryUpdateMenuItem);
             this.menuMenuItem.MenuItems.Add(this.menuItem3);
             this.menuMenuItem.MenuItems.Add(this.settingMenuItem);
@@ -90,6 +92,7 @@
             this.menuMenuItem.MenuItems.Add(this.aboutMenuItem);
             this.menuMenuItem.MenuItems.Add(this.menuItem1);
             this.menuMenuItem.MenuItems.Add(this.exitMenuItem);
+            resources.ApplyResources(this.menuMenuItem, "menuMenuItem");
             // 
             // automaticaryUpdateMenuItem
             // 
@@ -125,9 +128,9 @@
             // 
             // topPanel
             // 
-            resources.ApplyResources(this.topPanel, "topPanel");
             this.topPanel.Controls.Add(this.doingInfomationTextLabel);
             this.topPanel.Controls.Add(this.twitterIconPictureBox);
+            resources.ApplyResources(this.topPanel, "topPanel");
             this.topPanel.Name = "topPanel";
             // 
             // doingInfomationTextLabel
@@ -147,11 +150,11 @@
             // 
             // bottomPanel
             // 
-            resources.ApplyResources(this.bottomPanel, "bottomPanel");
             this.bottomPanel.Controls.Add(this.mainStatusBar);
             this.bottomPanel.Controls.Add(this.twitterInfomationTabControl);
             this.bottomPanel.Controls.Add(this.updateButton);
-            this.bottomPanel.Controls.Add(this.dowingTextBox);
+            this.bottomPanel.Controls.Add(this.doingTextBox);
+            resources.ApplyResources(this.bottomPanel, "bottomPanel");
             this.bottomPanel.Name = "bottomPanel";
             // 
             // mainStatusBar
@@ -169,8 +172,8 @@
             // 
             // timelineTabPage
             // 
-            resources.ApplyResources(this.timelineTabPage, "timelineTabPage");
             this.timelineTabPage.Controls.Add(this.timilineTwitterListView);
+            resources.ApplyResources(this.timelineTabPage, "timelineTabPage");
             this.timelineTabPage.Name = "timelineTabPage";
             // 
             // timilineTwitterListView
@@ -198,23 +201,24 @@
             // 
             // timelineContextMenu
             // 
-            this.timelineContextMenu.MenuItems.Add(this.replyMenuItem);
-            this.timelineContextMenu.MenuItems.Add(this.directMessageMenuItem);
+            this.timelineContextMenu.MenuItems.Add(this.timelineReplyMenuItem);
+            this.timelineContextMenu.MenuItems.Add(this.timelineDirectMessageMenuItem);
+            this.timelineContextMenu.Popup += new System.EventHandler(this.timelineContextMenu_Popup);
             // 
-            // replyMenuItem
+            // timelineReplyMenuItem
             // 
-            resources.ApplyResources(this.replyMenuItem, "replyMenuItem");
-            this.replyMenuItem.Click += new System.EventHandler(this.replyMenuItem_Click);
+            resources.ApplyResources(this.timelineReplyMenuItem, "timelineReplyMenuItem");
+            this.timelineReplyMenuItem.Click += new System.EventHandler(this.timelineReplyMenuItem_Click);
             // 
-            // directMessageMenuItem
+            // timelineDirectMessageMenuItem
             // 
-            resources.ApplyResources(this.directMessageMenuItem, "directMessageMenuItem");
-            this.directMessageMenuItem.Click += new System.EventHandler(this.directMessageMenuItem_Click);
+            resources.ApplyResources(this.timelineDirectMessageMenuItem, "timelineDirectMessageMenuItem");
+            this.timelineDirectMessageMenuItem.Click += new System.EventHandler(this.timelineDirectMessageMenuItem_Click);
             // 
             // directMessageTabPage
             // 
-            resources.ApplyResources(this.directMessageTabPage, "directMessageTabPage");
             this.directMessageTabPage.Controls.Add(this.messageTwitterListView);
+            resources.ApplyResources(this.directMessageTabPage, "directMessageTabPage");
             this.directMessageTabPage.Name = "directMessageTabPage";
             // 
             // messageTwitterListView
@@ -223,6 +227,7 @@
             this.messageTwitterListView.Columns.Add(this.messageScreenNameColumnHeader);
             this.messageTwitterListView.Columns.Add(this.messageColumnHeader);
             this.messageTwitterListView.Columns.Add(this.messageDateColumnHeader);
+            this.messageTwitterListView.ContextMenu = this.messagesContextMenu;
             this.messageTwitterListView.Name = "messageTwitterListView";
             this.messageTwitterListView.View = System.Windows.Forms.View.Details;
             this.messageTwitterListView.SelectedIndexChanged += new System.EventHandler(this.messageTwitterListView_SelectedIndexChanged);
@@ -247,9 +252,10 @@
             // 
             // dowingTextBox
             // 
-            resources.ApplyResources(this.dowingTextBox, "dowingTextBox");
-            this.dowingTextBox.ContextMenu = this.doingContextMenu;
-            this.dowingTextBox.Name = "dowingTextBox";
+            resources.ApplyResources(this.doingTextBox, "dowingTextBox");
+            this.doingTextBox.ContextMenu = this.doingContextMenu;
+            this.doingTextBox.Name = "dowingTextBox";
+            this.doingTextBox.TextChanged += new System.EventHandler(this.doingTextBox_TextChanged);
             // 
             // doingContextMenu
             // 
@@ -301,6 +307,22 @@
             this.fetchDirectMessageBackgroundWorker.RunWorkerCompleted += new OpenNETCF.ComponentModel.RunWorkerCompletedEventHandler(this.fetchDirectMessageBackgroundWorker_RunWorkerCompleted);
             this.fetchDirectMessageBackgroundWorker.ProgressChanged += new OpenNETCF.ComponentModel.ProgressChangedEventHandler(this.fetchDirectMessageBackgroundWorker_ProgressChanged);
             // 
+            // messagesContextMenu
+            // 
+            this.messagesContextMenu.MenuItems.Add(this.messagesReplayMenuItem);
+            this.messagesContextMenu.MenuItems.Add(this.messagesDirectMessageMenuItem);
+            this.messagesContextMenu.Popup += new System.EventHandler(this.messagesContextMenu_Popup);
+            // 
+            // messagesReplayMenuItem
+            // 
+            resources.ApplyResources(this.messagesReplayMenuItem, "messagesReplayMenuItem");
+            this.messagesReplayMenuItem.Click += new System.EventHandler(this.messagesReplayMenuItem_Click);
+            // 
+            // messagesDirectMessageMenuItem
+            // 
+            resources.ApplyResources(this.messagesDirectMessageMenuItem, "messagesDirectMessageMenuItem");
+            this.messagesDirectMessageMenuItem.Click += new System.EventHandler(this.messagesDirectMessageMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -330,7 +352,7 @@
         private System.Windows.Forms.Label doingInfomationTextLabel;
         private System.Windows.Forms.PictureBox twitterIconPictureBox;
         private System.Windows.Forms.Button updateButton;
-        private OpenNETCF.Windows.Forms.TextBox2 dowingTextBox;
+        private OpenNETCF.Windows.Forms.TextBox2 doingTextBox;
         private System.Windows.Forms.ListView timilineTwitterListView;
         private System.Windows.Forms.ColumnHeader timelineScreenNameColumnHeader;
         private System.Windows.Forms.ColumnHeader doingColumnHeader;
@@ -352,8 +374,8 @@
         private System.Windows.Forms.MenuItem cutMenuItem;
         private System.Windows.Forms.MenuItem pasteMenuItem;
         private System.Windows.Forms.ContextMenu timelineContextMenu;
-        private System.Windows.Forms.MenuItem replyMenuItem;
-        private System.Windows.Forms.MenuItem directMessageMenuItem;
+        private System.Windows.Forms.MenuItem timelineReplyMenuItem;
+        private System.Windows.Forms.MenuItem timelineDirectMessageMenuItem;
         private System.Windows.Forms.TabPage directMessageTabPage;
         private System.Windows.Forms.ListView messageTwitterListView;
         private System.Windows.Forms.ColumnHeader messageScreenNameColumnHeader;
@@ -362,6 +384,9 @@
         private OpenNETCF.ComponentModel.BackgroundWorker fetchDirectMessageBackgroundWorker;
         private System.Windows.Forms.MenuItem automaticaryUpdateMenuItem;
         private System.Windows.Forms.MenuItem menuItem3;
+        private System.Windows.Forms.ContextMenu messagesContextMenu;
+        private System.Windows.Forms.MenuItem messagesReplayMenuItem;
+        private System.Windows.Forms.MenuItem messagesDirectMessageMenuItem;
 
 
     }

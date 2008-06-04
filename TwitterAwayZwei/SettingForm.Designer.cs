@@ -30,15 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingForm));
             this.settingTabControl = new System.Windows.Forms.TabControl();
-            this.generalTabPage = new System.Windows.Forms.TabPage();
-            this.checkDirectMessageIntervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.checkDirectMessageLabel = new System.Windows.Forms.Label();
-            this.getListPanel = new System.Windows.Forms.Panel();
-            this.checkPublicRadioButton = new System.Windows.Forms.RadioButton();
-            this.checkFriendsRadioButton = new System.Windows.Forms.RadioButton();
-            this.checkListLabel = new System.Windows.Forms.Label();
-            this.checkTimelineIntervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.checkTimelineIntervalLabel = new System.Windows.Forms.Label();
+            this.userTabPage = new System.Windows.Forms.TabPage();
             this.passwordTextBox = new OpenNETCF.Windows.Forms.TextBox2();
             this.passwordContextMenu = new System.Windows.Forms.ContextMenu();
             this.passwordCutMenuItem = new System.Windows.Forms.MenuItem();
@@ -51,6 +43,16 @@
             this.userNameCopyMenuItem = new System.Windows.Forms.MenuItem();
             this.userNamePasteMenuItem = new System.Windows.Forms.MenuItem();
             this.userNameLabel = new System.Windows.Forms.Label();
+            this.checkTabPage = new System.Windows.Forms.TabPage();
+            this.fetchProfileIconsCheckBox = new System.Windows.Forms.CheckBox();
+            this.checkDirectMessageIntervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.checkDirectMessageLabel = new System.Windows.Forms.Label();
+            this.getListPanel = new System.Windows.Forms.Panel();
+            this.checkPublicRadioButton = new System.Windows.Forms.RadioButton();
+            this.checkFriendsRadioButton = new System.Windows.Forms.RadioButton();
+            this.checkListLabel = new System.Windows.Forms.Label();
+            this.checkTimelineIntervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.checkTimelineIntervalLabel = new System.Windows.Forms.Label();
             this.networkTabPage = new System.Windows.Forms.TabPage();
             this.proxySettingPanel = new System.Windows.Forms.Panel();
             this.proxyUseOriginalSettingRadioButton = new System.Windows.Forms.RadioButton();
@@ -69,7 +71,8 @@
             this.proxyPortLabel = new System.Windows.Forms.Label();
             this.proxyServerLabel = new System.Windows.Forms.Label();
             this.settingTabControl.SuspendLayout();
-            this.generalTabPage.SuspendLayout();
+            this.userTabPage.SuspendLayout();
+            this.checkTabPage.SuspendLayout();
             this.getListPanel.SuspendLayout();
             this.networkTabPage.SuspendLayout();
             this.proxySettingPanel.SuspendLayout();
@@ -77,101 +80,21 @@
             // 
             // settingTabControl
             // 
-            this.settingTabControl.Controls.Add(this.generalTabPage);
-            this.settingTabControl.Controls.Add(this.networkTabPage);
             resources.ApplyResources(this.settingTabControl, "settingTabControl");
+            this.settingTabControl.Controls.Add(this.userTabPage);
+            this.settingTabControl.Controls.Add(this.checkTabPage);
+            this.settingTabControl.Controls.Add(this.networkTabPage);
             this.settingTabControl.Name = "settingTabControl";
             this.settingTabControl.SelectedIndex = 0;
             // 
-            // generalTabPage
+            // userTabPage
             // 
-            this.generalTabPage.Controls.Add(this.checkDirectMessageIntervalNumericUpDown);
-            this.generalTabPage.Controls.Add(this.checkDirectMessageLabel);
-            this.generalTabPage.Controls.Add(this.getListPanel);
-            this.generalTabPage.Controls.Add(this.checkTimelineIntervalNumericUpDown);
-            this.generalTabPage.Controls.Add(this.checkTimelineIntervalLabel);
-            this.generalTabPage.Controls.Add(this.passwordTextBox);
-            this.generalTabPage.Controls.Add(this.passwordLabel);
-            this.generalTabPage.Controls.Add(this.userNameTextBox);
-            this.generalTabPage.Controls.Add(this.userNameLabel);
-            resources.ApplyResources(this.generalTabPage, "generalTabPage");
-            this.generalTabPage.Name = "generalTabPage";
-            // 
-            // checkDirectMessageIntervalNumericUpDown
-            // 
-            resources.ApplyResources(this.checkDirectMessageIntervalNumericUpDown, "checkDirectMessageIntervalNumericUpDown");
-            this.checkDirectMessageIntervalNumericUpDown.Maximum = new decimal(new int[] {
-            3600,
-            0,
-            0,
-            0});
-            this.checkDirectMessageIntervalNumericUpDown.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.checkDirectMessageIntervalNumericUpDown.Name = "checkDirectMessageIntervalNumericUpDown";
-            this.checkDirectMessageIntervalNumericUpDown.ReadOnly = true;
-            this.checkDirectMessageIntervalNumericUpDown.Value = new decimal(new int[] {
-            600,
-            0,
-            0,
-            0});
-            // 
-            // checkDirectMessageLabel
-            // 
-            resources.ApplyResources(this.checkDirectMessageLabel, "checkDirectMessageLabel");
-            this.checkDirectMessageLabel.Name = "checkDirectMessageLabel";
-            // 
-            // getListPanel
-            // 
-            this.getListPanel.Controls.Add(this.checkPublicRadioButton);
-            this.getListPanel.Controls.Add(this.checkFriendsRadioButton);
-            this.getListPanel.Controls.Add(this.checkListLabel);
-            resources.ApplyResources(this.getListPanel, "getListPanel");
-            this.getListPanel.Name = "getListPanel";
-            // 
-            // checkPublicRadioButton
-            // 
-            resources.ApplyResources(this.checkPublicRadioButton, "checkPublicRadioButton");
-            this.checkPublicRadioButton.Name = "checkPublicRadioButton";
-            // 
-            // checkFriendsRadioButton
-            // 
-            this.checkFriendsRadioButton.Checked = true;
-            resources.ApplyResources(this.checkFriendsRadioButton, "checkFriendsRadioButton");
-            this.checkFriendsRadioButton.Name = "checkFriendsRadioButton";
-            // 
-            // checkListLabel
-            // 
-            resources.ApplyResources(this.checkListLabel, "checkListLabel");
-            this.checkListLabel.Name = "checkListLabel";
-            // 
-            // checkTimelineIntervalNumericUpDown
-            // 
-            resources.ApplyResources(this.checkTimelineIntervalNumericUpDown, "checkTimelineIntervalNumericUpDown");
-            this.checkTimelineIntervalNumericUpDown.Maximum = new decimal(new int[] {
-            3600,
-            0,
-            0,
-            0});
-            this.checkTimelineIntervalNumericUpDown.Minimum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.checkTimelineIntervalNumericUpDown.Name = "checkTimelineIntervalNumericUpDown";
-            this.checkTimelineIntervalNumericUpDown.ReadOnly = true;
-            this.checkTimelineIntervalNumericUpDown.Value = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            // 
-            // checkTimelineIntervalLabel
-            // 
-            resources.ApplyResources(this.checkTimelineIntervalLabel, "checkTimelineIntervalLabel");
-            this.checkTimelineIntervalLabel.Name = "checkTimelineIntervalLabel";
+            resources.ApplyResources(this.userTabPage, "userTabPage");
+            this.userTabPage.Controls.Add(this.passwordTextBox);
+            this.userTabPage.Controls.Add(this.passwordLabel);
+            this.userTabPage.Controls.Add(this.userNameTextBox);
+            this.userTabPage.Controls.Add(this.userNameLabel);
+            this.userTabPage.Name = "userTabPage";
             // 
             // passwordTextBox
             // 
@@ -237,10 +160,102 @@
             resources.ApplyResources(this.userNameLabel, "userNameLabel");
             this.userNameLabel.Name = "userNameLabel";
             // 
+            // checkTabPage
+            // 
+            resources.ApplyResources(this.checkTabPage, "checkTabPage");
+            this.checkTabPage.Controls.Add(this.fetchProfileIconsCheckBox);
+            this.checkTabPage.Controls.Add(this.checkDirectMessageIntervalNumericUpDown);
+            this.checkTabPage.Controls.Add(this.checkDirectMessageLabel);
+            this.checkTabPage.Controls.Add(this.getListPanel);
+            this.checkTabPage.Controls.Add(this.checkTimelineIntervalNumericUpDown);
+            this.checkTabPage.Controls.Add(this.checkTimelineIntervalLabel);
+            this.checkTabPage.Name = "checkTabPage";
+            // 
+            // fetchProfileIconsCheckBox
+            // 
+            resources.ApplyResources(this.fetchProfileIconsCheckBox, "fetchProfileIconsCheckBox");
+            this.fetchProfileIconsCheckBox.Name = "fetchProfileIconsCheckBox";
+            // 
+            // checkDirectMessageIntervalNumericUpDown
+            // 
+            resources.ApplyResources(this.checkDirectMessageIntervalNumericUpDown, "checkDirectMessageIntervalNumericUpDown");
+            this.checkDirectMessageIntervalNumericUpDown.Maximum = new decimal(new int[] {
+            3600,
+            0,
+            0,
+            0});
+            this.checkDirectMessageIntervalNumericUpDown.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.checkDirectMessageIntervalNumericUpDown.Name = "checkDirectMessageIntervalNumericUpDown";
+            this.checkDirectMessageIntervalNumericUpDown.ReadOnly = true;
+            this.checkDirectMessageIntervalNumericUpDown.Value = new decimal(new int[] {
+            600,
+            0,
+            0,
+            0});
+            // 
+            // checkDirectMessageLabel
+            // 
+            resources.ApplyResources(this.checkDirectMessageLabel, "checkDirectMessageLabel");
+            this.checkDirectMessageLabel.Name = "checkDirectMessageLabel";
+            // 
+            // getListPanel
+            // 
+            resources.ApplyResources(this.getListPanel, "getListPanel");
+            this.getListPanel.Controls.Add(this.checkPublicRadioButton);
+            this.getListPanel.Controls.Add(this.checkFriendsRadioButton);
+            this.getListPanel.Controls.Add(this.checkListLabel);
+            this.getListPanel.Name = "getListPanel";
+            // 
+            // checkPublicRadioButton
+            // 
+            resources.ApplyResources(this.checkPublicRadioButton, "checkPublicRadioButton");
+            this.checkPublicRadioButton.Name = "checkPublicRadioButton";
+            // 
+            // checkFriendsRadioButton
+            // 
+            resources.ApplyResources(this.checkFriendsRadioButton, "checkFriendsRadioButton");
+            this.checkFriendsRadioButton.Checked = true;
+            this.checkFriendsRadioButton.Name = "checkFriendsRadioButton";
+            // 
+            // checkListLabel
+            // 
+            resources.ApplyResources(this.checkListLabel, "checkListLabel");
+            this.checkListLabel.Name = "checkListLabel";
+            // 
+            // checkTimelineIntervalNumericUpDown
+            // 
+            resources.ApplyResources(this.checkTimelineIntervalNumericUpDown, "checkTimelineIntervalNumericUpDown");
+            this.checkTimelineIntervalNumericUpDown.Maximum = new decimal(new int[] {
+            3600,
+            0,
+            0,
+            0});
+            this.checkTimelineIntervalNumericUpDown.Minimum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.checkTimelineIntervalNumericUpDown.Name = "checkTimelineIntervalNumericUpDown";
+            this.checkTimelineIntervalNumericUpDown.ReadOnly = true;
+            this.checkTimelineIntervalNumericUpDown.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            // 
+            // checkTimelineIntervalLabel
+            // 
+            resources.ApplyResources(this.checkTimelineIntervalLabel, "checkTimelineIntervalLabel");
+            this.checkTimelineIntervalLabel.Name = "checkTimelineIntervalLabel";
+            // 
             // networkTabPage
             // 
-            this.networkTabPage.Controls.Add(this.proxySettingPanel);
             resources.ApplyResources(this.networkTabPage, "networkTabPage");
+            this.networkTabPage.Controls.Add(this.proxySettingPanel);
             this.networkTabPage.Name = "networkTabPage";
             // 
             // proxySettingPanel
@@ -262,8 +277,8 @@
             // 
             // proxyPortTextBox
             // 
-            this.proxyPortTextBox.ContextMenu = this.proxyPortContextMenu;
             resources.ApplyResources(this.proxyPortTextBox, "proxyPortTextBox");
+            this.proxyPortTextBox.ContextMenu = this.proxyPortContextMenu;
             this.proxyPortTextBox.Name = "proxyPortTextBox";
             // 
             // proxyPortContextMenu
@@ -289,14 +304,14 @@
             // 
             // proxyUseOsSettingRadioButton
             // 
-            this.proxyUseOsSettingRadioButton.Checked = true;
             resources.ApplyResources(this.proxyUseOsSettingRadioButton, "proxyUseOsSettingRadioButton");
+            this.proxyUseOsSettingRadioButton.Checked = true;
             this.proxyUseOsSettingRadioButton.Name = "proxyUseOsSettingRadioButton";
             // 
             // proxyServerTextBox
             // 
-            this.proxyServerTextBox.ContextMenu = this.proxyServerContextMenu;
             resources.ApplyResources(this.proxyServerTextBox, "proxyServerTextBox");
+            this.proxyServerTextBox.ContextMenu = this.proxyServerContextMenu;
             this.proxyServerTextBox.Name = "proxyServerTextBox";
             // 
             // proxyServerContextMenu
@@ -345,7 +360,8 @@
             this.Load += new System.EventHandler(this.SettingForm_Load);
             this.Closing += new System.ComponentModel.CancelEventHandler(this.SettingForm_Closing);
             this.settingTabControl.ResumeLayout(false);
-            this.generalTabPage.ResumeLayout(false);
+            this.userTabPage.ResumeLayout(false);
+            this.checkTabPage.ResumeLayout(false);
             this.getListPanel.ResumeLayout(false);
             this.networkTabPage.ResumeLayout(false);
             this.proxySettingPanel.ResumeLayout(false);
@@ -356,13 +372,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl settingTabControl;
-        private System.Windows.Forms.TabPage generalTabPage;
-        private System.Windows.Forms.Panel getListPanel;
-        private System.Windows.Forms.RadioButton checkPublicRadioButton;
-        private System.Windows.Forms.RadioButton checkFriendsRadioButton;
-        private System.Windows.Forms.Label checkListLabel;
-        private System.Windows.Forms.NumericUpDown checkTimelineIntervalNumericUpDown;
-        private System.Windows.Forms.Label checkTimelineIntervalLabel;
+        private System.Windows.Forms.TabPage userTabPage;
         private OpenNETCF.Windows.Forms.TextBox2 passwordTextBox;
         private System.Windows.Forms.Label passwordLabel;
         private OpenNETCF.Windows.Forms.TextBox2 userNameTextBox;
@@ -392,7 +402,15 @@
         private System.Windows.Forms.MenuItem proxyPortCutMenuItem;
         private System.Windows.Forms.MenuItem proxyPortCopyMenuItem;
         private System.Windows.Forms.MenuItem proxyPortPasteMenuItem;
+        private System.Windows.Forms.TabPage checkTabPage;
         private System.Windows.Forms.NumericUpDown checkDirectMessageIntervalNumericUpDown;
         private System.Windows.Forms.Label checkDirectMessageLabel;
+        private System.Windows.Forms.Panel getListPanel;
+        private System.Windows.Forms.RadioButton checkPublicRadioButton;
+        private System.Windows.Forms.RadioButton checkFriendsRadioButton;
+        private System.Windows.Forms.Label checkListLabel;
+        private System.Windows.Forms.NumericUpDown checkTimelineIntervalNumericUpDown;
+        private System.Windows.Forms.Label checkTimelineIntervalLabel;
+        private System.Windows.Forms.CheckBox fetchProfileIconsCheckBox;
     }
 }
