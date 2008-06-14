@@ -155,6 +155,43 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
+        /// Timeline/Messagesリストのフォントサイズ列挙
+        /// </summary>
+        public enum TimelineListFontSizes
+        {
+            DefaultSize,
+            Size6pt = 6,
+            Size7pt = 7,
+            Size8pt = 8,
+            Size9pt = 9,
+            Size10pt = 10,
+            Size11pt = 11,
+            Size12pt = 12,
+            Size13pt = 13,
+            Size14pt = 14,
+            Size15pt = 15,
+            Size16pt = 16,
+            Size17pt = 17,
+            Size18pt = 18,
+            Size19pt = 19,
+            Size20pt = 20
+        }
+
+        /// <summary>
+        /// Timeline/Messagesリストのフォントサイズ
+        /// </summary>
+        private TimelineListFontSizes timelineListFontSize = TimelineListFontSizes.DefaultSize;
+
+        /// <summary>
+        /// Timeline/Messagesリストのフォントサイズを取得・設定する
+        /// </summary>
+        public TimelineListFontSizes TimelineListFontSize
+        {
+            get { return timelineListFontSize; }
+            set { timelineListFontSize = value; }
+        }
+
+        /// <summary>
         /// プロキシの接続方法
         /// </summary>
         private Twitter.Twitter.ProxyConnects proxyUse = Twitter.Twitter.ProxyConnects.OsSetting;

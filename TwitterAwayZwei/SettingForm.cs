@@ -30,6 +30,59 @@ namespace TwitterAwayZwei
 
             #region 設定の読み込み
 
+            switch (UserSettingAdapter.Setting.TimelineListFontSize)
+            {
+                case UserSetting.TimelineListFontSizes.Size6pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 1;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size7pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 2;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size8pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 3;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size9pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 4;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size10pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 5;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size11pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 6;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size12pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 7;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size13pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 8;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size14pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 9;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size15pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 10;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size16pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 11;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size17pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 12;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size18pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 13;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size19pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 14;
+                    break;
+                case UserSetting.TimelineListFontSizes.Size20pt:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 15;
+                    break;
+                case UserSetting.TimelineListFontSizes.DefaultSize:
+                default:
+                    timelineListFontSizeDomainUpDown.SelectedIndex = 0;
+                    break;
+            }
+
             userNameTextBox.Text = UserSettingAdapter.Setting.UserName;
             passwordTextBox.Text = UserSettingAdapter.Setting.Password;
 
@@ -86,6 +139,59 @@ namespace TwitterAwayZwei
         private void SettingForm_Closing(object sender, CancelEventArgs e)
         {
             #region 設定の書き込み
+
+            switch (timelineListFontSizeDomainUpDown.SelectedIndex)
+            {
+                case 1:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size6pt;
+                    break;
+                case 2:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size7pt;
+                    break;
+                case 3:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size8pt;
+                    break;
+                case 4:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size9pt;
+                    break;
+                case 5:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size10pt;
+                    break;
+                case 6:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size11pt;
+                    break;
+                case 7:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size12pt;
+                    break;
+                case 8:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size13pt;
+                    break;
+                case 9:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size14pt;
+                    break;
+                case 10:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size15pt;
+                    break;
+                case 11:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size16pt;
+                    break;
+                case 12:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size17pt;
+                    break;
+                case 13:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size18pt;
+                    break;
+                case 14:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size19pt;
+                    break;
+                case 15:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.Size20pt;
+                    break;
+                case 0:
+                default:
+                    UserSettingAdapter.Setting.TimelineListFontSize = UserSetting.TimelineListFontSizes.DefaultSize;
+                    break;
+            }
 
             UserSettingAdapter.Setting.UserName = userNameTextBox.Text;
             UserSettingAdapter.Setting.Password = passwordTextBox.Text;

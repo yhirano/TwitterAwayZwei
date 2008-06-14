@@ -56,6 +56,14 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
+        /// Timeline/Messagesリストのデフォルトフォントサイズ
+        /// </summary>
+        public static int TimelineListDefaultFontSize
+        {
+            get { return 9; }
+        }
+
+        /// <summary>
         /// アプリケーションの設定ファイルパスを取得する
         /// </summary>
         public static string SettingPath

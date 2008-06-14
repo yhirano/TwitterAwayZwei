@@ -153,19 +153,19 @@ namespace TwitterAwayZwei
         /// <param name="addStatus"></param>
         private void UpdateTimelineListView(StatusInfomation[] statuses)
         {
-            timilineTwitterListView.Items.Clear();
+            timelineTwitterListView.Items.Clear();
 
             if (statuses == null)
             {
                 return;
             }
 
-            timilineTwitterListView.BeginUpdate();
+            timelineTwitterListView.BeginUpdate();
             foreach (StatusInfomation status in statuses)
             {
                 AddStatusToListView(status);
             }
-            timilineTwitterListView.EndUpdate();
+            timelineTwitterListView.EndUpdate();
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace TwitterAwayZwei
             {
                 item.ImageIndex = twitterAccount.GetProfileImageIndex(addStatus.User.ProfileImageUrl);
             }
-            timilineTwitterListView.Items.Add(item);
+            timelineTwitterListView.Items.Add(item);
         }
 
         /// <summary>
@@ -380,9 +380,9 @@ namespace TwitterAwayZwei
         {
             automaticaryCheck = UserSettingAdapter.Setting.AutomaticaryCheck;
             topPanel.Height = UserSettingAdapter.Setting.TopPanelHeight;
-            timilineTwitterListView.Columns[0].Width = UserSettingAdapter.Setting.TimelineTwitterListViewNameColumnWidth;
-            timilineTwitterListView.Columns[1].Width = UserSettingAdapter.Setting.TimelineTwitterListViewDoingColumnWidth;
-            timilineTwitterListView.Columns[2].Width = UserSettingAdapter.Setting.TimelineTwitterListViewDateColumnWidth;
+            timelineTwitterListView.Columns[0].Width = UserSettingAdapter.Setting.TimelineTwitterListViewNameColumnWidth;
+            timelineTwitterListView.Columns[1].Width = UserSettingAdapter.Setting.TimelineTwitterListViewDoingColumnWidth;
+            timelineTwitterListView.Columns[2].Width = UserSettingAdapter.Setting.TimelineTwitterListViewDateColumnWidth;
             messageTwitterListView.Columns[0].Width = UserSettingAdapter.Setting.MessageTwitterListViewNameColumnWidth;
             messageTwitterListView.Columns[1].Width = UserSettingAdapter.Setting.MessageTwitterListViewMessageColumnWidth;
             messageTwitterListView.Columns[2].Width = UserSettingAdapter.Setting.MessageTwitterListViewDateColumnWidth;
@@ -395,9 +395,9 @@ namespace TwitterAwayZwei
         {
             UserSettingAdapter.Setting.AutomaticaryCheck = automaticaryCheck;
             UserSettingAdapter.Setting.TopPanelHeight = topPanel.Height;
-            UserSettingAdapter.Setting.TimelineTwitterListViewNameColumnWidth = timilineTwitterListView.Columns[0].Width;
-            UserSettingAdapter.Setting.TimelineTwitterListViewDoingColumnWidth = timilineTwitterListView.Columns[1].Width;
-            UserSettingAdapter.Setting.TimelineTwitterListViewDateColumnWidth = timilineTwitterListView.Columns[2].Width;
+            UserSettingAdapter.Setting.TimelineTwitterListViewNameColumnWidth = timelineTwitterListView.Columns[0].Width;
+            UserSettingAdapter.Setting.TimelineTwitterListViewDoingColumnWidth = timelineTwitterListView.Columns[1].Width;
+            UserSettingAdapter.Setting.TimelineTwitterListViewDateColumnWidth = timelineTwitterListView.Columns[2].Width;
             UserSettingAdapter.Setting.MessageTwitterListViewNameColumnWidth = messageTwitterListView.Columns[0].Width;
             UserSettingAdapter.Setting.MessageTwitterListViewMessageColumnWidth = messageTwitterListView.Columns[1].Width;
             UserSettingAdapter.Setting.MessageTwitterListViewDateColumnWidth = messageTwitterListView.Columns[2].Width;
@@ -413,12 +413,12 @@ namespace TwitterAwayZwei
             // 設定の復元
             LoadFormSetting();
 
-            timilineTwitterListView.SmallImageList = twitterAccount.ProfileSmallImageList;
-            timilineTwitterListView.LargeImageList = twitterAccount.ProfileLargeImageList;
+            timelineTwitterListView.SmallImageList = twitterAccount.ProfileSmallImageList;
+            timelineTwitterListView.LargeImageList = twitterAccount.ProfileLargeImageList;
 
             // タイマーを有効にする
             fetchTimelineTimer.Enabled = true;
-            
+
             if (automaticaryCheck == true)
             {
                 automaticaryUpdateMenuItem.Checked = true;
@@ -675,9 +675,9 @@ namespace TwitterAwayZwei
         private void twitterListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             // リストビューに選択がある場合
-            if (timilineTwitterListView.SelectedIndices.Count == 1 && timilineTwitterListView.SelectedIndices[0] < twitterStatuses.Length)
+            if (timelineTwitterListView.SelectedIndices.Count == 1 && timelineTwitterListView.SelectedIndices[0] < twitterStatuses.Length)
             {
-                StatusInfomation status = timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag as StatusInfomation;
+                StatusInfomation status = timelineTwitterListView.Items[timelineTwitterListView.SelectedIndices[0]].Tag as StatusInfomation;
                 if (status != null)
                 {
                     doingInfomationTextLabel.Text = status.User.Name + "\r\n" + status.Text;
@@ -779,8 +779,8 @@ namespace TwitterAwayZwei
 
         private void timelineContextMenu_Popup(object sender, EventArgs e)
         {
-            if (timilineTwitterListView.SelectedIndices.Count > 0 &&
-                timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
+            if (timelineTwitterListView.SelectedIndices.Count > 0 &&
+                timelineTwitterListView.Items[timelineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
             {
                 timelineReplyMenuItem.Enabled = true;
                 timelineDirectMessageMenuItem.Enabled = true;
@@ -794,20 +794,20 @@ namespace TwitterAwayZwei
 
         private void timelineReplyMenuItem_Click(object sender, EventArgs e)
         {
-            if (timilineTwitterListView.SelectedIndices.Count > 0 &&
-                timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
+            if (timelineTwitterListView.SelectedIndices.Count > 0 &&
+                timelineTwitterListView.Items[timelineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
             {
-                StatusInfomation status = (StatusInfomation)timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag;
+                StatusInfomation status = (StatusInfomation)timelineTwitterListView.Items[timelineTwitterListView.SelectedIndices[0]].Tag;
                 doingTextBox.Text = string.Format("@{0} {1}", status.User.ScreenName, doingTextBox.Text);
             }
         }
 
         private void timelineDirectMessageMenuItem_Click(object sender, EventArgs e)
         {
-            if (timilineTwitterListView.SelectedIndices.Count > 0 &&
-                timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
+            if (timelineTwitterListView.SelectedIndices.Count > 0 &&
+                timelineTwitterListView.Items[timelineTwitterListView.SelectedIndices[0]].Tag is StatusInfomation)
             {
-                StatusInfomation status = (StatusInfomation)timilineTwitterListView.Items[timilineTwitterListView.SelectedIndices[0]].Tag;
+                StatusInfomation status = (StatusInfomation)timelineTwitterListView.Items[timelineTwitterListView.SelectedIndices[0]].Tag;
                 doingTextBox.Text = string.Format("D {0} {1}", status.User.ScreenName, doingTextBox.Text);
             }
         }
@@ -865,6 +865,22 @@ namespace TwitterAwayZwei
         private void doingTextBox_TextChanged(object sender, EventArgs e)
         {
             SwitchEnableUpdateButton();
+        }
+
+        private void bottomPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (UserSettingAdapter.Setting.TimelineListFontSize == UserSetting.TimelineListFontSizes.DefaultSize)
+            {
+                Font font = new Font(timelineTwitterListView.Font.Name, TwitterAwayZweiInfo.TimelineListDefaultFontSize, timelineTwitterListView.Font.Style);
+                timelineTwitterListView.Font = font;
+                messageTwitterListView.Font = font;
+            }
+            else
+            {
+                Font font = new Font(timelineTwitterListView.Font.Name, (int)UserSettingAdapter.Setting.TimelineListFontSize, timelineTwitterListView.Font.Style);
+                timelineTwitterListView.Font = font;
+                messageTwitterListView.Font = font;
+            }
         }
     }
 }

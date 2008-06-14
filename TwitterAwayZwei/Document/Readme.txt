@@ -54,6 +54,9 @@ TwitterAway Zwei]を選択して削除してください。
 
 
 【バージョン履歴】
+Version 0.4
+・Timeline/Messagesリストビューのフォントサイズを設定できるようにした
+
 Version 0.3
 ・Timelineリストビューのを選択状態でコンテキストメニューのReplay/Direct message
 　の有効無効を切り替えるようにした

@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingForm));
             this.settingTabControl = new System.Windows.Forms.TabControl();
+            this.generalTabPage = new System.Windows.Forms.TabPage();
+            this.timelineListFontSizeLabel = new System.Windows.Forms.Label();
+            this.timelineListFontSizeDomainUpDown = new System.Windows.Forms.DomainUpDown();
             this.userTabPage = new System.Windows.Forms.TabPage();
             this.passwordTextBox = new OpenNETCF.Windows.Forms.TextBox2();
             this.passwordContextMenu = new System.Windows.Forms.ContextMenu();
@@ -43,7 +46,7 @@
             this.userNameCopyMenuItem = new System.Windows.Forms.MenuItem();
             this.userNamePasteMenuItem = new System.Windows.Forms.MenuItem();
             this.userNameLabel = new System.Windows.Forms.Label();
-            this.checkTabPage = new System.Windows.Forms.TabPage();
+            this.timelineTabPage = new System.Windows.Forms.TabPage();
             this.fetchProfileIconsCheckBox = new System.Windows.Forms.CheckBox();
             this.checkDirectMessageIntervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.checkDirectMessageLabel = new System.Windows.Forms.Label();
@@ -71,8 +74,9 @@
             this.proxyPortLabel = new System.Windows.Forms.Label();
             this.proxyServerLabel = new System.Windows.Forms.Label();
             this.settingTabControl.SuspendLayout();
+            this.generalTabPage.SuspendLayout();
             this.userTabPage.SuspendLayout();
-            this.checkTabPage.SuspendLayout();
+            this.timelineTabPage.SuspendLayout();
             this.getListPanel.SuspendLayout();
             this.networkTabPage.SuspendLayout();
             this.proxySettingPanel.SuspendLayout();
@@ -81,11 +85,46 @@
             // settingTabControl
             // 
             resources.ApplyResources(this.settingTabControl, "settingTabControl");
+            this.settingTabControl.Controls.Add(this.generalTabPage);
             this.settingTabControl.Controls.Add(this.userTabPage);
-            this.settingTabControl.Controls.Add(this.checkTabPage);
+            this.settingTabControl.Controls.Add(this.timelineTabPage);
             this.settingTabControl.Controls.Add(this.networkTabPage);
             this.settingTabControl.Name = "settingTabControl";
             this.settingTabControl.SelectedIndex = 0;
+            // 
+            // generalTabPage
+            // 
+            resources.ApplyResources(this.generalTabPage, "generalTabPage");
+            this.generalTabPage.Controls.Add(this.timelineListFontSizeLabel);
+            this.generalTabPage.Controls.Add(this.timelineListFontSizeDomainUpDown);
+            this.generalTabPage.Name = "generalTabPage";
+            // 
+            // timelineListFontSizeLabel
+            // 
+            resources.ApplyResources(this.timelineListFontSizeLabel, "timelineListFontSizeLabel");
+            this.timelineListFontSizeLabel.Name = "timelineListFontSizeLabel";
+            // 
+            // timelineListFontSizeDomainUpDown
+            // 
+            resources.ApplyResources(this.timelineListFontSizeDomainUpDown, "timelineListFontSizeDomainUpDown");
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items1"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items2"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items3"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items4"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items5"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items6"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items7"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items8"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items9"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items10"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items11"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items12"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items13"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items14"));
+            this.timelineListFontSizeDomainUpDown.Items.Add(resources.GetString("timelineListFontSizeDomainUpDown.Items15"));
+            this.timelineListFontSizeDomainUpDown.Name = "timelineListFontSizeDomainUpDown";
+            this.timelineListFontSizeDomainUpDown.ReadOnly = true;
             // 
             // userTabPage
             // 
@@ -160,16 +199,16 @@
             resources.ApplyResources(this.userNameLabel, "userNameLabel");
             this.userNameLabel.Name = "userNameLabel";
             // 
-            // checkTabPage
+            // timelineTabPage
             // 
-            resources.ApplyResources(this.checkTabPage, "checkTabPage");
-            this.checkTabPage.Controls.Add(this.fetchProfileIconsCheckBox);
-            this.checkTabPage.Controls.Add(this.checkDirectMessageIntervalNumericUpDown);
-            this.checkTabPage.Controls.Add(this.checkDirectMessageLabel);
-            this.checkTabPage.Controls.Add(this.getListPanel);
-            this.checkTabPage.Controls.Add(this.checkTimelineIntervalNumericUpDown);
-            this.checkTabPage.Controls.Add(this.checkTimelineIntervalLabel);
-            this.checkTabPage.Name = "checkTabPage";
+            resources.ApplyResources(this.timelineTabPage, "timelineTabPage");
+            this.timelineTabPage.Controls.Add(this.fetchProfileIconsCheckBox);
+            this.timelineTabPage.Controls.Add(this.checkDirectMessageIntervalNumericUpDown);
+            this.timelineTabPage.Controls.Add(this.checkDirectMessageLabel);
+            this.timelineTabPage.Controls.Add(this.getListPanel);
+            this.timelineTabPage.Controls.Add(this.checkTimelineIntervalNumericUpDown);
+            this.timelineTabPage.Controls.Add(this.checkTimelineIntervalLabel);
+            this.timelineTabPage.Name = "timelineTabPage";
             // 
             // fetchProfileIconsCheckBox
             // 
@@ -360,8 +399,9 @@
             this.Load += new System.EventHandler(this.SettingForm_Load);
             this.Closing += new System.ComponentModel.CancelEventHandler(this.SettingForm_Closing);
             this.settingTabControl.ResumeLayout(false);
+            this.generalTabPage.ResumeLayout(false);
             this.userTabPage.ResumeLayout(false);
-            this.checkTabPage.ResumeLayout(false);
+            this.timelineTabPage.ResumeLayout(false);
             this.getListPanel.ResumeLayout(false);
             this.networkTabPage.ResumeLayout(false);
             this.proxySettingPanel.ResumeLayout(false);
@@ -402,7 +442,7 @@
         private System.Windows.Forms.MenuItem proxyPortCutMenuItem;
         private System.Windows.Forms.MenuItem proxyPortCopyMenuItem;
         private System.Windows.Forms.MenuItem proxyPortPasteMenuItem;
-        private System.Windows.Forms.TabPage checkTabPage;
+        private System.Windows.Forms.TabPage timelineTabPage;
         private System.Windows.Forms.NumericUpDown checkDirectMessageIntervalNumericUpDown;
         private System.Windows.Forms.Label checkDirectMessageLabel;
         private System.Windows.Forms.Panel getListPanel;
@@ -412,5 +452,8 @@
         private System.Windows.Forms.NumericUpDown checkTimelineIntervalNumericUpDown;
         private System.Windows.Forms.Label checkTimelineIntervalLabel;
         private System.Windows.Forms.CheckBox fetchProfileIconsCheckBox;
+        private System.Windows.Forms.TabPage generalTabPage;
+        private System.Windows.Forms.DomainUpDown timelineListFontSizeDomainUpDown;
+        private System.Windows.Forms.Label timelineListFontSizeLabel;
     }
 }

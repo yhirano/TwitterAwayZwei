@@ -117,18 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="userTabPage.Text" xml:space="preserve">
-    <value>ユーザー</value>
+  <data name="timelineListFontSizeLabel.Text" xml:space="preserve">
+    <value>Timeline/Messagesリストのフォントサイズ</value>
   </data>
-  <data name="checkTabPage.Text" xml:space="preserve">
-    <value>チェック</value>
+  <data name="timelineListFontSizeDomainUpDown.Items" xml:space="preserve">
+    <value>規定</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="networkTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 268</value>
-  </data>
-  <data name="networkTabPage.Text" xml:space="preserve">
-    <value>ネットワーク</value>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>一般</value>
   </data>
   <data name="passwordCutMenuItem.Text" xml:space="preserve">
     <value>切り取り</value>
@@ -138,6 +134,10 @@
   </data>
   <data name="passwordPasteMenuItem.Text" xml:space="preserve">
     <value>貼り付け</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="passwordTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 21</value>
   </data>
   <data name="passwordLabel.Text" xml:space="preserve">
     <value>パスワード</value>
@@ -151,11 +151,23 @@
   <data name="userNamePasteMenuItem.Text" xml:space="preserve">
     <value>貼り付け</value>
   </data>
+  <data name="userNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 21</value>
+  </data>
   <data name="userNameLabel.Text" xml:space="preserve">
     <value>ユーザー名</value>
   </data>
+  <data name="userTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 268</value>
+  </data>
+  <data name="userTabPage.Text" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
   <data name="fetchProfileIconsCheckBox.Text" xml:space="preserve">
     <value>プロフィールアイコンをダウンロードする</value>
+  </data>
+  <data name="checkDirectMessageIntervalNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 128</value>
   </data>
   <data name="checkDirectMessageLabel.Text" xml:space="preserve">
     <value>ダイレクトメッセージの自動アップデート間隔 (秒)</value>
@@ -163,11 +175,17 @@
   <data name="checkListLabel.Text" xml:space="preserve">
     <value>チェックするタイムライン</value>
   </data>
+  <data name="checkTimelineIntervalNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 83</value>
+  </data>
   <data name="checkTimelineIntervalLabel.Text" xml:space="preserve">
     <value>タイムラインの自動アップデート間隔 (秒)</value>
   </data>
-  <data name="proxySettingPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 169</value>
+  <data name="timelineTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 268</value>
+  </data>
+  <data name="timelineTabPage.Text" xml:space="preserve">
+    <value>タイムライン</value>
   </data>
   <data name="proxyUseOriginalSettingRadioButton.Text" xml:space="preserve">
     <value>プロキシを使用する</value>
@@ -198,6 +216,15 @@
   </data>
   <data name="proxyServerLabel.Text" xml:space="preserve">
     <value>プロキシサーバー (例: proxy.example.com)</value>
+  </data>
+  <data name="proxySettingPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 169</value>
+  </data>
+  <data name="networkTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 268</value>
+  </data>
+  <data name="networkTabPage.Text" xml:space="preserve">
+    <value>ネットワーク</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>設定</value>
