@@ -680,7 +680,7 @@ namespace TwitterAwayZwei
                 StatusInfomation status = timelineTwitterListView.Items[timelineTwitterListView.SelectedIndices[0]].Tag as StatusInfomation;
                 if (status != null)
                 {
-                    doingInfomationTextLabel.Text = status.User.Name + "\r\n" + status.Text;
+                    doingInfomationTextLabel.Text = status.User.Name + " / " + status.User.ScreenName + "\r\n" + status.Text;
 
                     twitterIconPictureBox.Image = twitterAccount.GetProfileLargeImage(status.User.ProfileImageUrl);
                 }
