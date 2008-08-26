@@ -39,6 +39,7 @@
             this.aboutMenuItem = new System.Windows.Forms.MenuItem();
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.exitMenuItem = new System.Windows.Forms.MenuItem();
+            this.updateMenuItem = new System.Windows.Forms.MenuItem();
             this.topPanel = new System.Windows.Forms.Panel();
             this.doingInfomationTextLabel = new System.Windows.Forms.Label();
             this.twitterIconPictureBox = new System.Windows.Forms.PictureBox();
@@ -62,7 +63,7 @@
             this.messagesContextMenu = new System.Windows.Forms.ContextMenu();
             this.messagesReplayMenuItem = new System.Windows.Forms.MenuItem();
             this.messagesDirectMessageMenuItem = new System.Windows.Forms.MenuItem();
-            this.updateButton = new System.Windows.Forms.Button();
+            this.twitButton = new System.Windows.Forms.Button();
             this.doingTextBox = new OpenNETCF.Windows.Forms.TextBox2();
             this.doingContextMenu = new System.Windows.Forms.ContextMenu();
             this.cutMenuItem = new System.Windows.Forms.MenuItem();
@@ -82,6 +83,7 @@
             // mainMenu
             // 
             this.mainMenu.MenuItems.Add(this.menuMenuItem);
+            this.mainMenu.MenuItems.Add(this.updateMenuItem);
             // 
             // menuMenuItem
             // 
@@ -126,6 +128,11 @@
             resources.ApplyResources(this.exitMenuItem, "exitMenuItem");
             this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
+            // updateMenuItem
+            // 
+            resources.ApplyResources(this.updateMenuItem, "updateMenuItem");
+            this.updateMenuItem.Click += new System.EventHandler(this.updateMenuItem_Click);
+            // 
             // topPanel
             // 
             this.topPanel.Controls.Add(this.doingInfomationTextLabel);
@@ -152,7 +159,7 @@
             // 
             this.bottomPanel.Controls.Add(this.mainStatusBar);
             this.bottomPanel.Controls.Add(this.twitterInfomationTabControl);
-            this.bottomPanel.Controls.Add(this.updateButton);
+            this.bottomPanel.Controls.Add(this.twitButton);
             this.bottomPanel.Controls.Add(this.doingTextBox);
             resources.ApplyResources(this.bottomPanel, "bottomPanel");
             this.bottomPanel.Name = "bottomPanel";
@@ -177,14 +184,14 @@
             resources.ApplyResources(this.timelineTabPage, "timelineTabPage");
             this.timelineTabPage.Name = "timelineTabPage";
             // 
-            // timilineTwitterListView
+            // timelineTwitterListView
             // 
-            resources.ApplyResources(this.timelineTwitterListView, "timilineTwitterListView");
+            resources.ApplyResources(this.timelineTwitterListView, "timelineTwitterListView");
             this.timelineTwitterListView.Columns.Add(this.timelineScreenNameColumnHeader);
             this.timelineTwitterListView.Columns.Add(this.doingColumnHeader);
             this.timelineTwitterListView.Columns.Add(this.timelineDateColumnHeader);
             this.timelineTwitterListView.ContextMenu = this.timelineContextMenu;
-            this.timelineTwitterListView.Name = "timilineTwitterListView";
+            this.timelineTwitterListView.Name = "timelineTwitterListView";
             this.timelineTwitterListView.View = System.Windows.Forms.View.Details;
             this.timelineTwitterListView.SelectedIndexChanged += new System.EventHandler(this.twitterListView_SelectedIndexChanged);
             // 
@@ -261,11 +268,11 @@
             resources.ApplyResources(this.messagesDirectMessageMenuItem, "messagesDirectMessageMenuItem");
             this.messagesDirectMessageMenuItem.Click += new System.EventHandler(this.messagesDirectMessageMenuItem_Click);
             // 
-            // updateButton
+            // twitButton
             // 
-            resources.ApplyResources(this.updateButton, "updateButton");
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            resources.ApplyResources(this.twitButton, "twitButton");
+            this.twitButton.Name = "twitButton";
+            this.twitButton.Click += new System.EventHandler(this.twitButton_Click);
             // 
             // doingTextBox
             // 
@@ -352,7 +359,7 @@
         private System.Windows.Forms.Panel bottomPanel;
         private System.Windows.Forms.Label doingInfomationTextLabel;
         private System.Windows.Forms.PictureBox twitterIconPictureBox;
-        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button twitButton;
         private OpenNETCF.Windows.Forms.TextBox2 doingTextBox;
         private System.Windows.Forms.ListView timelineTwitterListView;
         private System.Windows.Forms.ColumnHeader timelineScreenNameColumnHeader;
@@ -388,6 +395,7 @@
         private System.Windows.Forms.ContextMenu messagesContextMenu;
         private System.Windows.Forms.MenuItem messagesReplayMenuItem;
         private System.Windows.Forms.MenuItem messagesDirectMessageMenuItem;
+        private System.Windows.Forms.MenuItem updateMenuItem;
 
 
     }

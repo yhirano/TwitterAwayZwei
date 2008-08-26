@@ -126,8 +126,12 @@ namespace TwitterAwayZwei
                 return;
             }
 
+            updateMenuItem.Enabled = false;
+
             CheckTimelineUpdate();
             UpdateTimelineListView(twitterStatuses);
+
+            updateMenuItem.Enabled = true;
         }
 
         private void CheckTwitterUpdateAsync()
@@ -359,17 +363,17 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
-        /// 入力されたテキストの状態を見て、UpdateButtonの有効無効を切り替える
+        /// 入力されたテキストの状態を見て、TwitButtonの有効無効を切り替える
         /// </summary>
         private void SwitchEnableUpdateButton()
         {
             if (doingTextBox.Text.Length > 0)
             {
-                updateButton.Enabled = true;
+                twitButton.Enabled = true;
             }
             else
             {
-                updateButton.Enabled = false;
+                twitButton.Enabled = false;
             }
         }
 
@@ -531,8 +535,15 @@ namespace TwitterAwayZwei
             passesSecendsPreviousFetchDirectMessage = 0;
         }
 
+        private delegate void MethodInvokeDelegate();
+
         private void fetchTimelineTwitterBackgroundWorker_DoWork(object sender, OpenNETCF.ComponentModel.DoWorkEventArgs e)
         {
+            this.Invoke(new MethodInvokeDelegate(delegate
+            {
+                updateMenuItem.Enabled = false;
+            }));
+
             CheckTimelineUpdate();
         }
 
@@ -578,6 +589,11 @@ namespace TwitterAwayZwei
                     }
                 }
             }
+
+            this.Invoke(new MethodInvokeDelegate(delegate
+            {
+                updateMenuItem.Enabled = true;
+            }));
         }
 
         private void fetchDirectMessageBackgroundWorker_DoWork(object sender, OpenNETCF.ComponentModel.DoWorkEventArgs e)
@@ -669,7 +685,7 @@ namespace TwitterAwayZwei
                 }
             }
 
-            updateButton.Enabled = true;
+            twitButton.Enabled = true;
         }
 
         private void twitterListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -751,11 +767,11 @@ namespace TwitterAwayZwei
             aboutForm.Dispose();
         }
 
-        private void updateButton_Click(object sender, EventArgs e)
+        private void twitButton_Click(object sender, EventArgs e)
         {
             if (updateTwitterBackgroundWorker.IsBusy == false)
             {
-                updateButton.Enabled = false;
+                twitButton.Enabled = false;
                 string message = doingTextBox.Text;
                 doingTextBox.Text = string.Empty;
                 updateTwitterBackgroundWorker.RunWorkerAsync(message);
@@ -881,6 +897,11 @@ namespace TwitterAwayZwei
                 timelineTwitterListView.Font = font;
                 messageTwitterListView.Font = font;
             }
+        }
+
+        private void updateMenuItem_Click(object sender, EventArgs e)
+        {
+            CheckTwitterUpdateAsync();
         }
     }
 }

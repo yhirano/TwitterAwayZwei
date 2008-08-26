@@ -117,838 +117,838 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;proxyPortCopyMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;passwordLabel.Parent" xml:space="preserve">
-    <value>userTabPage</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="proxyUnuseRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;proxyUseOriginalSettingRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;passwordTextBox.Type" xml:space="preserve">
-    <value>Microsoft.CompactFramework.Design.UnsafeControl, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="timelineListFontSizeLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="fetchProfileIconsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 20</value>
+  <data name="timelineListFontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 4</value>
   </data>
-  <data name="&gt;&gt;checkPublicRadioButton.Parent" xml:space="preserve">
-    <value>getListPanel</value>
+  <data name="timelineListFontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 20</value>
   </data>
-  <data name="proxyServerCutMenuItem.Text" xml:space="preserve">
-    <value>Cu&amp;t</value>
+  <data name="timelineListFontSizeLabel.Text" xml:space="preserve">
+    <value>Timeline/Messages list font size</value>
   </data>
-  <data name="&gt;&gt;userNameCopyMenuItem.Name" xml:space="preserve">
-    <value>userNameCopyMenuItem</value>
+  <data name="&gt;&gt;timelineListFontSizeLabel.Name" xml:space="preserve">
+    <value>timelineListFontSizeLabel</value>
   </data>
-  <data name="&gt;&gt;userNameCutMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userNamePasteMenuItem.Name" xml:space="preserve">
-    <value>userNamePasteMenuItem</value>
-  </data>
-  <data name="&gt;&gt;checkListLabel.Name" xml:space="preserve">
-    <value>checkListLabel</value>
-  </data>
-  <data name="proxyServerLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 78</value>
-  </data>
-  <data name="&gt;&gt;proxyPortTextBox.Name" xml:space="preserve">
-    <value>proxyPortTextBox</value>
-  </data>
-  <data name="proxyPortCopyMenuItem.Text" xml:space="preserve">
-    <value>&amp;Copy</value>
-  </data>
-  <data name="settingTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 294</value>
-  </data>
-  <data name="&gt;&gt;timelineTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="userNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 3</value>
-  </data>
-  <data name="&gt;&gt;generalTabPage.Name" xml:space="preserve">
-    <value>generalTabPage</value>
-  </data>
-  <data name="&gt;&gt;userNameCutMenuItem.Name" xml:space="preserve">
-    <value>userNameCutMenuItem</value>
-  </data>
-  <data name="&gt;&gt;timelineListFontSizeDomainUpDown.Name" xml:space="preserve">
-    <value>timelineListFontSizeDomainUpDown</value>
-  </data>
-  <data name="userTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="passwordTextBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="checkFriendsRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="checkDirectMessageIntervalNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 128</value>
-  </data>
-  <data name="&gt;&gt;checkTimelineIntervalLabel.Name" xml:space="preserve">
-    <value>checkTimelineIntervalLabel</value>
-  </data>
-  <data name="proxyUseOsSettingRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 29</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items14" xml:space="preserve">
-    <value>19 pt</value>
-  </data>
-  <data name="&gt;&gt;networkTabPage.Parent" xml:space="preserve">
-    <value>settingTabControl</value>
-  </data>
-  <data name="&gt;&gt;proxyServerContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkTimelineIntervalNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;passwordLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;timelineListFontSizeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;proxyPortContextMenu.Name" xml:space="preserve">
-    <value>proxyPortContextMenu</value>
+  <data name="&gt;&gt;timelineListFontSizeLabel.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
   </data>
   <data name="&gt;&gt;timelineListFontSizeLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="proxyServerCopyMenuItem.Text" xml:space="preserve">
-    <value>&amp;Copy</value>
-  </data>
-  <data name="&gt;&gt;timelineListFontSizeDomainUpDown.Parent" xml:space="preserve">
-    <value>generalTabPage</value>
-  </data>
-  <data name="proxyUseOsSettingRadioButton.Text" xml:space="preserve">
-    <value>Use the proxy set depending on OS</value>
-  </data>
-  <data name="&gt;&gt;userNameContextMenu.Name" xml:space="preserve">
-    <value>userNameContextMenu</value>
-  </data>
-  <data name="passwordPasteMenuItem.Text" xml:space="preserve">
-    <value>&amp;Paste</value>
-  </data>
-  <data name="checkListLabel.Text" xml:space="preserve">
-    <value>Check for new twitter from</value>
-  </data>
-  <data name="&gt;&gt;userNameLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="timelineListFontSizeDomainUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="timelineListFontSizeDomainUpDown.Items" xml:space="preserve">
     <value>Default</value>
   </data>
-  <data name="checkTimelineIntervalNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 22</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="userNameTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="proxyServerPasteMenuItem.Text" xml:space="preserve">
-    <value>&amp;Paste</value>
-  </data>
-  <data name="&gt;&gt;settingTabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;checkTimelineIntervalLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;generalTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="proxyUseOriginalSettingRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 55</value>
-  </data>
-  <data name="proxyPortTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;userNameTextBox.Parent" xml:space="preserve">
-    <value>userTabPage</value>
-  </data>
-  <data name="userNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 21</value>
-  </data>
-  <data name="&gt;&gt;proxyServerPasteMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;generalTabPage.Parent" xml:space="preserve">
-    <value>settingTabControl</value>
-  </data>
-  <data name="proxyServerTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="timelineListFontSizeDomainUpDown.Items1" xml:space="preserve">
+    <value>6 pt</value>
   </data>
   <data name="timelineListFontSizeDomainUpDown.Items2" xml:space="preserve">
     <value>7 pt</value>
   </data>
-  <data name="&gt;&gt;settingTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="timelineListFontSizeDomainUpDown.Items3" xml:space="preserve">
+    <value>8 pt</value>
   </data>
-  <data name="&gt;&gt;proxySettingPanel.Name" xml:space="preserve">
-    <value>proxySettingPanel</value>
+  <data name="timelineListFontSizeDomainUpDown.Items4" xml:space="preserve">
+    <value>9 pt</value>
   </data>
-  <data name="userNameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="timelineListFontSizeDomainUpDown.Items5" xml:space="preserve">
+    <value>10 pt</value>
   </data>
-  <data name="&gt;&gt;checkFriendsRadioButton.Name" xml:space="preserve">
-    <value>checkFriendsRadioButton</value>
-  </data>
-  <data name="&gt;&gt;getListPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;proxyPortTextBox.Parent" xml:space="preserve">
-    <value>proxySettingPanel</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items1" xml:space="preserve">
-    <value>6 pt</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items15" xml:space="preserve">
-    <value>20 pt</value>
-  </data>
-  <data name="&gt;&gt;proxyPortCutMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="getListPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;proxyServerContextMenu.Name" xml:space="preserve">
-    <value>proxyServerContextMenu</value>
-  </data>
-  <data name="&gt;&gt;proxyPortPasteMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkTimelineIntervalNumericUpDown.Name" xml:space="preserve">
-    <value>checkTimelineIntervalNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;checkDirectMessageIntervalNumericUpDown.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Setting</value>
-  </data>
-  <data name="&gt;&gt;proxyPortTextBox.Type" xml:space="preserve">
-    <value>Microsoft.CompactFramework.Design.UnsafeControl, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;timelineListFontSizeDomainUpDown.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;proxyServerLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 27</value>
-  </data>
-  <data name="checkFriendsRadioButton.Text" xml:space="preserve">
-    <value>The Friends List</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
-  </data>
-  <data name="userNameLabel.Text" xml:space="preserve">
-    <value>User name</value>
-  </data>
-  <data name="userNamePasteMenuItem.Text" xml:space="preserve">
-    <value>&amp;Paste</value>
-  </data>
-  <data name="&gt;&gt;proxyPortLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="proxyUseOsSettingRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="checkTimelineIntervalLabel.Text" xml:space="preserve">
-    <value>Automatically refresh timeline (sec)</value>
-  </data>
-  <data name="&gt;&gt;checkFriendsRadioButton.Parent" xml:space="preserve">
-    <value>getListPanel</value>
+  <data name="timelineListFontSizeDomainUpDown.Items6" xml:space="preserve">
+    <value>11 pt</value>
   </data>
   <data name="timelineListFontSizeDomainUpDown.Items7" xml:space="preserve">
     <value>12 pt</value>
   </data>
-  <data name="&gt;&gt;proxyPortCutMenuItem.Name" xml:space="preserve">
-    <value>proxyPortCutMenuItem</value>
+  <data name="timelineListFontSizeDomainUpDown.Items8" xml:space="preserve">
+    <value>13 pt</value>
   </data>
-  <data name="&gt;&gt;checkTimelineIntervalNumericUpDown.Parent" xml:space="preserve">
-    <value>timelineTabPage</value>
+  <data name="timelineListFontSizeDomainUpDown.Items9" xml:space="preserve">
+    <value>14 pt</value>
   </data>
-  <data name="&gt;&gt;networkTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="timelineListFontSizeDomainUpDown.Items10" xml:space="preserve">
+    <value>15 pt</value>
   </data>
-  <data name="checkPublicRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 49</value>
+  <data name="timelineListFontSizeDomainUpDown.Items11" xml:space="preserve">
+    <value>16 pt</value>
   </data>
-  <data name="&gt;&gt;checkTimelineIntervalNumericUpDown.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="timelineListFontSizeDomainUpDown.Items12" xml:space="preserve">
+    <value>17 pt</value>
   </data>
-  <data name="&gt;&gt;proxyUseOriginalSettingRadioButton.Parent" xml:space="preserve">
-    <value>proxySettingPanel</value>
+  <data name="timelineListFontSizeDomainUpDown.Items13" xml:space="preserve">
+    <value>18 pt</value>
   </data>
-  <data name="&gt;&gt;proxyUseOsSettingRadioButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="timelineListFontSizeDomainUpDown.Items14" xml:space="preserve">
+    <value>19 pt</value>
   </data>
-  <data name="&gt;&gt;proxyServerCopyMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="timelineListFontSizeDomainUpDown.Items15" xml:space="preserve">
+    <value>20 pt</value>
   </data>
-  <data name="&gt;&gt;passwordPasteMenuItem.Name" xml:space="preserve">
-    <value>passwordPasteMenuItem</value>
+  <data name="timelineListFontSizeDomainUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 27</value>
   </data>
-  <data name="proxyUseOriginalSettingRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 20</value>
+  <data name="timelineListFontSizeDomainUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 22</value>
   </data>
-  <data name="proxyServerTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 97</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="timelineListFontSizeDomainUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="proxyPortCutMenuItem.Text" xml:space="preserve">
-    <value>Cu&amp;t</value>
-  </data>
-  <data name="&gt;&gt;userNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkDirectMessageIntervalNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkTimelineIntervalNumericUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;timelineListFontSizeDomainUpDown.Name" xml:space="preserve">
+    <value>timelineListFontSizeDomainUpDown</value>
   </data>
   <data name="&gt;&gt;timelineListFontSizeDomainUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.DomainUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkPublicRadioButton.Name" xml:space="preserve">
-    <value>checkPublicRadioButton</value>
+  <data name="&gt;&gt;timelineListFontSizeDomainUpDown.Parent" xml:space="preserve">
+    <value>generalTabPage</value>
   </data>
-  <data name="&gt;&gt;proxyUnuseRadioButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;timelineListFontSizeDomainUpDown.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="proxyPortTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 21</value>
+  <data name="generalTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;proxyPortLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="generalTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 271</value>
   </data>
-  <data name="checkFriendsRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 20</value>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>General</value>
   </data>
-  <data name="proxyUnuseRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 20</value>
+  <data name="&gt;&gt;generalTabPage.Name" xml:space="preserve">
+    <value>generalTabPage</value>
   </data>
-  <data name="&gt;&gt;passwordLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;generalTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;generalTabPage.Parent" xml:space="preserve">
+    <value>settingTabControl</value>
+  </data>
+  <data name="&gt;&gt;generalTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="passwordTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <metadata name="passwordContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>331, 17</value>
+  </metadata>
+  <data name="passwordCutMenuItem.Text" xml:space="preserve">
+    <value>Cu&amp;t</value>
+  </data>
+  <data name="passwordCopyMenuItem.Text" xml:space="preserve">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="passwordPasteMenuItem.Text" xml:space="preserve">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="passwordTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 30</value>
+  </data>
+  <data name="passwordTextBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="passwordTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="passwordTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;passwordTextBox.Name" xml:space="preserve">
     <value>passwordTextBox</value>
   </data>
-  <data name="timelineListFontSizeDomainUpDown.Items8" xml:space="preserve">
-    <value>13 pt</value>
-  </data>
-  <data name="&gt;&gt;checkFriendsRadioButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="proxyPortLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 121</value>
-  </data>
-  <data name="proxyServerTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 21</value>
-  </data>
-  <data name="&gt;&gt;proxySettingPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;passwordContextMenu.Name" xml:space="preserve">
-    <value>passwordContextMenu</value>
-  </data>
-  <data name="&gt;&gt;getListPanel.Parent" xml:space="preserve">
-    <value>timelineTabPage</value>
-  </data>
-  <data name="&gt;&gt;timelineTabPage.Parent" xml:space="preserve">
-    <value>settingTabControl</value>
-  </data>
-  <data name="userNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
-  </data>
-  <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 31</value>
-  </data>
-  <data name="&gt;&gt;proxyServerCopyMenuItem.Name" xml:space="preserve">
-    <value>proxyServerCopyMenuItem</value>
-  </data>
-  <data name="&gt;&gt;checkDirectMessageLabel.Name" xml:space="preserve">
-    <value>checkDirectMessageLabel</value>
-  </data>
-  <data name="&gt;&gt;getListPanel.Name" xml:space="preserve">
-    <value>getListPanel</value>
-  </data>
-  <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 20</value>
-  </data>
-  <data name="&gt;&gt;timelineTabPage.Name" xml:space="preserve">
-    <value>timelineTabPage</value>
-  </data>
-  <data name="&gt;&gt;proxyUseOsSettingRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="proxyServerLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 16</value>
-  </data>
-  <data name="&gt;&gt;userTabPage.Name" xml:space="preserve">
-    <value>userTabPage</value>
-  </data>
-  <data name="&gt;&gt;proxyServerTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;passwordTextBox.Type" xml:space="preserve">
     <value>Microsoft.CompactFramework.Design.UnsafeControl, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;proxyPortPasteMenuItem.Name" xml:space="preserve">
-    <value>proxyPortPasteMenuItem</value>
-  </data>
-  <data name="timelineTabPage.Text" xml:space="preserve">
-    <value>Timeline</value>
-  </data>
-  <data name="timelineTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 271</value>
-  </data>
-  <data name="&gt;&gt;proxyPortCopyMenuItem.Name" xml:space="preserve">
-    <value>proxyPortCopyMenuItem</value>
-  </data>
-  <data name="&gt;&gt;proxyUnuseRadioButton.Name" xml:space="preserve">
-    <value>proxyUnuseRadioButton</value>
-  </data>
-  <data name="fetchProfileIconsCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;userTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userNameTextBox.Type" xml:space="preserve">
-    <value>Microsoft.CompactFramework.Design.UnsafeControl, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items4" xml:space="preserve">
-    <value>9 pt</value>
-  </data>
-  <data name="proxyUnuseRadioButton.Text" xml:space="preserve">
-    <value>Use no proxy</value>
-  </data>
-  <data name="&gt;&gt;proxyPortContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="proxySettingPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="proxyPortLabel.Text" xml:space="preserve">
-    <value>Port number (ex: 8080)</value>
-  </data>
-  <data name="proxyUseOsSettingRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 20</value>
-  </data>
-  <data name="&gt;&gt;proxyServerCutMenuItem.Name" xml:space="preserve">
-    <value>proxyServerCutMenuItem</value>
-  </data>
-  <data name="proxyPortPasteMenuItem.Text" xml:space="preserve">
-    <value>&amp;Paste</value>
-  </data>
-  <data name="proxyUseOriginalSettingRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;checkDirectMessageIntervalNumericUpDown.Parent" xml:space="preserve">
-    <value>timelineTabPage</value>
-  </data>
-  <data name="&gt;&gt;checkPublicRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="settingTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="userNameCopyMenuItem.Text" xml:space="preserve">
-    <value>&amp;Copy</value>
-  </data>
-  <data name="&gt;&gt;timelineTabPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items3" xml:space="preserve">
-    <value>8 pt</value>
-  </data>
-  <data name="&gt;&gt;passwordLabel.Name" xml:space="preserve">
-    <value>passwordLabel</value>
-  </data>
-  <data name="&gt;&gt;proxyUnuseRadioButton.Parent" xml:space="preserve">
-    <value>proxySettingPanel</value>
-  </data>
-  <data name="&gt;&gt;checkTimelineIntervalLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkPublicRadioButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;passwordCopyMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userTabPage.Parent" xml:space="preserve">
-    <value>settingTabControl</value>
-  </data>
-  <data name="passwordCopyMenuItem.Text" xml:space="preserve">
-    <value>&amp;Copy</value>
   </data>
   <data name="&gt;&gt;passwordTextBox.Parent" xml:space="preserve">
     <value>userTabPage</value>
   </data>
-  <data name="&gt;&gt;checkFriendsRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;passwordCutMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="timelineListFontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 4</value>
-  </data>
-  <data name="generalTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items10" xml:space="preserve">
-    <value>15 pt</value>
-  </data>
-  <data name="&gt;&gt;proxyUseOsSettingRadioButton.Name" xml:space="preserve">
-    <value>proxyUseOsSettingRadioButton</value>
-  </data>
-  <data name="settingTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;checkListLabel.Parent" xml:space="preserve">
-    <value>getListPanel</value>
-  </data>
-  <data name="networkTabPage.Text" xml:space="preserve">
-    <value>NetWork</value>
-  </data>
-  <data name="&gt;&gt;settingTabControl.Name" xml:space="preserve">
-    <value>settingTabControl</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SettingForm</value>
-  </data>
-  <data name="timelineListFontSizeLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="fetchProfileIconsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 176</value>
-  </data>
-  <data name="&gt;&gt;proxyUseOsSettingRadioButton.Parent" xml:space="preserve">
-    <value>proxySettingPanel</value>
-  </data>
-  <data name="&gt;&gt;proxyUseOriginalSettingRadioButton.Name" xml:space="preserve">
-    <value>proxyUseOriginalSettingRadioButton</value>
-  </data>
-  <data name="&gt;&gt;passwordPasteMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;passwordContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timelineListFontSizeLabel.Name" xml:space="preserve">
-    <value>timelineListFontSizeLabel</value>
-  </data>
-  <data name="checkPublicRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="userTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 271</value>
-  </data>
-  <data name="&gt;&gt;proxyServerCutMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkDirectMessageIntervalNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 22</value>
-  </data>
-  <data name="passwordTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="checkTimelineIntervalLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 36</value>
-  </data>
-  <data name="checkDirectMessageIntervalNumericUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="settingTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;checkListLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="getListPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 77</value>
-  </data>
-  <data name="checkDirectMessageLabel.Text" xml:space="preserve">
-    <value>Automatically refresh direct message (sec)</value>
-  </data>
-  <data name="checkTimelineIntervalLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 85</value>
-  </data>
-  <data name="&gt;&gt;networkTabPage.Name" xml:space="preserve">
-    <value>networkTabPage</value>
-  </data>
-  <data name="&gt;&gt;checkTimelineIntervalLabel.Parent" xml:space="preserve">
-    <value>timelineTabPage</value>
-  </data>
-  <data name="timelineListFontSizeLabel.Text" xml:space="preserve">
-    <value>Timeline/Messages list font size</value>
-  </data>
-  <data name="&gt;&gt;proxyServerPasteMenuItem.Name" xml:space="preserve">
-    <value>proxyServerPasteMenuItem</value>
-  </data>
-  <data name="&gt;&gt;checkTimelineIntervalNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;proxyUseOriginalSettingRadioButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items11" xml:space="preserve">
-    <value>16 pt</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;checkDirectMessageLabel.Parent" xml:space="preserve">
-    <value>timelineTabPage</value>
-  </data>
-  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items9" xml:space="preserve">
-    <value>14 pt</value>
-  </data>
-  <data name="checkPublicRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 20</value>
-  </data>
-  <data name="&gt;&gt;proxyServerTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;proxyServerLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;proxyPortLabel.Name" xml:space="preserve">
-    <value>proxyPortLabel</value>
-  </data>
-  <data name="networkTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 271</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;generalTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;passwordTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="passwordTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 31</value>
+  </data>
+  <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 20</value>
+  </data>
+  <data name="passwordLabel.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.Name" xml:space="preserve">
+    <value>passwordLabel</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.Parent" xml:space="preserve">
+    <value>userTabPage</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="userNameTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <metadata name="userNameContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>139, 17</value>
+  </metadata>
+  <data name="userNameCutMenuItem.Text" xml:space="preserve">
+    <value>Cu&amp;t</value>
+  </data>
+  <data name="userNameCopyMenuItem.Text" xml:space="preserve">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="userNamePasteMenuItem.Text" xml:space="preserve">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="userNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 3</value>
+  </data>
+  <data name="userNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 21</value>
   </data>
-  <data name="checkListLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 20</value>
+  <data name="userNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;userNameTextBox.Name" xml:space="preserve">
+    <value>userNameTextBox</value>
+  </data>
+  <data name="&gt;&gt;userNameTextBox.Type" xml:space="preserve">
+    <value>Microsoft.CompactFramework.Design.UnsafeControl, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;userNameTextBox.Parent" xml:space="preserve">
+    <value>userTabPage</value>
+  </data>
+  <data name="&gt;&gt;userNameTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="userNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
   </data>
   <data name="userNameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 20</value>
   </data>
-  <data name="&gt;&gt;checkDirectMessageLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="userNameLabel.Text" xml:space="preserve">
+    <value>User name</value>
   </data>
-  <data name="&gt;&gt;proxySettingPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;userNameLabel.Name" xml:space="preserve">
+    <value>userNameLabel</value>
   </data>
-  <data name="&gt;&gt;passwordCopyMenuItem.Name" xml:space="preserve">
-    <value>passwordCopyMenuItem</value>
+  <data name="&gt;&gt;userNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="passwordTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="&gt;&gt;userNameLabel.Parent" xml:space="preserve">
+    <value>userTabPage</value>
   </data>
-  <data name="passwordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 30</value>
+  <data name="&gt;&gt;userNameLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="proxyUseOriginalSettingRadioButton.Text" xml:space="preserve">
-    <value>Use the following proxy</value>
+  <data name="userTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="checkListLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="proxySettingPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 169</value>
-  </data>
-  <data name="generalTabPage.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="userTabPage.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 271</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>240, 294</value>
+  <data name="userTabPage.Text" xml:space="preserve">
+    <value>User</value>
   </data>
-  <data name="proxyPortTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 140</value>
+  <data name="&gt;&gt;userTabPage.Name" xml:space="preserve">
+    <value>userTabPage</value>
   </data>
-  <data name="&gt;&gt;timelineListFontSizeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;userTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userTabPage.Parent" xml:space="preserve">
+    <value>settingTabControl</value>
   </data>
   <data name="&gt;&gt;userTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;networkTabPage.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="fetchProfileIconsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 176</value>
   </data>
-  <data name="&gt;&gt;userNamePasteMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="fetchProfileIconsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 20</value>
   </data>
-  <data name="&gt;&gt;userNameTextBox.ZOrder" xml:space="preserve">
+  <data name="fetchProfileIconsCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="fetchProfileIconsCheckBox.Text" xml:space="preserve">
     <value>Fetch profile icons</value>
   </data>
-  <data name="timelineTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;userNameContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkDirectMessageLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 128</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items12" xml:space="preserve">
-    <value>17 pt</value>
-  </data>
-  <data name="checkTimelineIntervalNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 83</value>
-  </data>
-  <data name="&gt;&gt;proxyServerLabel.Parent" xml:space="preserve">
-    <value>proxySettingPanel</value>
-  </data>
-  <data name="timelineListFontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 20</value>
-  </data>
-  <data name="proxySettingPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="generalTabPage.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="&gt;&gt;checkListLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="userTabPage.Text" xml:space="preserve">
-    <value>User</value>
-  </data>
-  <data name="&gt;&gt;proxyPortTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;userNameLabel.Name" xml:space="preserve">
-    <value>userNameLabel</value>
-  </data>
-  <data name="networkTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;passwordCutMenuItem.Name" xml:space="preserve">
-    <value>passwordCutMenuItem</value>
-  </data>
-  <data name="&gt;&gt;userNameLabel.Parent" xml:space="preserve">
-    <value>userTabPage</value>
-  </data>
-  <data name="proxyUnuseRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="passwordCutMenuItem.Text" xml:space="preserve">
-    <value>Cu&amp;t</value>
-  </data>
-  <data name="checkDirectMessageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 36</value>
-  </data>
-  <data name="&gt;&gt;getListPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;userNameTextBox.Name" xml:space="preserve">
-    <value>userNameTextBox</value>
-  </data>
-  <data name="checkFriendsRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 23</value>
-  </data>
-  <data name="&gt;&gt;proxyServerTextBox.Parent" xml:space="preserve">
-    <value>proxySettingPanel</value>
-  </data>
-  <data name="proxyPortLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 16</value>
-  </data>
-  <data name="&gt;&gt;userNameCopyMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkDirectMessageIntervalNumericUpDown.Name" xml:space="preserve">
-    <value>checkDirectMessageIntervalNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;proxyServerTextBox.Name" xml:space="preserve">
-    <value>proxyServerTextBox</value>
-  </data>
-  <data name="&gt;&gt;proxyPortLabel.Parent" xml:space="preserve">
-    <value>proxySettingPanel</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="checkDirectMessageIntervalNumericUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;settingTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="checkDirectMessageIntervalNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 128</value>
   </data>
-  <data name="&gt;&gt;proxySettingPanel.Parent" xml:space="preserve">
-    <value>networkTabPage</value>
-  </data>
-  <data name="checkPublicRadioButton.Text" xml:space="preserve">
-    <value>The Public List</value>
-  </data>
-  <data name="&gt;&gt;proxyUnuseRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="proxyServerLabel.Text" xml:space="preserve">
-    <value>Proxy server (ex: proxy.example.com)</value>
-  </data>
-  <data name="timelineListFontSizeDomainUpDown.Items6" xml:space="preserve">
-    <value>11 pt</value>
-  </data>
-  <data name="&gt;&gt;timelineListFontSizeLabel.Parent" xml:space="preserve">
-    <value>generalTabPage</value>
+  <data name="checkDirectMessageIntervalNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 22</value>
   </data>
   <data name="checkDirectMessageIntervalNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="timelineListFontSizeDomainUpDown.Items5" xml:space="preserve">
-    <value>10 pt</value>
+  <data name="&gt;&gt;checkDirectMessageIntervalNumericUpDown.Name" xml:space="preserve">
+    <value>checkDirectMessageIntervalNumericUpDown</value>
   </data>
-  <data name="timelineListFontSizeDomainUpDown.Items13" xml:space="preserve">
-    <value>18 pt</value>
+  <data name="&gt;&gt;checkDirectMessageIntervalNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;proxyServerLabel.Name" xml:space="preserve">
-    <value>proxyServerLabel</value>
+  <data name="&gt;&gt;checkDirectMessageIntervalNumericUpDown.Parent" xml:space="preserve">
+    <value>timelineTabPage</value>
   </data>
-  <data name="passwordLabel.Text" xml:space="preserve">
-    <value>Password</value>
+  <data name="&gt;&gt;checkDirectMessageIntervalNumericUpDown.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="userNameCutMenuItem.Text" xml:space="preserve">
-    <value>Cu&amp;t</value>
+  <data name="checkDirectMessageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 128</value>
+  </data>
+  <data name="checkDirectMessageLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 36</value>
+  </data>
+  <data name="checkDirectMessageLabel.Text" xml:space="preserve">
+    <value>Automatically refresh direct message (sec)</value>
+  </data>
+  <data name="&gt;&gt;checkDirectMessageLabel.Name" xml:space="preserve">
+    <value>checkDirectMessageLabel</value>
   </data>
   <data name="&gt;&gt;checkDirectMessageLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
-    <value>Pocket_PC</value>
-  </metadata>
-  <metadata name="userNameContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>139, 17</value>
-  </metadata>
+  <data name="&gt;&gt;checkDirectMessageLabel.Parent" xml:space="preserve">
+    <value>timelineTabPage</value>
+  </data>
+  <data name="&gt;&gt;checkDirectMessageLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkPublicRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 49</value>
+  </data>
+  <data name="checkPublicRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 20</value>
+  </data>
+  <data name="checkPublicRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="checkPublicRadioButton.Text" xml:space="preserve">
+    <value>The Public List</value>
+  </data>
+  <data name="&gt;&gt;checkPublicRadioButton.Name" xml:space="preserve">
+    <value>checkPublicRadioButton</value>
+  </data>
+  <data name="&gt;&gt;checkPublicRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkPublicRadioButton.Parent" xml:space="preserve">
+    <value>getListPanel</value>
+  </data>
+  <data name="&gt;&gt;checkPublicRadioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkFriendsRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 23</value>
+  </data>
+  <data name="checkFriendsRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 20</value>
+  </data>
+  <data name="checkFriendsRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkFriendsRadioButton.Text" xml:space="preserve">
+    <value>The Friends List</value>
+  </data>
+  <data name="&gt;&gt;checkFriendsRadioButton.Name" xml:space="preserve">
+    <value>checkFriendsRadioButton</value>
+  </data>
+  <data name="&gt;&gt;checkFriendsRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkFriendsRadioButton.Parent" xml:space="preserve">
+    <value>getListPanel</value>
+  </data>
+  <data name="&gt;&gt;checkFriendsRadioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkListLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="checkListLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 20</value>
+  </data>
+  <data name="checkListLabel.Text" xml:space="preserve">
+    <value>Check for new twitter from</value>
+  </data>
+  <data name="&gt;&gt;checkListLabel.Name" xml:space="preserve">
+    <value>checkListLabel</value>
+  </data>
+  <data name="&gt;&gt;checkListLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkListLabel.Parent" xml:space="preserve">
+    <value>getListPanel</value>
+  </data>
+  <data name="&gt;&gt;checkListLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="getListPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="getListPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 77</value>
+  </data>
+  <data name="&gt;&gt;getListPanel.Name" xml:space="preserve">
+    <value>getListPanel</value>
+  </data>
+  <data name="&gt;&gt;getListPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;getListPanel.Parent" xml:space="preserve">
+    <value>timelineTabPage</value>
+  </data>
+  <data name="&gt;&gt;getListPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkTimelineIntervalNumericUpDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="checkTimelineIntervalNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 83</value>
+  </data>
+  <data name="checkTimelineIntervalNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 22</value>
+  </data>
+  <data name="checkTimelineIntervalNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;checkTimelineIntervalNumericUpDown.Name" xml:space="preserve">
+    <value>checkTimelineIntervalNumericUpDown</value>
+  </data>
+  <data name="&gt;&gt;checkTimelineIntervalNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkTimelineIntervalNumericUpDown.Parent" xml:space="preserve">
+    <value>timelineTabPage</value>
+  </data>
+  <data name="&gt;&gt;checkTimelineIntervalNumericUpDown.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkTimelineIntervalLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 85</value>
+  </data>
+  <data name="checkTimelineIntervalLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 36</value>
+  </data>
+  <data name="checkTimelineIntervalLabel.Text" xml:space="preserve">
+    <value>Automatically refresh timeline (sec)</value>
+  </data>
+  <data name="&gt;&gt;checkTimelineIntervalLabel.Name" xml:space="preserve">
+    <value>checkTimelineIntervalLabel</value>
+  </data>
+  <data name="&gt;&gt;checkTimelineIntervalLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkTimelineIntervalLabel.Parent" xml:space="preserve">
+    <value>timelineTabPage</value>
+  </data>
+  <data name="&gt;&gt;checkTimelineIntervalLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="timelineTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="timelineTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 271</value>
+  </data>
+  <data name="timelineTabPage.Text" xml:space="preserve">
+    <value>Timeline</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.Name" xml:space="preserve">
+    <value>timelineTabPage</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.Parent" xml:space="preserve">
+    <value>settingTabControl</value>
+  </data>
+  <data name="&gt;&gt;timelineTabPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="proxySettingPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="proxyUseOriginalSettingRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 55</value>
+  </data>
+  <data name="proxyUseOriginalSettingRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 20</value>
+  </data>
+  <data name="proxyUseOriginalSettingRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="proxyUseOriginalSettingRadioButton.Text" xml:space="preserve">
+    <value>Use the following proxy</value>
+  </data>
+  <data name="&gt;&gt;proxyUseOriginalSettingRadioButton.Name" xml:space="preserve">
+    <value>proxyUseOriginalSettingRadioButton</value>
+  </data>
+  <data name="&gt;&gt;proxyUseOriginalSettingRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyUseOriginalSettingRadioButton.Parent" xml:space="preserve">
+    <value>proxySettingPanel</value>
+  </data>
+  <data name="&gt;&gt;proxyUseOriginalSettingRadioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="proxyPortContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>980, 17</value>
   </metadata>
+  <data name="proxyPortCutMenuItem.Text" xml:space="preserve">
+    <value>Cu&amp;t</value>
+  </data>
+  <data name="proxyPortCopyMenuItem.Text" xml:space="preserve">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="proxyPortPasteMenuItem.Text" xml:space="preserve">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="proxyPortTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 140</value>
+  </data>
+  <data name="proxyPortTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 21</value>
+  </data>
+  <data name="proxyPortTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;proxyPortTextBox.Name" xml:space="preserve">
+    <value>proxyPortTextBox</value>
+  </data>
+  <data name="&gt;&gt;proxyPortTextBox.Type" xml:space="preserve">
+    <value>Microsoft.CompactFramework.Design.UnsafeControl, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;proxyPortTextBox.Parent" xml:space="preserve">
+    <value>proxySettingPanel</value>
+  </data>
+  <data name="&gt;&gt;proxyPortTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="proxyUseOsSettingRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 29</value>
+  </data>
+  <data name="proxyUseOsSettingRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 20</value>
+  </data>
+  <data name="proxyUseOsSettingRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="proxyUseOsSettingRadioButton.Text" xml:space="preserve">
+    <value>Use the proxy set depending on OS</value>
+  </data>
+  <data name="&gt;&gt;proxyUseOsSettingRadioButton.Name" xml:space="preserve">
+    <value>proxyUseOsSettingRadioButton</value>
+  </data>
+  <data name="&gt;&gt;proxyUseOsSettingRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyUseOsSettingRadioButton.Parent" xml:space="preserve">
+    <value>proxySettingPanel</value>
+  </data>
+  <data name="&gt;&gt;proxyUseOsSettingRadioButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="proxyServerContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>519, 17</value>
+  </metadata>
+  <data name="proxyServerCutMenuItem.Text" xml:space="preserve">
+    <value>Cu&amp;t</value>
+  </data>
+  <data name="proxyServerCopyMenuItem.Text" xml:space="preserve">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="proxyServerPasteMenuItem.Text" xml:space="preserve">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="proxyServerTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 97</value>
+  </data>
+  <data name="proxyServerTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 21</value>
+  </data>
+  <data name="proxyServerTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;proxyServerTextBox.Name" xml:space="preserve">
+    <value>proxyServerTextBox</value>
+  </data>
+  <data name="&gt;&gt;proxyServerTextBox.Type" xml:space="preserve">
+    <value>Microsoft.CompactFramework.Design.UnsafeControl, Microsoft.CompactFramework.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;proxyServerTextBox.Parent" xml:space="preserve">
+    <value>proxySettingPanel</value>
+  </data>
+  <data name="&gt;&gt;proxyServerTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="proxyUnuseRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="proxyUnuseRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 20</value>
+  </data>
+  <data name="proxyUnuseRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="proxyUnuseRadioButton.Text" xml:space="preserve">
+    <value>Use no proxy</value>
+  </data>
+  <data name="&gt;&gt;proxyUnuseRadioButton.Name" xml:space="preserve">
+    <value>proxyUnuseRadioButton</value>
+  </data>
+  <data name="&gt;&gt;proxyUnuseRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyUnuseRadioButton.Parent" xml:space="preserve">
+    <value>proxySettingPanel</value>
+  </data>
+  <data name="&gt;&gt;proxyUnuseRadioButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="proxyPortLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 121</value>
+  </data>
+  <data name="proxyPortLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 16</value>
+  </data>
+  <data name="proxyPortLabel.Text" xml:space="preserve">
+    <value>Port number (ex: 8080)</value>
+  </data>
+  <data name="&gt;&gt;proxyPortLabel.Name" xml:space="preserve">
+    <value>proxyPortLabel</value>
+  </data>
+  <data name="&gt;&gt;proxyPortLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyPortLabel.Parent" xml:space="preserve">
+    <value>proxySettingPanel</value>
+  </data>
+  <data name="&gt;&gt;proxyPortLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="proxyServerLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 78</value>
+  </data>
+  <data name="proxyServerLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 16</value>
+  </data>
+  <data name="proxyServerLabel.Text" xml:space="preserve">
+    <value>Proxy server (ex: proxy.example.com)</value>
+  </data>
+  <data name="&gt;&gt;proxyServerLabel.Name" xml:space="preserve">
+    <value>proxyServerLabel</value>
+  </data>
+  <data name="&gt;&gt;proxyServerLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyServerLabel.Parent" xml:space="preserve">
+    <value>proxySettingPanel</value>
+  </data>
+  <data name="&gt;&gt;proxyServerLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="proxySettingPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="proxySettingPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 169</value>
+  </data>
+  <data name="&gt;&gt;proxySettingPanel.Name" xml:space="preserve">
+    <value>proxySettingPanel</value>
+  </data>
+  <data name="&gt;&gt;proxySettingPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxySettingPanel.Parent" xml:space="preserve">
+    <value>networkTabPage</value>
+  </data>
+  <data name="&gt;&gt;proxySettingPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="networkTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="networkTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 271</value>
+  </data>
+  <data name="networkTabPage.Text" xml:space="preserve">
+    <value>NetWork</value>
+  </data>
+  <data name="&gt;&gt;networkTabPage.Name" xml:space="preserve">
+    <value>networkTabPage</value>
+  </data>
+  <data name="&gt;&gt;networkTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;networkTabPage.Parent" xml:space="preserve">
+    <value>settingTabControl</value>
+  </data>
+  <data name="&gt;&gt;networkTabPage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="settingTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="settingTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="settingTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 294</value>
+  </data>
+  <data name="settingTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;settingTabControl.Name" xml:space="preserve">
+    <value>settingTabControl</value>
+  </data>
+  <data name="&gt;&gt;settingTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;settingTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;settingTabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
+    <value>Pocket_PC</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="passwordContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>331, 17</value>
+  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>240, 294</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="&gt;&gt;passwordContextMenu.Name" xml:space="preserve">
+    <value>passwordContextMenu</value>
+  </data>
+  <data name="&gt;&gt;passwordContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordCutMenuItem.Name" xml:space="preserve">
+    <value>passwordCutMenuItem</value>
+  </data>
+  <data name="&gt;&gt;passwordCutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordCopyMenuItem.Name" xml:space="preserve">
+    <value>passwordCopyMenuItem</value>
+  </data>
+  <data name="&gt;&gt;passwordCopyMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordPasteMenuItem.Name" xml:space="preserve">
+    <value>passwordPasteMenuItem</value>
+  </data>
+  <data name="&gt;&gt;passwordPasteMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userNameContextMenu.Name" xml:space="preserve">
+    <value>userNameContextMenu</value>
+  </data>
+  <data name="&gt;&gt;userNameContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userNameCutMenuItem.Name" xml:space="preserve">
+    <value>userNameCutMenuItem</value>
+  </data>
+  <data name="&gt;&gt;userNameCutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userNameCopyMenuItem.Name" xml:space="preserve">
+    <value>userNameCopyMenuItem</value>
+  </data>
+  <data name="&gt;&gt;userNameCopyMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userNamePasteMenuItem.Name" xml:space="preserve">
+    <value>userNamePasteMenuItem</value>
+  </data>
+  <data name="&gt;&gt;userNamePasteMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyPortContextMenu.Name" xml:space="preserve">
+    <value>proxyPortContextMenu</value>
+  </data>
+  <data name="&gt;&gt;proxyPortContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyPortCutMenuItem.Name" xml:space="preserve">
+    <value>proxyPortCutMenuItem</value>
+  </data>
+  <data name="&gt;&gt;proxyPortCutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyPortCopyMenuItem.Name" xml:space="preserve">
+    <value>proxyPortCopyMenuItem</value>
+  </data>
+  <data name="&gt;&gt;proxyPortCopyMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyPortPasteMenuItem.Name" xml:space="preserve">
+    <value>proxyPortPasteMenuItem</value>
+  </data>
+  <data name="&gt;&gt;proxyPortPasteMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyServerContextMenu.Name" xml:space="preserve">
+    <value>proxyServerContextMenu</value>
+  </data>
+  <data name="&gt;&gt;proxyServerContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyServerCutMenuItem.Name" xml:space="preserve">
+    <value>proxyServerCutMenuItem</value>
+  </data>
+  <data name="&gt;&gt;proxyServerCutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyServerCopyMenuItem.Name" xml:space="preserve">
+    <value>proxyServerCopyMenuItem</value>
+  </data>
+  <data name="&gt;&gt;proxyServerCopyMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proxyServerPasteMenuItem.Name" xml:space="preserve">
+    <value>proxyServerPasteMenuItem</value>
+  </data>
+  <data name="&gt;&gt;proxyServerPasteMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SettingForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

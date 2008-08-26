@@ -132,11 +132,8 @@
   <data name="menuMenuItem.Text" xml:space="preserve">
     <value>メニュー</value>
   </data>
-  <data name="replyMenuItem.Text" xml:space="preserve">
-    <value>返信</value>
-  </data>
-  <data name="directMessageMenuItem.Text" xml:space="preserve">
-    <value>ダイレクトメッセージ</value>
+  <data name="updateMenuItem.Text" xml:space="preserve">
+    <value>更新</value>
   </data>
   <data name="cutMenuItem.Text" xml:space="preserve">
     <value>切り取り</value>
