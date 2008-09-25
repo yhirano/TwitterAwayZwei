@@ -117,14 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="generalTabPage.Text" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="userTabPage.Text" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
+  <data name="timelineTabPage.Text" xml:space="preserve">
+    <value>タイムライン</value>
+  </data>
+  <data name="networkTabPage.Text" xml:space="preserve">
+    <value>ネットワーク</value>
+  </data>
   <data name="timelineListFontSizeLabel.Text" xml:space="preserve">
     <value>Timeline/Messagesリストのフォントサイズ</value>
   </data>
   <data name="timelineListFontSizeDomainUpDown.Items" xml:space="preserve">
     <value>規定</value>
-  </data>
-  <data name="generalTabPage.Text" xml:space="preserve">
-    <value>一般</value>
   </data>
   <data name="passwordCutMenuItem.Text" xml:space="preserve">
     <value>切り取り</value>
@@ -150,9 +159,6 @@
   <data name="userNameLabel.Text" xml:space="preserve">
     <value>ユーザー名</value>
   </data>
-  <data name="userTabPage.Text" xml:space="preserve">
-    <value>ユーザー</value>
-  </data>
   <data name="fetchProfileIconsCheckBox.Text" xml:space="preserve">
     <value>プロフィールアイコンをダウンロードする</value>
   </data>
@@ -165,10 +171,7 @@
   <data name="checkTimelineIntervalLabel.Text" xml:space="preserve">
     <value>タイムラインの自動アップデート間隔 (秒)</value>
   </data>
-  <data name="timelineTabPage.Text" xml:space="preserve">
-    <value>タイムライン</value>
-  </data>
-  <data name="proxyUseOriginalSettingRadioButton.Text" xml:space="preserve">
+  <data name="manualProxySettingRadioButton.Text" xml:space="preserve">
     <value>プロキシを使用する</value>
   </data>
   <data name="proxyPortCutMenuItem.Text" xml:space="preserve">
@@ -180,8 +183,8 @@
   <data name="proxyPortPasteMenuItem.Text" xml:space="preserve">
     <value>貼り付け</value>
   </data>
-  <data name="proxyUseOsSettingRadioButton.Text" xml:space="preserve">
-    <value>OSで設定したプロキシを使用する</value>
+  <data name="autoDetectProxySettingRadioButton.Text" xml:space="preserve">
+    <value>プロキシ設定を自動検出する</value>
   </data>
   <data name="proxyServerCutMenuItem.Text" xml:space="preserve">
     <value>切り取り</value>
@@ -189,7 +192,7 @@
   <data name="proxyServerCopyMenuItem.Text" xml:space="preserve">
     <value>貼り付け</value>
   </data>
-  <data name="proxyUnuseRadioButton.Text" xml:space="preserve">
+  <data name="proxyNoUseRadioButton.Text" xml:space="preserve">
     <value>プロキシに接続しない</value>
   </data>
   <data name="proxyPortLabel.Text" xml:space="preserve">
@@ -197,9 +200,6 @@
   </data>
   <data name="proxyServerLabel.Text" xml:space="preserve">
     <value>プロキシサーバー (例: proxy.example.com)</value>
-  </data>
-  <data name="networkTabPage.Text" xml:space="preserve">
-    <value>ネットワーク</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>設定</value>

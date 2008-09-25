@@ -58,19 +58,19 @@
             this.checkTimelineIntervalLabel = new System.Windows.Forms.Label();
             this.networkTabPage = new System.Windows.Forms.TabPage();
             this.proxySettingPanel = new System.Windows.Forms.Panel();
-            this.proxyUseOriginalSettingRadioButton = new System.Windows.Forms.RadioButton();
+            this.manualProxySettingRadioButton = new System.Windows.Forms.RadioButton();
             this.proxyPortTextBox = new OpenNETCF.Windows.Forms.TextBox2();
             this.proxyPortContextMenu = new System.Windows.Forms.ContextMenu();
             this.proxyPortCutMenuItem = new System.Windows.Forms.MenuItem();
             this.proxyPortCopyMenuItem = new System.Windows.Forms.MenuItem();
             this.proxyPortPasteMenuItem = new System.Windows.Forms.MenuItem();
-            this.proxyUseOsSettingRadioButton = new System.Windows.Forms.RadioButton();
+            this.autoDetectProxySettingRadioButton = new System.Windows.Forms.RadioButton();
             this.proxyServerTextBox = new OpenNETCF.Windows.Forms.TextBox2();
             this.proxyServerContextMenu = new System.Windows.Forms.ContextMenu();
             this.proxyServerCutMenuItem = new System.Windows.Forms.MenuItem();
             this.proxyServerCopyMenuItem = new System.Windows.Forms.MenuItem();
             this.proxyServerPasteMenuItem = new System.Windows.Forms.MenuItem();
-            this.proxyUnuseRadioButton = new System.Windows.Forms.RadioButton();
+            this.proxyNoUseRadioButton = new System.Windows.Forms.RadioButton();
             this.proxyPortLabel = new System.Windows.Forms.Label();
             this.proxyServerLabel = new System.Windows.Forms.Label();
             this.settingTabControl.SuspendLayout();
@@ -84,19 +84,19 @@
             // 
             // settingTabControl
             // 
+            resources.ApplyResources(this.settingTabControl, "settingTabControl");
             this.settingTabControl.Controls.Add(this.generalTabPage);
             this.settingTabControl.Controls.Add(this.userTabPage);
             this.settingTabControl.Controls.Add(this.timelineTabPage);
             this.settingTabControl.Controls.Add(this.networkTabPage);
-            resources.ApplyResources(this.settingTabControl, "settingTabControl");
             this.settingTabControl.Name = "settingTabControl";
             this.settingTabControl.SelectedIndex = 0;
             // 
             // generalTabPage
             // 
+            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Controls.Add(this.timelineListFontSizeLabel);
             this.generalTabPage.Controls.Add(this.timelineListFontSizeDomainUpDown);
-            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Name = "generalTabPage";
             // 
             // timelineListFontSizeLabel
@@ -128,11 +128,11 @@
             // 
             // userTabPage
             // 
+            resources.ApplyResources(this.userTabPage, "userTabPage");
             this.userTabPage.Controls.Add(this.passwordTextBox);
             this.userTabPage.Controls.Add(this.passwordLabel);
             this.userTabPage.Controls.Add(this.userNameTextBox);
             this.userTabPage.Controls.Add(this.userNameLabel);
-            resources.ApplyResources(this.userTabPage, "userTabPage");
             this.userTabPage.Name = "userTabPage";
             // 
             // passwordTextBox
@@ -201,13 +201,13 @@
             // 
             // timelineTabPage
             // 
+            resources.ApplyResources(this.timelineTabPage, "timelineTabPage");
             this.timelineTabPage.Controls.Add(this.fetchProfileIconsCheckBox);
             this.timelineTabPage.Controls.Add(this.checkDirectMessageIntervalNumericUpDown);
             this.timelineTabPage.Controls.Add(this.checkDirectMessageLabel);
             this.timelineTabPage.Controls.Add(this.getListPanel);
             this.timelineTabPage.Controls.Add(this.checkTimelineIntervalNumericUpDown);
             this.timelineTabPage.Controls.Add(this.checkTimelineIntervalLabel);
-            resources.ApplyResources(this.timelineTabPage, "timelineTabPage");
             this.timelineTabPage.Name = "timelineTabPage";
             // 
             // fetchProfileIconsCheckBox
@@ -243,10 +243,10 @@
             // 
             // getListPanel
             // 
+            resources.ApplyResources(this.getListPanel, "getListPanel");
             this.getListPanel.Controls.Add(this.checkPublicRadioButton);
             this.getListPanel.Controls.Add(this.checkFriendsRadioButton);
             this.getListPanel.Controls.Add(this.checkListLabel);
-            resources.ApplyResources(this.getListPanel, "getListPanel");
             this.getListPanel.Name = "getListPanel";
             // 
             // checkPublicRadioButton
@@ -256,8 +256,8 @@
             // 
             // checkFriendsRadioButton
             // 
-            this.checkFriendsRadioButton.Checked = true;
             resources.ApplyResources(this.checkFriendsRadioButton, "checkFriendsRadioButton");
+            this.checkFriendsRadioButton.Checked = true;
             this.checkFriendsRadioButton.Name = "checkFriendsRadioButton";
             // 
             // checkListLabel
@@ -293,31 +293,31 @@
             // 
             // networkTabPage
             // 
-            this.networkTabPage.Controls.Add(this.proxySettingPanel);
             resources.ApplyResources(this.networkTabPage, "networkTabPage");
+            this.networkTabPage.Controls.Add(this.proxySettingPanel);
             this.networkTabPage.Name = "networkTabPage";
             // 
             // proxySettingPanel
             // 
             resources.ApplyResources(this.proxySettingPanel, "proxySettingPanel");
-            this.proxySettingPanel.Controls.Add(this.proxyUseOriginalSettingRadioButton);
+            this.proxySettingPanel.Controls.Add(this.manualProxySettingRadioButton);
             this.proxySettingPanel.Controls.Add(this.proxyPortTextBox);
-            this.proxySettingPanel.Controls.Add(this.proxyUseOsSettingRadioButton);
+            this.proxySettingPanel.Controls.Add(this.autoDetectProxySettingRadioButton);
             this.proxySettingPanel.Controls.Add(this.proxyServerTextBox);
-            this.proxySettingPanel.Controls.Add(this.proxyUnuseRadioButton);
+            this.proxySettingPanel.Controls.Add(this.proxyNoUseRadioButton);
             this.proxySettingPanel.Controls.Add(this.proxyPortLabel);
             this.proxySettingPanel.Controls.Add(this.proxyServerLabel);
             this.proxySettingPanel.Name = "proxySettingPanel";
             // 
-            // proxyUseOriginalSettingRadioButton
+            // manualProxySettingRadioButton
             // 
-            resources.ApplyResources(this.proxyUseOriginalSettingRadioButton, "proxyUseOriginalSettingRadioButton");
-            this.proxyUseOriginalSettingRadioButton.Name = "proxyUseOriginalSettingRadioButton";
+            resources.ApplyResources(this.manualProxySettingRadioButton, "manualProxySettingRadioButton");
+            this.manualProxySettingRadioButton.Name = "manualProxySettingRadioButton";
             // 
             // proxyPortTextBox
             // 
-            this.proxyPortTextBox.ContextMenu = this.proxyPortContextMenu;
             resources.ApplyResources(this.proxyPortTextBox, "proxyPortTextBox");
+            this.proxyPortTextBox.ContextMenu = this.proxyPortContextMenu;
             this.proxyPortTextBox.Name = "proxyPortTextBox";
             // 
             // proxyPortContextMenu
@@ -341,16 +341,16 @@
             resources.ApplyResources(this.proxyPortPasteMenuItem, "proxyPortPasteMenuItem");
             this.proxyPortPasteMenuItem.Click += new System.EventHandler(this.proxyPortPasteMenuItem_Click);
             // 
-            // proxyUseOsSettingRadioButton
+            // autoDetectProxySettingRadioButton
             // 
-            this.proxyUseOsSettingRadioButton.Checked = true;
-            resources.ApplyResources(this.proxyUseOsSettingRadioButton, "proxyUseOsSettingRadioButton");
-            this.proxyUseOsSettingRadioButton.Name = "proxyUseOsSettingRadioButton";
+            resources.ApplyResources(this.autoDetectProxySettingRadioButton, "autoDetectProxySettingRadioButton");
+            this.autoDetectProxySettingRadioButton.Checked = true;
+            this.autoDetectProxySettingRadioButton.Name = "autoDetectProxySettingRadioButton";
             // 
             // proxyServerTextBox
             // 
-            this.proxyServerTextBox.ContextMenu = this.proxyServerContextMenu;
             resources.ApplyResources(this.proxyServerTextBox, "proxyServerTextBox");
+            this.proxyServerTextBox.ContextMenu = this.proxyServerContextMenu;
             this.proxyServerTextBox.Name = "proxyServerTextBox";
             // 
             // proxyServerContextMenu
@@ -374,10 +374,10 @@
             resources.ApplyResources(this.proxyServerPasteMenuItem, "proxyServerPasteMenuItem");
             this.proxyServerPasteMenuItem.Click += new System.EventHandler(this.proxyServerPasteMenuItem_Click);
             // 
-            // proxyUnuseRadioButton
+            // proxyNoUseRadioButton
             // 
-            resources.ApplyResources(this.proxyUnuseRadioButton, "proxyUnuseRadioButton");
-            this.proxyUnuseRadioButton.Name = "proxyUnuseRadioButton";
+            resources.ApplyResources(this.proxyNoUseRadioButton, "proxyNoUseRadioButton");
+            this.proxyNoUseRadioButton.Name = "proxyNoUseRadioButton";
             // 
             // proxyPortLabel
             // 
@@ -419,11 +419,11 @@
         private System.Windows.Forms.Label userNameLabel;
         private System.Windows.Forms.TabPage networkTabPage;
         private System.Windows.Forms.Panel proxySettingPanel;
-        private System.Windows.Forms.RadioButton proxyUseOriginalSettingRadioButton;
+        private System.Windows.Forms.RadioButton manualProxySettingRadioButton;
         private OpenNETCF.Windows.Forms.TextBox2 proxyPortTextBox;
-        private System.Windows.Forms.RadioButton proxyUseOsSettingRadioButton;
+        private System.Windows.Forms.RadioButton autoDetectProxySettingRadioButton;
         private OpenNETCF.Windows.Forms.TextBox2 proxyServerTextBox;
-        private System.Windows.Forms.RadioButton proxyUnuseRadioButton;
+        private System.Windows.Forms.RadioButton proxyNoUseRadioButton;
         private System.Windows.Forms.Label proxyPortLabel;
         private System.Windows.Forms.Label proxyServerLabel;
         private System.Windows.Forms.ContextMenu userNameContextMenu;

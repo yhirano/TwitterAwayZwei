@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
 [assembly: AssemblyTitle("TwitterAway::Zwei")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Twitter client for Windows Mobile.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("TwitterAway::Zwei")]
@@ -29,7 +29,7 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("0.5.0.0")]
+[assembly: AssemblyVersion("0.6.0.0")]
 
 // 以下の属性は FxCop 警告 "CA2232 : Microsoft.Usage : STAThreadAttribute をアセンブリに追加します" を抑制しますが、
 // これは、デバイス アプリケーションで STA スレッドがサポートされないためです。

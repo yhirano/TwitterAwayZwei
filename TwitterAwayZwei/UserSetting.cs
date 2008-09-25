@@ -194,7 +194,7 @@ namespace TwitterAwayZwei
         /// <summary>
         /// プロキシの接続方法
         /// </summary>
-        private Twitter.Twitter.ProxyConnects proxyUse = Twitter.Twitter.ProxyConnects.OsSetting;
+        private Twitter.Twitter.ProxyConnects proxyUse = Twitter.Twitter.ProxyConnects.AutoDetect;
 
         /// <summary>
         /// プロキシの接続方法を取得・設定する

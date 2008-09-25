@@ -12,10 +12,6 @@ using MiscPocketCompactLibrary2.Reflection;
 
 namespace TwitterAwayZwei.Twitter
 {
-    internal delegate void StatusAddedEventHandler(object sender, StatusAddedEventArgs e);
-
-    internal delegate void DirectMessageAddedEventHandler(object sender, DirectMessageAddedEventArgs e);
-
     /// <summary>
     /// Twitterクラス
     /// </summary>
@@ -115,7 +111,7 @@ namespace TwitterAwayZwei.Twitter
         {
             this.userName = userName;
             this.password = password;
-            profileSmallImageList.ImageSize = new Size(16, 16);
+            profileSmallImageList.ImageSize = new Size(32, 32);
             profileLargeImageList.ImageSize = new Size(44, 44);
         }
 
@@ -372,166 +368,6 @@ namespace TwitterAwayZwei.Twitter
             return statusList.ToArray();
         }
 
-        ///// <summary>
-        ///// ステータス情報XMLをステータス情報にパージングする
-        ///// </summary>
-        ///// <param name="stream">ステータス情報XMLを格納したStream</param>
-        ///// <returns>ステータス情報</returns>
-        //private StatusInfomation[] PaeseStatuses(Stream stream)
-        //{
-        //    XmlReader reader = null;
-
-        //    // ステータスのリスト
-        //    List<StatusInfomation> statuses = new List<StatusInfomation>();
-
-        //    try
-        //    {
-        //        reader = XmlTextReader.Create(stream);
-
-        //        // ステータス
-        //        StatusInfomation status = null;
-        //        // ユーザー
-        //        UserInfomation user = null;
-        //        // userタグの中にいるか
-        //        bool inUserFlag = false;
-
-        //        while (reader.Read())
-        //        {
-        //            if (reader.NodeType == XmlNodeType.Element)
-        //            {
-        //                if (reader.LocalName == "status")
-        //                {
-        //                    status = new StatusInfomation();
-        //                } // End of status
-        //                else if (reader.LocalName == "created_at")
-        //                {
-        //                    status.SetCreatedAt(reader.ReadString());
-        //                } // End of created_at
-        //                else if (reader.LocalName == "id")
-        //                {
-        //                    status.Id = reader.ReadString();
-        //                } // End of id
-        //                else if (reader.LocalName == "text")
-        //                {
-        //                    status.Text = reader.ReadString();
-        //                } // End of text
-        //                else if (reader.LocalName == "user")
-        //                {
-        //                    inUserFlag = true;
-        //                    user = new UserInfomation();
-        //                    status.User = user;
-
-        //                } // End of user
-        //                else if (inUserFlag == true)
-        //                {
-        //                    if (reader.LocalName == "id")
-        //                    {
-        //                        user.Id = reader.ReadString();
-        //                    } // End of id
-        //                    else if (reader.LocalName == "name")
-        //                    {
-        //                        user.Name = reader.ReadString();
-        //                    } // End of name
-        //                    else if (reader.LocalName == "screen_name")
-        //                    {
-        //                        user.ScreenName = reader.ReadString();
-        //                    } // End of screen_name
-        //                    else if (reader.LocalName == "location")
-        //                    {
-        //                        user.Location = reader.ReadString();
-        //                    } // End of location
-        //                    else if (reader.LocalName == "description")
-        //                    {
-        //                        user.Description = reader.ReadString();
-        //                    } // End of description
-        //                    else if (reader.LocalName == "profile_image_url")
-        //                    {
-        //                        try
-        //                        {
-        //                            user.ProfileImageUrl = new Uri(reader.ReadString());
-        //                        }
-        //                        catch (UriFormatException)
-        //                        {
-        //                            ;
-        //                        }
-        //                    } // End of profile_image_url
-        //                    else if (reader.LocalName == "url")
-        //                    {
-        //                        try
-        //                        {
-        //                            user.Url = new Uri(reader.ReadString());
-        //                        }
-        //                        catch (UriFormatException)
-        //                        {
-        //                            ;
-        //                        }
-        //                    } // End of url
-        //                    else if (reader.LocalName == "protected")
-        //                    {
-        //                        if (reader.ReadString() == Boolean.TrueString)
-        //                        {
-        //                            user.ProtectedMyUpdate = true;
-        //                        }
-        //                        else
-        //                        {
-        //                            user.ProtectedMyUpdate = false;
-        //                        }
-        //                    } // End of protected
-        //                } // End of userタグの中にいるか
-        //            }
-        //            else if (reader.NodeType == XmlNodeType.EndElement)
-        //            {
-        //                if (reader.LocalName == "status")
-        //                {
-        //                    statuses.Add(status);
-        //                    OnStatusAdded(status, statuses.Count, 20);
-        //                }
-        //                else if (reader.LocalName == "user")
-        //                {
-        //                    inUserFlag = false;
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (WebException)
-        //    {
-        //        throw;
-        //    }
-        //    catch (OutOfMemoryException)
-        //    {
-        //        throw;
-        //    }
-        //    catch (IOException)
-        //    {
-        //        throw;
-        //    }
-        //    catch (UriFormatException)
-        //    {
-        //        throw;
-        //    }
-        //    catch (SocketException)
-        //    {
-        //        throw;
-        //    }
-        //    catch (XmlException)
-        //    {
-        //        throw;
-        //    }
-        //    catch (ArgumentException)
-        //    {
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        if (reader != null)
-        //        {
-        //            reader.Close();
-        //        }
-        //    }
-
-        //    return statuses.ToArray();
-        //}
-
         /// <summary>
         /// プロフィールイメージを取得する
         /// </summary>
@@ -734,13 +570,13 @@ namespace TwitterAwayZwei.Twitter
         /// </summary>
         public enum ProxyConnects
         {
-            Unuse, OsSetting, OriginalSetting
+            NoUse, AutoDetect, Manual
         }
 
         /// <summary>
         /// プロキシの接続方法
         /// </summary>
-        private ProxyConnects proxyUse = ProxyConnects.OsSetting;
+        private ProxyConnects proxyUse = ProxyConnects.AutoDetect;
 
         /// <summary>
         /// プロキシの接続方法を設定する
@@ -833,15 +669,15 @@ namespace TwitterAwayZwei.Twitter
 
             switch (proxyUse)
             {
-                case ProxyConnects.Unuse:
+                case ProxyConnects.NoUse:
                     WebProxy proxy = new WebProxy();
                     proxy.Address = null;
                     webReq.Proxy = proxy;
                     break;
-                case ProxyConnects.OriginalSetting:
+                case ProxyConnects.AutoDetect:
                     webReq.Proxy = new WebProxy(proxyServer, proxyPort);
                     break;
-                case ProxyConnects.OsSetting:
+                case ProxyConnects.Manual:
                 default:
                     break;
 
@@ -854,7 +690,7 @@ namespace TwitterAwayZwei.Twitter
             return webReq.GetResponse().GetResponseStream();
         }
 
-        internal event StatusAddedEventHandler StatusAdded;
+        internal event EventHandler<StatusAddedEventArgs> StatusAdded;
 
         private void OnStatusAdded(StatusInfomation addedStatus, int statusNo, int allStatusCount)
         {
@@ -864,7 +700,7 @@ namespace TwitterAwayZwei.Twitter
             }
         }
 
-        internal event DirectMessageAddedEventHandler DirectMessageAdded;
+        internal event EventHandler<DirectMessageAddedEventArgs> DirectMessageAdded;
 
         private void OnDirectMessageAdded(DirectMessage message, int messageNo, int allMessageCount)
         {
