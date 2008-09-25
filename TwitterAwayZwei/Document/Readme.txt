@@ -55,7 +55,7 @@ TwitterAway Zwei]を選択して削除してください。
 
 【バージョン履歴】
 Version 0.6
-・Timeline/Messagesリストビューのアイコンサイズを大きくした
+・Timelineリストビューのアイコンサイズを大きくした
 
 Version 0.5
 ・更新メニューを追加
