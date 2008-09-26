@@ -2,13 +2,11 @@
 
 using System.IO;
 using System.Xml.Serialization;
-using MiscPocketCompactLibrary2.Reflection;
-
 
 namespace TwitterAwayZwei
 {
     /// <summary>
-    /// TwitterAwayの設定にアクセスするクラス。
+    /// TwitterAway::Zweiの設定にアクセスするクラス。
     /// UserSettingクラスへのアクセスと、シリアライズ・デシリアライズを担当している。
     /// </summary>
     public static class UserSettingAdapter

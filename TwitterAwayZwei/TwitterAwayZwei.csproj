@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{26AF9761-CBCB-4B56-B9BC-57E8B5F27860}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -118,6 +118,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="ProxySetting.cs" />
     <Compile Include="SettingForm.cs">
       <SubType>Form</SubType>
     </Compile>

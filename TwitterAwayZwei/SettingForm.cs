@@ -107,19 +107,19 @@ namespace TwitterAwayZwei
             checkTimelineIntervalNumericUpDown.Text = (UserSettingAdapter.Setting.UpdateTimulineInterval).ToString();
             checkDirectMessageIntervalNumericUpDown.Text = (UserSettingAdapter.Setting.UpdateDirectMessageInterval).ToString();
 
-            switch (UserSettingAdapter.Setting.ProxyUse)
+            switch (UserSettingAdapter.Setting.Proxy.ProxyUse)
             {
-                case Twitter.Twitter.ProxyConnects.NoUse:
+                case ProxySetting.ProxyConnects.NoUse:
                     proxyNoUseRadioButton.Checked = true;
                     autoDetectProxySettingRadioButton.Checked = false;
                     manualProxySettingRadioButton.Checked = false;
                     break;
-                case Twitter.Twitter.ProxyConnects.AutoDetect:
+                case ProxySetting.ProxyConnects.AutoDetect:
                     proxyNoUseRadioButton.Checked = false;
                     autoDetectProxySettingRadioButton.Checked = true;
                     manualProxySettingRadioButton.Checked = false;
                     break;
-                case Twitter.Twitter.ProxyConnects.Manual:
+                case ProxySetting.ProxyConnects.Manual:
                     proxyNoUseRadioButton.Checked = false;
                     autoDetectProxySettingRadioButton.Checked = false;
                     manualProxySettingRadioButton.Checked = true;
@@ -130,8 +130,8 @@ namespace TwitterAwayZwei
                     break;
             }
 
-            proxyServerTextBox.Text = UserSettingAdapter.Setting.ProxyServer;
-            proxyPortTextBox.Text = UserSettingAdapter.Setting.ProxyPort.ToString();
+            proxyServerTextBox.Text = UserSettingAdapter.Setting.Proxy.ProxyServer;
+            proxyPortTextBox.Text = UserSettingAdapter.Setting.Proxy.ProxyPort.ToString();
 
             #endregion
         }
@@ -230,25 +230,25 @@ namespace TwitterAwayZwei
 
             if (proxyNoUseRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.ProxyUse = Twitter.Twitter.ProxyConnects.NoUse;
+                UserSettingAdapter.Setting.Proxy.ProxyUse = ProxySetting.ProxyConnects.NoUse;
             }
             else if (autoDetectProxySettingRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.ProxyUse = Twitter.Twitter.ProxyConnects.AutoDetect;
+                UserSettingAdapter.Setting.Proxy.ProxyUse = ProxySetting.ProxyConnects.AutoDetect;
             }
             else if (manualProxySettingRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.ProxyUse = Twitter.Twitter.ProxyConnects.Manual;
+                UserSettingAdapter.Setting.Proxy.ProxyUse = ProxySetting.ProxyConnects.Manual;
             }
             else
             {
                 // ここに到達することはあり得ない
                 Trace.Assert(false, "想定外の動作のため、終了します");
             }
-            UserSettingAdapter.Setting.ProxyServer = proxyServerTextBox.Text.Trim();
+            UserSettingAdapter.Setting.Proxy.ProxyServer = proxyServerTextBox.Text.Trim();
             try
             {
-                UserSettingAdapter.Setting.ProxyPort = int.Parse(proxyPortTextBox.Text.Trim());
+                UserSettingAdapter.Setting.Proxy.ProxyPort = int.Parse(proxyPortTextBox.Text.Trim());
             }
             catch (ArgumentException) { ; }
             catch (FormatException) { ; }

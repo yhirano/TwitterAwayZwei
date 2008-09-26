@@ -566,57 +566,16 @@ namespace TwitterAwayZwei.Twitter
         }
 
         /// <summary>
-        /// プロキシの接続方法列挙
+        /// プロキシの設定
         /// </summary>
-        public enum ProxyConnects
+        private ProxySetting proxy;
+
+        /// <summary>
+        /// プロキシの設定を設定する
+        /// </summary>
+        public ProxySetting Proxy
         {
-            NoUse, AutoDetect, Manual
-        }
-
-        /// <summary>
-        /// プロキシの接続方法
-        /// </summary>
-        private ProxyConnects proxyUse = ProxyConnects.AutoDetect;
-
-        /// <summary>
-        /// プロキシの接続方法を設定する
-        /// </summary>
-        public ProxyConnects ProxyUse
-        {
-            set { proxyUse = value; }
-        }
-
-        /// <summary>
-        /// プロキシのサーバ名
-        /// </summary>
-        private string proxyServer = string.Empty;
-
-        /// <summary>
-        /// プロキシのサーバ名を設定する
-        /// </summary>
-        public string ProxyServer
-        {
-            set { proxyServer = value; }
-        }
-
-        /// <summary>
-        /// プロキシのポート番号
-        /// </summary>
-        private int proxyPort = 0;
-
-        /// <summary>
-        /// プロキシのポート番号を設定する
-        /// </summary>
-        public int ProxyPort
-        {
-            set
-            {
-                if (0x00 <= value && value <= 0xFFFF)
-                {
-                    proxyPort = value;
-                }
-                else { ; }
-            }
+            set { proxy = value; }
         }
 
         /// <summary>
@@ -667,20 +626,19 @@ namespace TwitterAwayZwei.Twitter
                 webReq.Method = requestMethod;
             }
 
-            switch (proxyUse)
+            switch (proxy.ProxyUse)
             {
-                case ProxyConnects.NoUse:
-                    WebProxy proxy = new WebProxy();
-                    proxy.Address = null;
-                    webReq.Proxy = proxy;
+                case ProxySetting.ProxyConnects.NoUse:
+                    WebProxy webProxy = new WebProxy();
+                    webProxy.Address = null;
+                    webReq.Proxy = webProxy;
                     break;
-                case ProxyConnects.AutoDetect:
-                    webReq.Proxy = new WebProxy(proxyServer, proxyPort);
+                case ProxySetting.ProxyConnects.Manual:
+                    webReq.Proxy = new WebProxy(proxy.ProxyServer, proxy.ProxyPort);
                     break;
-                case ProxyConnects.Manual:
+                case ProxySetting.ProxyConnects.AutoDetect:
                 default:
                     break;
-
             }
             webReq.Timeout = webRequestTimeoutMillSec;
             webReq.UserAgent = userAgent;

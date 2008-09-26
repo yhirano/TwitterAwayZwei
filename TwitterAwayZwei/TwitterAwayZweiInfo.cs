@@ -1,17 +1,14 @@
 using System;
 
-using System.Drawing;
-using System.Reflection;
 using System.Text.RegularExpressions;
-using System.Runtime.InteropServices;
 using MiscPocketCompactLibrary2.Reflection;
 
 namespace TwitterAwayZwei
 {
     /// <summary>
-    /// TwitterAwayの固有情報を記述しているクラス
+    /// TwitterAway::Zweiの固有情報を記述しているクラス
     /// </summary>
-    public static class TwitterAwayZweiInfo
+    internal static class TwitterAwayZweiInfo
     {
         #region アプリケーションの設定
 
@@ -81,7 +78,7 @@ namespace TwitterAwayZwei
         /// </summary>
         public static string ExceptionLogFile
         {
-            get { return "TwitterAwayExceptionLog.log"; }
+            get { return "TwitterAwayZweiExceptionLog.log"; }
         }
 
         #endregion

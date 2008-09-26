@@ -1,15 +1,11 @@
 ﻿using System;
 
-using System.Drawing;
-using System.Text;
-using System.IO;
 using System.Xml.Serialization;
-using MiscPocketCompactLibrary2.Reflection;
 
 namespace TwitterAwayZwei
 {
     /// <summary>
-    /// TwitterAwayの設定を保持するクラス
+    /// TwitterAway::Zweiの設定を保持するクラス
     /// </summary>
     [Serializable()]
     public class UserSetting
@@ -192,62 +188,17 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
-        /// プロキシの接続方法
+        /// プロキシ設定
         /// </summary>
-        private Twitter.Twitter.ProxyConnects proxyUse = Twitter.Twitter.ProxyConnects.AutoDetect;
+        private ProxySetting proxy = new ProxySetting();
 
         /// <summary>
-        /// プロキシの接続方法を取得・設定する
+        /// プロキシ設定を取得・設定する
         /// </summary>
-        public Twitter.Twitter.ProxyConnects ProxyUse
+        public ProxySetting Proxy
         {
-            get { return proxyUse; }
-            set { proxyUse = value; }
-        }
-
-        /// <summary>
-        /// プロキシのサーバ名
-        /// </summary>
-        private string proxyServer = string.Empty;
-
-        /// <summary>
-        /// プロキシのサーバ名を取得・設定する
-        /// </summary>
-        public string ProxyServer
-        {
-            get { return proxyServer; }
-            set { proxyServer = value; }
-        }
-
-        /// <summary>
-        /// プロキシのポート番号
-        /// </summary>
-        private int proxyPort = 0;
-
-        /// <summary>
-        /// プロキシのポート番号を取得・設定する
-        /// </summary>
-        public int ProxyPort
-        {
-            get
-            {
-                if (0x00 <= proxyPort && proxyPort <= 0xFFFF)
-                {
-                    return proxyPort;
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            set
-            {
-                if (0x00 <= value && value <= 0xFFFF)
-                {
-                    proxyPort = value;
-                }
-                else { ; }
-            }
+            get { return proxy; }
+            set { proxy = value; }
         }
 
         /// <summary>

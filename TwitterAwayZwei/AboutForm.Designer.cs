@@ -65,10 +65,10 @@
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.versionNumberLabel);
             this.Controls.Add(this.applicationNameLabel);
+            this.KeyPreview = true;
             this.Name = "AboutForm";
             this.Load += new System.EventHandler(this.AboutForm_Load);
             this.ResumeLayout(false);
-
         }
 
         #endregion

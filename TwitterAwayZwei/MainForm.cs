@@ -54,9 +54,7 @@ namespace TwitterAwayZwei
             // Twitterの初期化
             twitterAccount = new TwitterAwayZwei.Twitter.Twitter(UserSettingAdapter.Setting.UserName, UserSettingAdapter.Setting.Password);
             twitterAccount.IsFetchProfileImages = UserSettingAdapter.Setting.IsFetchProfileImages;
-            twitterAccount.ProxyUse = UserSettingAdapter.Setting.ProxyUse;
-            twitterAccount.ProxyServer = UserSettingAdapter.Setting.ProxyServer;
-            twitterAccount.ProxyPort = UserSettingAdapter.Setting.ProxyPort;
+            twitterAccount.Proxy = UserSettingAdapter.Setting.Proxy;
             twitterAccount.WebRequestTimeoutMillSec = TwitterAwayZweiInfo.WebRequestTimeoutMillSec;
             twitterAccount.StatusAdded += delegate(object sender, StatusAddedEventArgs e)
             {
@@ -92,9 +90,7 @@ namespace TwitterAwayZwei
                 twitterAccount.UserName = UserSettingAdapter.Setting.UserName;
                 twitterAccount.Password = UserSettingAdapter.Setting.Password;
                 twitterAccount.IsFetchProfileImages = UserSettingAdapter.Setting.IsFetchProfileImages;
-                twitterAccount.ProxyUse = UserSettingAdapter.Setting.ProxyUse;
-                twitterAccount.ProxyServer = UserSettingAdapter.Setting.ProxyServer;
-                twitterAccount.ProxyPort = UserSettingAdapter.Setting.ProxyPort;
+                twitterAccount.Proxy = UserSettingAdapter.Setting.Proxy;
                 twitterAccount.WebRequestTimeoutMillSec = TwitterAwayZweiInfo.WebRequestTimeoutMillSec;
 
                 switch (UserSettingAdapter.Setting.CheckList)

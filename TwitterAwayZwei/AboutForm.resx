@@ -134,20 +134,17 @@
   <data name="&gt;&gt;applicationNameLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AboutForm</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>240, 294</value>
   </data>
   <data name="&gt;&gt;copyrightLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="versionNumberLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <data name="copyrightLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;iconPictureBox.Name" xml:space="preserve">
-    <value>iconPictureBox</value>
   </data>
   <data name="copyrightLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>234, 20</value>
@@ -160,39 +157,6 @@
   </data>
   <data name="applicationNameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 54</value>
-  </data>
-  <data name="iconPictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="iconPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="versionNumberLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="applicationNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 20</value>
-  </data>
-  <data name="&gt;&gt;applicationNameLabel.Name" xml:space="preserve">
-    <value>applicationNameLabel</value>
-  </data>
-  <data name="&gt;&gt;versionNumberLabel.Name" xml:space="preserve">
-    <value>versionNumberLabel</value>
-  </data>
-  <data name="&gt;&gt;applicationNameLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;copyrightLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="applicationNameLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="versionNumberLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 20</value>
   </data>
   <data name="iconPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -232,6 +196,42 @@
         FB4AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="iconPictureBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="iconPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="versionNumberLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="applicationNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 20</value>
+  </data>
+  <data name="&gt;&gt;applicationNameLabel.Name" xml:space="preserve">
+    <value>applicationNameLabel</value>
+  </data>
+  <data name="&gt;&gt;versionNumberLabel.Name" xml:space="preserve">
+    <value>versionNumberLabel</value>
+  </data>
+  <data name="&gt;&gt;applicationNameLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;copyrightLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="applicationNameLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="versionNumberLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 20</value>
+  </data>
+  <data name="versionNumberLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="&gt;&gt;versionNumberLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -257,8 +257,8 @@
   <data name="&gt;&gt;copyrightLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AboutForm</value>
+  <data name="&gt;&gt;iconPictureBox.Name" xml:space="preserve">
+    <value>iconPictureBox</value>
   </data>
   <data name="&gt;&gt;versionNumberLabel.ZOrder" xml:space="preserve">
     <value>2</value>
