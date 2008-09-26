@@ -68,7 +68,6 @@ namespace TwitterAwayZwei
             get
             {
                 string title = Regex.Replace(AssemblyUtility.Title, "[\\\\/:,;*?\"<>|]", "_");
-                string version = Regex.Replace(AssemblyUtility.Version.ToString(), "[\\\\/:,;*?\"<>|]", "_");
                 return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\" + title + @"\Setting.xml";
             }
         }
