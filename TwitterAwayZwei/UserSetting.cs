@@ -39,22 +39,14 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
-        /// チェックするリスト列挙
-        /// </summary>
-        public enum CheckLists
-        {
-            Friends, Public
-        }
-
-        /// <summary>
         /// チェックするリスト
         /// </summary>
-        private CheckLists checkList = CheckLists.Friends;
+        private Twitter.Twitter.CheckLists checkList = Twitter.Twitter.CheckLists.Friends;
 
         /// <summary>
         /// チェックするリストを取得・設定する
         /// </summary>
-        public CheckLists CheckList
+        public Twitter.Twitter.CheckLists CheckList
         {
             get { return checkList; }
             set { checkList = value; }

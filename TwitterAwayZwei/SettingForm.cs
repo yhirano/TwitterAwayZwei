@@ -88,11 +88,11 @@ namespace TwitterAwayZwei
 
             switch (UserSettingAdapter.Setting.CheckList)
             {
-                case UserSetting.CheckLists.Friends:
+                case Twitter.Twitter.CheckLists.Friends:
                     checkFriendsRadioButton.Checked = true;
                     checkPublicRadioButton.Checked = false;
                     break;
-                case UserSetting.CheckLists.Public:
+                case Twitter.Twitter.CheckLists.Public:
                     checkFriendsRadioButton.Checked = false;
                     checkPublicRadioButton.Checked = true;
                     break;
@@ -198,11 +198,11 @@ namespace TwitterAwayZwei
 
             if (checkFriendsRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.CheckList = UserSetting.CheckLists.Friends;
+                UserSettingAdapter.Setting.CheckList = Twitter.Twitter.CheckLists.Friends;
             }
             else if (checkPublicRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.CheckList = UserSetting.CheckLists.Public;
+                UserSettingAdapter.Setting.CheckList = Twitter.Twitter.CheckLists.Public;
             }
             else
             {

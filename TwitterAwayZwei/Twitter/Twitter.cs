@@ -43,10 +43,11 @@ namespace TwitterAwayZwei.Twitter
         private string userName;
 
         /// <summary>
-        /// ユーザー名を設定する
+        /// ユーザー名を取得・設定する
         /// </summary>
         public string UserName
         {
+            get { return userName; }
             set { userName = value; }
         }
 
@@ -113,6 +114,28 @@ namespace TwitterAwayZwei.Twitter
             this.password = password;
             profileSmallImageList.ImageSize = new Size(32, 32);
             profileLargeImageList.ImageSize = new Size(44, 44);
+        }
+
+        /// <summary>
+        /// チェックするリスト列挙
+        /// </summary>
+        public enum CheckLists
+        {
+            Friends, Public
+        }
+
+        /// <summary>
+        /// チェックするリスト
+        /// </summary>
+        private CheckLists checkList = CheckLists.Friends;
+
+        /// <summary>
+        /// チェックするリストを取得・設定する
+        /// </summary>
+        public CheckLists CheckList
+        {
+            get { return checkList; }
+            set { checkList = value; }
         }
 
         /// <summary>
@@ -184,6 +207,28 @@ namespace TwitterAwayZwei.Twitter
                     }
 
                     return statuses;
+                }
+            }
+        }
+
+        /// <summary>
+        /// ステータス情報を取得する
+        /// </summary>
+        public StatusInfomation[] StatusesTimeline
+        {
+            get
+            {
+                lock (timelineFetchLock)
+                {
+                    switch (UserSettingAdapter.Setting.CheckList)
+                    {
+                        case CheckLists.Friends:
+                            return FriendTimeline;
+                        case CheckLists.Public:
+                            return PublicTimeline;
+                        default:
+                            return null;
+                    }
                 }
             }
         }

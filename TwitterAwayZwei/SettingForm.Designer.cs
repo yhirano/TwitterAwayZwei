@@ -73,6 +73,7 @@
             this.proxyNoUseRadioButton = new System.Windows.Forms.RadioButton();
             this.proxyPortLabel = new System.Windows.Forms.Label();
             this.proxyServerLabel = new System.Windows.Forms.Label();
+            this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.settingTabControl.SuspendLayout();
             this.generalTabPage.SuspendLayout();
             this.userTabPage.SuspendLayout();
@@ -84,19 +85,19 @@
             // 
             // settingTabControl
             // 
-            resources.ApplyResources(this.settingTabControl, "settingTabControl");
             this.settingTabControl.Controls.Add(this.generalTabPage);
             this.settingTabControl.Controls.Add(this.userTabPage);
             this.settingTabControl.Controls.Add(this.timelineTabPage);
             this.settingTabControl.Controls.Add(this.networkTabPage);
+            resources.ApplyResources(this.settingTabControl, "settingTabControl");
             this.settingTabControl.Name = "settingTabControl";
             this.settingTabControl.SelectedIndex = 0;
             // 
             // generalTabPage
             // 
-            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Controls.Add(this.timelineListFontSizeLabel);
             this.generalTabPage.Controls.Add(this.timelineListFontSizeDomainUpDown);
+            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             this.generalTabPage.Name = "generalTabPage";
             // 
             // timelineListFontSizeLabel
@@ -128,11 +129,11 @@
             // 
             // userTabPage
             // 
-            resources.ApplyResources(this.userTabPage, "userTabPage");
             this.userTabPage.Controls.Add(this.passwordTextBox);
             this.userTabPage.Controls.Add(this.passwordLabel);
             this.userTabPage.Controls.Add(this.userNameTextBox);
             this.userTabPage.Controls.Add(this.userNameLabel);
+            resources.ApplyResources(this.userTabPage, "userTabPage");
             this.userTabPage.Name = "userTabPage";
             // 
             // passwordTextBox
@@ -201,13 +202,13 @@
             // 
             // timelineTabPage
             // 
-            resources.ApplyResources(this.timelineTabPage, "timelineTabPage");
             this.timelineTabPage.Controls.Add(this.fetchProfileIconsCheckBox);
             this.timelineTabPage.Controls.Add(this.checkDirectMessageIntervalNumericUpDown);
             this.timelineTabPage.Controls.Add(this.checkDirectMessageLabel);
             this.timelineTabPage.Controls.Add(this.getListPanel);
             this.timelineTabPage.Controls.Add(this.checkTimelineIntervalNumericUpDown);
             this.timelineTabPage.Controls.Add(this.checkTimelineIntervalLabel);
+            resources.ApplyResources(this.timelineTabPage, "timelineTabPage");
             this.timelineTabPage.Name = "timelineTabPage";
             // 
             // fetchProfileIconsCheckBox
@@ -243,10 +244,10 @@
             // 
             // getListPanel
             // 
-            resources.ApplyResources(this.getListPanel, "getListPanel");
             this.getListPanel.Controls.Add(this.checkPublicRadioButton);
             this.getListPanel.Controls.Add(this.checkFriendsRadioButton);
             this.getListPanel.Controls.Add(this.checkListLabel);
+            resources.ApplyResources(this.getListPanel, "getListPanel");
             this.getListPanel.Name = "getListPanel";
             // 
             // checkPublicRadioButton
@@ -256,8 +257,8 @@
             // 
             // checkFriendsRadioButton
             // 
-            resources.ApplyResources(this.checkFriendsRadioButton, "checkFriendsRadioButton");
             this.checkFriendsRadioButton.Checked = true;
+            resources.ApplyResources(this.checkFriendsRadioButton, "checkFriendsRadioButton");
             this.checkFriendsRadioButton.Name = "checkFriendsRadioButton";
             // 
             // checkListLabel
@@ -293,8 +294,8 @@
             // 
             // networkTabPage
             // 
-            resources.ApplyResources(this.networkTabPage, "networkTabPage");
             this.networkTabPage.Controls.Add(this.proxySettingPanel);
+            resources.ApplyResources(this.networkTabPage, "networkTabPage");
             this.networkTabPage.Name = "networkTabPage";
             // 
             // proxySettingPanel
@@ -316,8 +317,8 @@
             // 
             // proxyPortTextBox
             // 
-            resources.ApplyResources(this.proxyPortTextBox, "proxyPortTextBox");
             this.proxyPortTextBox.ContextMenu = this.proxyPortContextMenu;
+            resources.ApplyResources(this.proxyPortTextBox, "proxyPortTextBox");
             this.proxyPortTextBox.Name = "proxyPortTextBox";
             // 
             // proxyPortContextMenu
@@ -343,14 +344,14 @@
             // 
             // autoDetectProxySettingRadioButton
             // 
-            resources.ApplyResources(this.autoDetectProxySettingRadioButton, "autoDetectProxySettingRadioButton");
             this.autoDetectProxySettingRadioButton.Checked = true;
+            resources.ApplyResources(this.autoDetectProxySettingRadioButton, "autoDetectProxySettingRadioButton");
             this.autoDetectProxySettingRadioButton.Name = "autoDetectProxySettingRadioButton";
             // 
             // proxyServerTextBox
             // 
-            resources.ApplyResources(this.proxyServerTextBox, "proxyServerTextBox");
             this.proxyServerTextBox.ContextMenu = this.proxyServerContextMenu;
+            resources.ApplyResources(this.proxyServerTextBox, "proxyServerTextBox");
             this.proxyServerTextBox.Name = "proxyServerTextBox";
             // 
             // proxyServerContextMenu
@@ -395,6 +396,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.settingTabControl);
+            this.Menu = this.mainMenu1;
             this.Name = "SettingForm";
             this.Load += new System.EventHandler(this.SettingForm_Load);
             this.Closing += new System.ComponentModel.CancelEventHandler(this.SettingForm_Closing);
@@ -455,5 +457,6 @@
         private System.Windows.Forms.TabPage generalTabPage;
         private System.Windows.Forms.DomainUpDown timelineListFontSizeDomainUpDown;
         private System.Windows.Forms.Label timelineListFontSizeLabel;
+        private System.Windows.Forms.MainMenu mainMenu1;
     }
 }

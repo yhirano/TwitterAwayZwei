@@ -91,19 +91,11 @@ namespace TwitterAwayZwei
                 twitterAccount.Password = UserSettingAdapter.Setting.Password;
                 twitterAccount.IsFetchProfileImages = UserSettingAdapter.Setting.IsFetchProfileImages;
                 twitterAccount.Proxy = UserSettingAdapter.Setting.Proxy;
+                twitterAccount.CheckList = UserSettingAdapter.Setting.CheckList;
                 twitterAccount.WebRequestTimeoutMillSec = TwitterAwayZweiInfo.WebRequestTimeoutMillSec;
 
-                switch (UserSettingAdapter.Setting.CheckList)
-                {
-                    case UserSetting.CheckLists.Friends:
-                        twitterStatuses = twitterAccount.FriendTimeline;
-                        break;
-                    case UserSetting.CheckLists.Public:
-                        twitterStatuses = twitterAccount.PublicTimeline;
-                        break;
-                    default:
-                        break;
-                }
+                // ステータス情報の取得
+                twitterStatuses = twitterAccount.StatusesTimeline;
             }
             catch (WebException) { throw; }
             catch (UriFormatException) { throw; }
@@ -148,9 +140,9 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
-        /// リストビューに StatusInfomation を設定する
+        /// Timelineリストビューに StatusInfomation を設定する
         /// </summary>
-        /// <param name="addStatus"></param>
+        /// <param name="addStatus">表示するステータス情報。nullの場合はリストビューのクリア。</param>
         private void UpdateTimelineListView(StatusInfomation[] statuses)
         {
             timelineTwitterListView.Items.Clear();
@@ -169,9 +161,9 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
-        /// リストビューに StatusInfomation を追加する
+        /// Timelineリストビューに StatusInfomation を追加する
         /// </summary>
-        /// <param name="addStatus"></param>
+        /// <param name="addStatus">表示するステータス情報</param>
         private void AddStatusToListView(StatusInfomation addStatus)
         {
             string date = string.Empty;
@@ -205,6 +197,14 @@ namespace TwitterAwayZwei
                 item.ImageIndex = twitterAccount.GetProfileImageIndex(addStatus.User.ProfileImageUrl);
             }
             timelineTwitterListView.Items.Add(item);
+        }
+
+        /// <summary>
+        /// Timelineリストビューのクリア
+        /// </summary>
+        private void ClearTimelineListView()
+        {
+            UpdateTimelineListView(null);
         }
 
         /// <summary>
@@ -271,9 +271,9 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
-        /// リストビューに DirectMessage を設定する
+        /// Messageリストビューに DirectMessage を設定する
         /// </summary>
-        /// <param name="addStatus"></param>
+        /// <param name="addStatus">表示するダイレクトメッセージ。nullの場合はリストビューのクリア。</param>
         private void UpdateDirectMessageListView(DirectMessage[] messages)
         {
             messageTwitterListView.Items.Clear();
@@ -292,9 +292,9 @@ namespace TwitterAwayZwei
         }
 
         /// <summary>
-        /// リストビューに DirectMessage を追加する
+        /// Messageリストビューに DirectMessage を追加する
         /// </summary>
-        /// <param name="addStatus"></param>
+        /// <param name="addStatus">表示するダイレクトメッセージ</param>
         private void AddMessageToListView(DirectMessage message)
         {
             string date = string.Empty;
@@ -326,6 +326,13 @@ namespace TwitterAwayZwei
             messageTwitterListView.Items.Add(item);
         }
 
+        /// <summary>
+        /// Messageリストビューのクリア
+        /// </summary>
+        private void ClearDirectMessageListView()
+        {
+            UpdateDirectMessageListView(null);
+        }
 
         /// <summary>
         /// 自動チェックを有効にする
@@ -752,6 +759,15 @@ namespace TwitterAwayZwei
             SettingForm settingForm = new SettingForm();
             settingForm.ShowDialog();
             settingForm.Dispose();
+
+            // ユーザが変更された場合にはリストビューをクリアする or
+            // チェックするリストが変更された場合にはリストビューをクリアする
+            if (twitterAccount.UserName != UserSettingAdapter.Setting.UserName
+                || twitterAccount.CheckList != UserSettingAdapter.Setting.CheckList)
+            {
+                ClearTimelineListView();
+                ClearDirectMessageListView();
+            }
 
             ResetPassesSecendsPriviousFetch();
         }

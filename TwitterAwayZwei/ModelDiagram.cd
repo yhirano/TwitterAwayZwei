@@ -20,13 +20,28 @@
   <Class Name="TwitterAwayZwei.Twitter.Twitter">
     <Position X="1.25" Y="0.5" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAQgQABQBBEAAAgACAAAAAgAAABAAAACAQAAAgECiAA=</HashCode>
+      <HashCode>AAQgQBBQDJEQBAgCCAAAAggAAIDgAAICQQAADoEiiIA=</HashCode>
       <FileName>Twitter\Twitter.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="FriendTimeline" />
       <Property Name="PublicTimeline" />
+      <Property Name="FriendTimeline" />
+      <Property Name="Proxy" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="TwitterAwayZwei.ProxySetting">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="TwitterAwayZwei.ProxySetting.ProxyConnects" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ProxySetting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAACQAACAEAAAgAAA=</HashCode>
+      <FileName>ProxySetting.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="メイリオ" Size="9" />
 </ClassDiagram>

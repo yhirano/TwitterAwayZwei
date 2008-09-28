@@ -33,6 +33,7 @@
             this.versionNumberLabel = new System.Windows.Forms.Label();
             this.applicationNameLabel = new System.Windows.Forms.Label();
             this.iconPictureBox = new System.Windows.Forms.PictureBox();
+            this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.SuspendLayout();
             // 
             // copyrightLabel
@@ -66,9 +67,11 @@
             this.Controls.Add(this.versionNumberLabel);
             this.Controls.Add(this.applicationNameLabel);
             this.KeyPreview = true;
+            this.Menu = this.mainMenu1;
             this.Name = "AboutForm";
             this.Load += new System.EventHandler(this.AboutForm_Load);
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -77,5 +80,6 @@
         private System.Windows.Forms.Label versionNumberLabel;
         private System.Windows.Forms.Label applicationNameLabel;
         private System.Windows.Forms.PictureBox iconPictureBox;
+        private System.Windows.Forms.MainMenu mainMenu1;
     }
 }
