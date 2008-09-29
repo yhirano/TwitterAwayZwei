@@ -13,6 +13,7 @@ namespace TwitterAwayZwei
         /// <summary>
         /// プロキシの接続方法列挙
         /// </summary>
+        [Serializable()]
         public enum ProxyConnects
         {
             NoUse, AutoDetect, Manual

@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Xml;
+using System.Xml.Serialization;
 using System.Text;
 using System.Windows.Forms;
 using MiscPocketCompactLibrary2.Reflection;
@@ -119,6 +120,7 @@ namespace TwitterAwayZwei.Twitter
         /// <summary>
         /// チェックするリスト列挙
         /// </summary>
+        [Serializable()]
         public enum CheckLists
         {
             Friends, Public

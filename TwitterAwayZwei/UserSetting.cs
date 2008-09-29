@@ -145,6 +145,7 @@ namespace TwitterAwayZwei
         /// <summary>
         /// Timeline/Messagesリストのフォントサイズ列挙
         /// </summary>
+        [Serializable()]
         public enum TimelineListFontSizes
         {
             DefaultSize,
