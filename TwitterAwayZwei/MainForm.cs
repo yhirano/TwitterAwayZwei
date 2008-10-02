@@ -45,7 +45,7 @@ namespace TwitterAwayZwei
         /// <summary>
         /// 多言語リソース
         /// </summary>
-        private ResourceManager stringResource = new ResourceManager("TwitterAwayZwei.TwitterAwayZweiStrings", AssemblyUtility.Assembly);
+        private ResourceManager stringResource = new ResourceManager("TwitterAwayZwei.TwitterAwayZweiStrings", EntryAssemblyUtility.Assembly);
 
         public MainForm()
         {
@@ -54,7 +54,7 @@ namespace TwitterAwayZwei
             // Twitterの初期化
             twitterAccount = new TwitterAwayZwei.Twitter.Twitter(UserSettingAdapter.Setting.UserName, UserSettingAdapter.Setting.Password);
             twitterAccount.IsFetchProfileImages = UserSettingAdapter.Setting.IsFetchProfileImages;
-            twitterAccount.Proxy = UserSettingAdapter.Setting.Proxy;
+            twitterAccount.ProxySetting = UserSettingAdapter.Setting.Proxy;
             twitterAccount.WebRequestTimeoutMillSec = TwitterAwayZweiInfo.WebRequestTimeoutMillSec;
             twitterAccount.StatusAdded += delegate(object sender, StatusAddedEventArgs e)
             {
@@ -90,7 +90,7 @@ namespace TwitterAwayZwei
                 twitterAccount.UserName = UserSettingAdapter.Setting.UserName;
                 twitterAccount.Password = UserSettingAdapter.Setting.Password;
                 twitterAccount.IsFetchProfileImages = UserSettingAdapter.Setting.IsFetchProfileImages;
-                twitterAccount.Proxy = UserSettingAdapter.Setting.Proxy;
+                twitterAccount.ProxySetting = UserSettingAdapter.Setting.Proxy;
                 twitterAccount.CheckList = UserSettingAdapter.Setting.CheckList;
                 twitterAccount.WebRequestTimeoutMillSec = TwitterAwayZweiInfo.WebRequestTimeoutMillSec;
 
@@ -413,7 +413,7 @@ namespace TwitterAwayZwei
         private void MainForm_Load(object sender, EventArgs e)
         {
             // フォームのテキストバーを設定
-            this.Text = AssemblyUtility.Title;
+            this.Text = EntryAssemblyUtility.Title;
 
             SwitchEnableUpdateButton();
 
@@ -700,7 +700,6 @@ namespace TwitterAwayZwei
                 if (status != null)
                 {
                     doingInfomationTextLabel.Text = status.User.Name + " / " + status.User.ScreenName + "\r\n" + status.Text;
-
                     twitterIconPictureBox.Image = twitterAccount.GetProfileLargeImage(status.User.ProfileImageUrl);
                 }
             }

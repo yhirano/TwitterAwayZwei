@@ -259,7 +259,7 @@
     <value>*</value>
   </data>
   <data name="passwordTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 21</value>
+    <value>156, 21</value>
   </data>
   <data name="passwordTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -316,7 +316,7 @@
     <value>81, 3</value>
   </data>
   <data name="userNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 21</value>
+    <value>156, 21</value>
   </data>
   <data name="userNameTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -358,7 +358,7 @@
     <value>0, 0</value>
   </data>
   <data name="userTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 268</value>
+    <value>240, 245</value>
   </data>
   <data name="userTabPage.Text" xml:space="preserve">
     <value>User</value>
@@ -391,7 +391,7 @@
     <value>Top, Right</value>
   </data>
   <data name="checkDirectMessageIntervalNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 128</value>
+    <value>172, 128</value>
   </data>
   <data name="checkDirectMessageIntervalNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 22</value>
@@ -523,7 +523,7 @@
     <value>Top, Right</value>
   </data>
   <data name="checkTimelineIntervalNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 83</value>
+    <value>172, 83</value>
   </data>
   <data name="checkTimelineIntervalNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 22</value>
@@ -568,7 +568,7 @@
     <value>0, 0</value>
   </data>
   <data name="timelineTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 268</value>
+    <value>240, 245</value>
   </data>
   <data name="timelineTabPage.Text" xml:space="preserve">
     <value>Timeline</value>
@@ -772,7 +772,7 @@
     <value>0, 0</value>
   </data>
   <data name="proxySettingPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 169</value>
+    <value>240, 169</value>
   </data>
   <data name="&gt;&gt;proxySettingPanel.Name" xml:space="preserve">
     <value>proxySettingPanel</value>
@@ -790,7 +790,7 @@
     <value>0, 0</value>
   </data>
   <data name="networkTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 268</value>
+    <value>240, 245</value>
   </data>
   <data name="networkTabPage.Text" xml:space="preserve">
     <value>NetWork</value>

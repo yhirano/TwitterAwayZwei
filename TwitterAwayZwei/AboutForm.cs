@@ -19,9 +19,9 @@ namespace TwitterAwayZwei
 
         private void AboutForm_Load(object sender, EventArgs e)
         {
-            applicationNameLabel.Text = AssemblyUtility.Title;
-            versionNumberLabel.Text = AssemblyUtility.Version.ToString();
-            copyrightLabel.Text = AssemblyUtility.Copyright;
+            applicationNameLabel.Text = EntryAssemblyUtility.Title;
+            versionNumberLabel.Text = EntryAssemblyUtility.Version.ToString();
+            copyrightLabel.Text = EntryAssemblyUtility.Copyright;
         }
     }
 }

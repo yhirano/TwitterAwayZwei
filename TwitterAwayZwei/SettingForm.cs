@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
+using MiscPocketCompactLibrary2.Net;
 
 namespace TwitterAwayZwei
 {
@@ -109,17 +110,17 @@ namespace TwitterAwayZwei
 
             switch (UserSettingAdapter.Setting.Proxy.ProxyUse)
             {
-                case ProxySetting.ProxyConnects.NoUse:
+                case WebProxySetting.ProxyConnects.NoUse:
                     proxyNoUseRadioButton.Checked = true;
                     autoDetectProxySettingRadioButton.Checked = false;
                     manualProxySettingRadioButton.Checked = false;
                     break;
-                case ProxySetting.ProxyConnects.AutoDetect:
+                case WebProxySetting.ProxyConnects.AutoDetect:
                     proxyNoUseRadioButton.Checked = false;
                     autoDetectProxySettingRadioButton.Checked = true;
                     manualProxySettingRadioButton.Checked = false;
                     break;
-                case ProxySetting.ProxyConnects.Manual:
+                case WebProxySetting.ProxyConnects.Manual:
                     proxyNoUseRadioButton.Checked = false;
                     autoDetectProxySettingRadioButton.Checked = false;
                     manualProxySettingRadioButton.Checked = true;
@@ -230,15 +231,15 @@ namespace TwitterAwayZwei
 
             if (proxyNoUseRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.Proxy.ProxyUse = ProxySetting.ProxyConnects.NoUse;
+                UserSettingAdapter.Setting.Proxy.ProxyUse = WebProxySetting.ProxyConnects.NoUse;
             }
             else if (autoDetectProxySettingRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.Proxy.ProxyUse = ProxySetting.ProxyConnects.AutoDetect;
+                UserSettingAdapter.Setting.Proxy.ProxyUse = WebProxySetting.ProxyConnects.AutoDetect;
             }
             else if (manualProxySettingRadioButton.Checked == true)
             {
-                UserSettingAdapter.Setting.Proxy.ProxyUse = ProxySetting.ProxyConnects.Manual;
+                UserSettingAdapter.Setting.Proxy.ProxyUse = WebProxySetting.ProxyConnects.Manual;
             }
             else
             {

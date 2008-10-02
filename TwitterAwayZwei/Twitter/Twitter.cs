@@ -10,6 +10,7 @@ using System.Xml.Serialization;
 using System.Text;
 using System.Windows.Forms;
 using MiscPocketCompactLibrary2.Reflection;
+using MiscPocketCompactLibrary2.Net;
 
 namespace TwitterAwayZwei.Twitter
 {
@@ -580,6 +581,32 @@ namespace TwitterAwayZwei.Twitter
         }
 
         /// <summary>
+        /// プロキシの設定
+        /// </summary>
+        private WebProxySetting proxySetting;
+
+        /// <summary>
+        /// プロキシの設定を設定する
+        /// </summary>
+        public WebProxySetting ProxySetting
+        {
+            set { proxySetting = value; }
+        }
+
+        /// <summary>
+        /// Web接続時のタイムアウト時間
+        /// </summary>
+        private int webRequestTimeoutMillSec = 20000;
+
+        /// <summary>
+        /// Web接続時のタイムアウト時間を設定する
+        /// </summary>
+        public int WebRequestTimeoutMillSec
+        {
+            set { webRequestTimeoutMillSec = value; }
+        }
+
+        /// <summary>
         /// Webサイトの情報をStreamで返す
         /// </summary>
         /// <param name="url">URL</param>
@@ -613,45 +640,6 @@ namespace TwitterAwayZwei.Twitter
         }
 
         /// <summary>
-        /// プロキシの設定
-        /// </summary>
-        private ProxySetting proxy;
-
-        /// <summary>
-        /// プロキシの設定を設定する
-        /// </summary>
-        public ProxySetting Proxy
-        {
-            set { proxy = value; }
-        }
-
-        /// <summary>
-        /// Web接続時のタイムアウト時間
-        /// </summary>
-        private int webRequestTimeoutMillSec = 20000;
-
-        /// <summary>
-        /// Web接続時のタイムアウト時間を設定する
-        /// </summary>
-        public int WebRequestTimeoutMillSec
-        {
-            set { webRequestTimeoutMillSec = value; }
-        }
-
-        /// <summary>
-        /// UserAgent
-        /// </summary>
-        private string userAgent = AssemblyUtility.Title + "/" + AssemblyUtility.Version.ToString();
-
-        /// <summary>
-        /// UserAgentを設定する
-        /// </summary>
-        public string UserAgent
-        {
-            set { userAgent = value; }
-        }
-
-        /// <summary>
         /// Webサイトの情報をStreamで返す
         /// </summary>
         /// <param name="url">URL</param>
@@ -661,38 +649,23 @@ namespace TwitterAwayZwei.Twitter
         /// <returns>Webサイトの情報のStream</returns>
         private Stream GetWebStream(Uri url, string requestMethod, string userName, string password)
         {
-            HttpWebRequest webReq = (HttpWebRequest)WebRequest.Create(url);
-            webReq.AllowWriteStreamBuffering = true;
+            HttpConnection connection = new HttpConnection();
             if (userName != null && userName != string.Empty)
             {
-                webReq.Credentials = new NetworkCredential(userName, password);
+                connection.Credential = new NetworkCredential(userName, password);
             }
 
             if (requestMethod != null && requestMethod != string.Empty)
             {
-                webReq.Method = requestMethod;
+                connection.RequestMethod = requestMethod;
             }
+            connection.ProxySetting = proxySetting;
+            connection.Timeout = webRequestTimeoutMillSec;
+            connection.UserAgent = EntryAssemblyUtility.Title + "/" + EntryAssemblyUtility.Version.ToString();
+            connection.ExtraHeaders.Add("X-Twitter-Client", EntryAssemblyUtility.Title);
+            connection.ExtraHeaders.Add("X-Twitter-Client-Version", EntryAssemblyUtility.Version.ToString());
 
-            switch (proxy.ProxyUse)
-            {
-                case ProxySetting.ProxyConnects.NoUse:
-                    WebProxy webProxy = new WebProxy();
-                    webProxy.Address = null;
-                    webReq.Proxy = webProxy;
-                    break;
-                case ProxySetting.ProxyConnects.Manual:
-                    webReq.Proxy = new WebProxy(proxy.ProxyServer, proxy.ProxyPort);
-                    break;
-                case ProxySetting.ProxyConnects.AutoDetect:
-                default:
-                    break;
-            }
-            webReq.Timeout = webRequestTimeoutMillSec;
-            webReq.UserAgent = userAgent;
-            webReq.Headers.Add("X-Twitter-Client", AssemblyUtility.Title);
-            webReq.Headers.Add("X-Twitter-Client-Version", AssemblyUtility.Version.ToString());
-
-            return webReq.GetResponse().GetResponseStream();
+            return connection.CreateStream(url);
         }
 
         internal event EventHandler<StatusAddedEventArgs> StatusAdded;

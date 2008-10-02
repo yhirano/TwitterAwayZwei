@@ -1,6 +1,6 @@
 ﻿using System;
-
 using System.Xml.Serialization;
+using MiscPocketCompactLibrary2.Net;
 
 namespace TwitterAwayZwei
 {
@@ -183,12 +183,12 @@ namespace TwitterAwayZwei
         /// <summary>
         /// プロキシ設定
         /// </summary>
-        private ProxySetting proxy = new ProxySetting();
+        private WebProxySetting proxy = new WebProxySetting();
 
         /// <summary>
         /// プロキシ設定を取得・設定する
         /// </summary>
-        public ProxySetting Proxy
+        public WebProxySetting Proxy
         {
             get { return proxy; }
             set { proxy = value; }
