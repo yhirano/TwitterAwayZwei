@@ -1,6 +1,7 @@
 using System;
 
 using System.Text.RegularExpressions;
+using System.Reflection;
 using MiscPocketCompactLibrary2.Reflection;
 
 namespace TwitterAwayZwei
@@ -67,7 +68,7 @@ namespace TwitterAwayZwei
         {
             get
             {
-                string title = Regex.Replace(EntryAssemblyUtility.Title, "[\\\\/:,;*?\"<>|]", "_");
+                string title = Regex.Replace(AssemblyUtility.GetTitle(Assembly.GetExecutingAssembly()), "[\\\\/:,;*?\"<>|]", "_");
                 return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\" + title + @"\Setting.xml";
             }
         }

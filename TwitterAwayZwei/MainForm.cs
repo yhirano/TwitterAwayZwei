@@ -8,6 +8,7 @@ using System.Text;
 using System.Net;
 using System.IO;
 using System.Resources;
+using System.Reflection;
 using System.Windows.Forms;
 using OpenNETCF.ComponentModel;
 using MiscPocketCompactLibrary2.Reflection;
@@ -45,7 +46,7 @@ namespace TwitterAwayZwei
         /// <summary>
         /// 多言語リソース
         /// </summary>
-        private ResourceManager stringResource = new ResourceManager("TwitterAwayZwei.TwitterAwayZweiStrings", EntryAssemblyUtility.Assembly);
+        private ResourceManager stringResource = new ResourceManager("TwitterAwayZwei.TwitterAwayZweiStrings", Assembly.GetExecutingAssembly());
 
         public MainForm()
         {
@@ -413,7 +414,7 @@ namespace TwitterAwayZwei
         private void MainForm_Load(object sender, EventArgs e)
         {
             // フォームのテキストバーを設定
-            this.Text = EntryAssemblyUtility.Title;
+            this.Text = AssemblyUtility.GetTitle(Assembly.GetExecutingAssembly());
 
             SwitchEnableUpdateButton();
 

@@ -8,6 +8,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Text;
+using System.Reflection;
 using System.Windows.Forms;
 using MiscPocketCompactLibrary2.Reflection;
 using MiscPocketCompactLibrary2.Net;
@@ -661,9 +662,9 @@ namespace TwitterAwayZwei.Twitter
             }
             connection.ProxySetting = proxySetting;
             connection.Timeout = webRequestTimeoutMillSec;
-            connection.UserAgent = EntryAssemblyUtility.Title + "/" + EntryAssemblyUtility.Version.ToString();
-            connection.ExtraHeaders.Add("X-Twitter-Client", EntryAssemblyUtility.Title);
-            connection.ExtraHeaders.Add("X-Twitter-Client-Version", EntryAssemblyUtility.Version.ToString());
+            connection.UserAgent = AssemblyUtility.GetTitle(Assembly.GetExecutingAssembly()) + "/" + AssemblyUtility.GetVersion(Assembly.GetExecutingAssembly()).ToString();
+            connection.ExtraHeaders.Add("X-Twitter-Client", AssemblyUtility.GetTitle(Assembly.GetExecutingAssembly()));
+            connection.ExtraHeaders.Add("X-Twitter-Client-Version", AssemblyUtility.GetVersion(Assembly.GetExecutingAssembly()).ToString());
 
             return connection.CreateStream(url);
         }
