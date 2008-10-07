@@ -1,6 +1,7 @@
 using System;
-
 using System.Text.RegularExpressions;
+using System.IO;
+
 using System.Reflection;
 using MiscPocketCompactLibrary2.Reflection;
 
@@ -76,9 +77,13 @@ namespace TwitterAwayZwei
         /// <summary>
         /// 例外に出力するログファイルを取得する
         /// </summary>
-        public static string ExceptionLogFile
+        public static string ExceptionLogFilePath
         {
-            get { return "TwitterAwayZweiExceptionLog.log"; }
+            get
+            {
+                return Path.GetDirectoryName(AssemblyUtility.GetLocation(Assembly.GetExecutingAssembly()))
+                  + @"\" + "TwitterAwayZweiExceptionLog.log";
+            }
         }
 
         #endregion
