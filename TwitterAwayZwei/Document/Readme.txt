@@ -55,6 +55,8 @@ TwitterAway Zwei]を選択して削除してください。
 
 【バージョン履歴】
 Version 0.8
+・アイコンをつけた。
+　Designed by モケさん http://www.pixiv.net/member.php?id=3064
 ・UIの微調整
 
 Version 0.7
